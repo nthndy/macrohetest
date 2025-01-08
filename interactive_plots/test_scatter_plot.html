@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Scatter Plot with S3 Videos</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        // Preload the first video to warm up the connection
+        const firstVideoLink = "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/1.3.5.PS0000.mp4"; // Example first video link
+        const preloadVideo = document.createElement("video");
+        preloadVideo.src = firstVideoLink;
+        preloadVideo.preload = "auto"; // Preload the video
+        preloadVideo.style.display = "none"; // Hide it from the user
+        document.body.appendChild(preloadVideo);
+    </script>
+
     <style>
         /* Set up a flexbox container */
         .container {
