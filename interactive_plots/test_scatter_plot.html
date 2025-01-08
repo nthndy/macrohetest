@@ -44,7 +44,7 @@
         const yValues = Array.from({ length: videoIds.length }, () => Math.random() * 100);
 
         // Generate video links pointing to the 'glimpses' folder
-        const videoLinks = videoIds.map(id => `../glimpses/${id}.mp4`);
+        const videoLinks = videoIds.map(id => `https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/${id}.mp4`);
 
         // Create the scatter plot
         const trace = {
