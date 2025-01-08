@@ -3,13 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Scatter Plot with Video</title>
+    <title>Interactive Scatter Plot with S3 Videos</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        /* Set up a flexbox container */
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            height: 600px; /* Match the height of the plot */
+        }
+
+        #scatter-plot {
+            flex: 1; /* Allow the plot to take most of the space */
+            height: 100%;
+        }
+
+        #video-container {
+            flex: 1; /* Allow the video container to share equal space */
+            height: 100%; /* Match the height of the plot */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-left: 1px solid #ccc; /* Add a separator line */
+            padding-left: 10px;
+        }
+
+        video {
+            height: 100%; /* Make the video match the container's height */
+            max-width: 100%; /* Prevent overflow */
+            border: 1px solid black;
+        }
+
+        p {
+            text-align: center;
+            font-size: 16px;
+            color: gray;
+        }
+    </style>
 </head>
 <body>
-    <div id="scatter-plot" style="width: 80%; height: 600px;"></div>
-    <div id="video-container" style="margin-top: 20px; text-align: center;">
-        <p>Hover over a point to load the corresponding video.</p>
+    <div class="container">
+        <div id="scatter-plot"></div>
+        <div id="video-container">
+            <p>Hover over a point to load the corresponding video.</p>
+        </div>
     </div>
     <script>
         // List of video IDs (filenames without extensions)
@@ -43,7 +83,7 @@
         const xValues = Array.from({ length: videoIds.length }, () => Math.random() * 100);
         const yValues = Array.from({ length: videoIds.length }, () => Math.random() * 100);
 
-        // Generate video links pointing to the 'glimpses' folder
+        // Generate video links pointing to the S3 bucket
         const videoLinks = videoIds.map(id => `https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/${id}.mp4`);
 
         // Create the scatter plot
@@ -59,7 +99,7 @@
         };
 
         const layout = {
-            title: 'Interactive Scatter Plot with Video',
+            title: 'Interactive Scatter Plot with Videos',
             xaxis: { title: 'Random X Values' },
             yaxis: { title: 'Random Y Values' },
             hovermode: 'closest'
@@ -77,7 +117,7 @@
 
             // Update the video container with the video
             videoContainer.innerHTML = `
-                <video controls autoplay style="width: 50%; border: 1px solid black;">
+                <video controls autoplay>
                     <source src="${videoLink}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
