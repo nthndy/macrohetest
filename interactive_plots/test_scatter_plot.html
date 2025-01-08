@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Scatter Plot</title>
+    <title>Interactive Scatter Plot with Video</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
     <div id="scatter-plot" style="width: 100%; height: 600px;"></div>
+    <div id="video-container" style="margin-top: 20px; text-align: center;">
+        <p>Hover over a point to load the corresponding video.</p>
+    </div>
     <script>
         // List of video IDs (filenames without extensions)
         const videoIds = [
@@ -43,25 +46,48 @@
         // Generate video links pointing to the 'glimpses' folder
         const videoLinks = videoIds.map(id => `../glimpses/${id}.mp4`);
 
-        // Create the plot
+        // Create the scatter plot
         const trace = {
             x: xValues,
             y: yValues,
             mode: 'markers',
             type: 'scatter',
-            text: videoIds.map((id, i) => `<a href="${videoLinks[i]}" target="_blank">${id}</a>`),  // Hover with links
+            text: videoIds, // IDs for hover data
+            customdata: videoLinks, // Video links for each point
             marker: { size: 12 },
             hovertemplate: '<b>ID:</b> %{text}<br><b>X:</b> %{x}<br><b>Y:</b> %{y}<extra></extra>',
         };
 
         const layout = {
-            title: 'Interactive Scatter Plot with Video Links',
+            title: 'Interactive Scatter Plot with Video',
             xaxis: { title: 'Random X Values' },
             yaxis: { title: 'Random Y Values' },
             hovermode: 'closest'
         };
 
         Plotly.newPlot('scatter-plot', [trace], layout);
+
+        // Load video on hover
+        const scatterPlot = document.getElementById('scatter-plot');
+        const videoContainer = document.getElementById('video-container');
+
+        scatterPlot.on('plotly_hover', function(eventData) {
+            const pointIndex = eventData.points[0].pointIndex; // Get index of hovered point
+            const videoLink = videoLinks[pointIndex]; // Get corresponding video link
+
+            // Update the video container with the video
+            videoContainer.innerHTML = `
+                <video controls autoplay style="width: 80%; border: 1px solid black;">
+                    <source src="${videoLink}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            `;
+        });
+
+        // Clear the video when the mouse leaves the plot
+        scatterPlot.on('plotly_unhover', function() {
+            videoContainer.innerHTML = '<p>Hover over a point to load the corresponding video.</p>';
+        });
     </script>
 </body>
 </html>
