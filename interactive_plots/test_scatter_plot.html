@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Scatter Plot</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id="scatter-plot" style="width: 100%; height: 600px;"></div>
+    <script>
+        // List of video IDs (filenames without extensions)
+        const videoIds = [
+            "1.3.5.PS0000",
+            "4.3.5.ND0003",
+            "5.4.5.PS0000",
+            "8.5.5.PS0000",
+            "10.4.6.PS0000",
+            "11.4.8.PS0000",
+            "11.5.4.ND0003",
+            "11.5.8.PS0000",
+            "14.3.5.ND0003",
+            "14.3.8.PS0000",
+            "15.4.6.ND0003",
+            "17.4.8.PS0000",
+            "19.4.5.PS0000",
+            "19.4.6.ND0003",
+            "21.4.7.PS0000",
+            "23.3.3.ND0002",
+            "25.4.5.PS0000",
+            "27.4.9.ND0004",
+            "30.5.5.PS0000",
+            "33.6.8.PS0000",
+            "34.3.3.ND0003",
+            "34.3.9.ND0002",
+            "36.3.5.PS0000"
+        ];
+
+        // Generate random x and y coordinates for the scatter plot
+        const xValues = Array.from({ length: videoIds.length }, () => Math.random() * 100);
+        const yValues = Array.from({ length: videoIds.length }, () => Math.random() * 100);
+
+        // Generate video links pointing to the 'glimpses' folder
+        const videoLinks = videoIds.map(id => `../glimpses/${id}.mp4`);
+
+        // Create the plot
+        const trace = {
+            x: xValues,
+            y: yValues,
+            mode: 'markers',
+            type: 'scatter',
+            text: videoIds.map((id, i) => `<a href="${videoLinks[i]}" target="_blank">${id}</a>`),  // Hover with links
+            marker: { size: 12 },
+            hovertemplate: '<b>ID:</b> %{text}<br><b>X:</b> %{x}<br><b>Y:</b> %{y}<extra></extra>',
+        };
+
+        const layout = {
+            title: 'Interactive Scatter Plot with Video Links',
+            xaxis: { title: 'Random X Values' },
+            yaxis: { title: 'Random Y Values' },
+            hovermode: 'closest'
+        };
+
+        Plotly.newPlot('scatter-plot', [trace], layout);
+    </script>
+</body>
+</html>
