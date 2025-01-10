@@ -1,20 +1,30 @@
 <!-- #region -->
 
-# macro*het*
-
 ![Funky image showing misrendered 3D view (XYT) of a timelapse microscopy image volume, looks like pink and green marble with a projected scale bar and time counter along the bottom](./landing_img.png)
 
-A repo for bringing together all of the threads of analyses for studying the single cell heterogeneity of human macrophages infected with _Mycobacterium tuberculosis_ (Mtb).
+# As of yet unannounced title.
 
-WORK IN PROGRESS
+### Abstract
 
-Currently mainly using it to back up various messy notebooks etc.
-Explore the interactive visualization of Mtb doubling times:
+Here goes some text that will the abstract of this paper...
 
-[**Interactive Plot (Doubling Times)**](https://nthndy.github.io/macrohetest/interactive_plots/doubling_times.html)
 
-Or view it directly inline below:
+### Introduction
+
+And here goes the introduction...
+
+### Methodology
+
+The code for the paper will be linked here: [Notebooks](https://nthndy.github.io/macrohetest/tree/main/code)
+
+### Results
+
+Figure X: A title to show what figure X shows.
 
 <iframe src="https://nthndy.github.io/macrohetest/interactive_plots/doubling_times.html" width="100%" height="800px" frameborder="0"></iframe>
+
+### Discussion
+
+Much insight
 
 <!-- #endregion -->
