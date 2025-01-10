@@ -9,16 +9,12 @@ A repo for bringing together all of the threads of analyses for studying the sin
 WORK IN PROGRESS
 
 Currently mainly using it to back up various messy notebooks etc.
+Explore the interactive visualization of Mtb doubling times:
 
-### This repository has 2 main aspects to it: labelling and analysis
+[**Interactive Plot (Doubling Times)**](https://nthndy.github.io/macrohetest/interactive_plots/doubling_times.html)
 
-1. The upstream labelling section is for the tiling, segmentation and tracking of timelapse microscopy data featuring human macrophages infected with _Mycobacterium tuberculosis_.
-2. The downstream analysis section is for investigating and interrogating the single-cell trajectories created in the first section as well as any further biological analysis of the microscopy data.
+Or view it directly inline below:
 
-Both sections contain `dev` folders where the bulk of the WIP notebooks will be located and zipped in archive. The more generally applicable and polished notebooks will be in the main directories of each section.
-
-### Here is an interactive example graph for browsing:
-
-[![Example analysis](example_graph.png)](https://macrohet.s3.eu-west-2.amazonaws.com/dMtb/dMtb_kde.html)
+<iframe src="https://nthndy.github.io/macrohetest/interactive_plots/doubling_times.html" width="100%" height="800px" frameborder="0"></iframe>
 
 <!-- #endregion -->
