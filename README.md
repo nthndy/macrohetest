@@ -15,7 +15,7 @@ And here goes the introduction...
 
 ### Methodology
 
-The code for the paper will be linked here: [Notebooks](https://github.com/nthndy/macrohetest/tree/main/code)
+The code for the paper will be linked here: [Notebooks](https://github.com/nthndy/macrohetest/blob/master/code/viewer-test.ipynb)
 
 ### Results
 
