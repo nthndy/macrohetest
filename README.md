@@ -15,13 +15,20 @@ And here goes the introduction...
 
 ### Methodology
 
-The code for the paper will be linked here: [Notebooks](https://nthndy.github.io/macrohetest/tree/main/code)
+The code for the paper will be linked here: [Notebooks](https://github.com/nthndy/macrohetest/tree/main/code)
 
 ### Results
 
 Figure X: A title to show what figure X shows.
 
-<iframe src="https://nthndy.github.io/macrohetest/interactive_plots/doubling_times.html" width="100%" height="800px" frameborder="0"></iframe>
+<div style="width: 100%; height: 100vh; overflow: hidden;">
+    <iframe
+        src="https://nthndy.github.io/macrohetest/interactive_plots/doubling_times.html"
+        width="100%"
+        height="100%"
+        style="border: none; display: block;"
+    ></iframe>
+</div>
 
 ### Discussion
 
