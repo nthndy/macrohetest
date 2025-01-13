@@ -1,0 +1,18 @@
+# Ignore Python compiled files
+__pycache__/
+*.py[cod]
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore environment files
+env/
+.venv/
+*.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore specific directories or files
+*.mp4
