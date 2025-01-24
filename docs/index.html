@@ -8,10 +8,17 @@
 </head>
 <body>
     <article class="scientific-paper">
-        <header>
-            <h1 class="paper-title">
-                Fast growing intracellular <i>Mycobacterium tuberculosis</i> populations evade antibiotic treatment
-            </h1>
+      <header class="landing-header">
+        <div class="landing-container">
+            <img src="images/landing_img.png" alt="Landing Image" class="landing-image">
+            <div class="overlay">
+                <h1 class="landing-title">
+                    Fast growing intracellular <i>Mycobacterium tuberculosis</i> populations evade antibiotic treatment
+                </h1>
+                <p class="landing-subtitle">A research perspective on infection heterogeneity</p>
+            </div>
+        </div>
+      </header>
 
             <section class="author-info">
                 <div class="authors">
@@ -62,7 +69,9 @@
                       id="fig:1"
                       src="figures/F1.html"
                       title="Figure 1: Methodology pipeline"
-                      loading="lazy">
+                      loading="lazy"
+                      width="100%"
+                      style="height: 1250px; border: none; overflow: visible;">
                   </iframe>
                   <figcaption>
                       <b>Fig. 1. A high-content live single-cell imaging approach to monitor Mtb replication in human macrophages.</b>
@@ -84,7 +93,9 @@
                       id="fig:2"
                       src="figures/F2.html"
                       title="Figure 2: Initial investigation of doubling times"
-                      loading="lazy">
+                      loading="lazy"
+                      width="100%"
+                      style="height: 1450px; border: none; overflow: visible;">
                   </iframe>
                   <figcaption>
                       <p><b>Fig. 2.</b> Infected macrophage tracking and quantification reveals extremely variegated growth rates. <b>(A)</b> Single cell example of normal doubling time (24 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with the doubling points in grey dotted lines (right). <b>(B)</b> Single cell example of slow doubling time (66 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with the doubling points in grey dotted lines. <b>(C)</b> Single cell example of fast doubling time (13 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with t dotted lines. The raw data is shown in magenta. <b>(D)</b> Box plots showing the distribution of intracellular doubling times for intracellular Mtb WT and Mtb ∆RD1.</p>
@@ -104,7 +115,8 @@
                       id="fig:3"
                       src="figures/F3.html"
                       title="Figure 3: Quantifying macrophage phenotypes"
-                      loading="lazy">
+                      loading="lazy"
+                      style="height: 2000px; border: none; overflow: visible;">
                   </iframe>
                   <figcaption>
                       <p><b>Fig. 3.</b> Intracellular fast-growing Mtb is a distinct subpopulation of infected macrophages. <b>(A)</b> Mtb population doublings of intracellular origin typically result in steady growth patterns well represented by the LOWESS growth model and subsequent R2 value. <b>(B)</b> Extracellular uptake of smaller populations of Mtb can result in an artificially quick doubling. <b>(C)</b> Intercellular transfer of larger populations of Mtb from neighboring cells results in more artificially quick doubling. <b>(D)</b> Distribution of Mtb doubling time separated by intrinsic versus extrinsic origin. <b>(E)</b> Sankey diagram illustrating how the proportion of each wild-type Mtb growth phenotype changes across the time-lapse. <b>(F)</b> The equivalent Sankey diagram for ∆RD1 reflects the mutants' reduced capacity to cause cell death and subsequent inter-cellular transfer.</p>
@@ -125,7 +137,8 @@
                       id="fig:4"
                       src="figures/F4.html"
                       title="Figure 4: Antibiotic doubling time plot"
-                      loading="lazy">
+                      loading="lazy"
+                      style="height: 800px; border: none; overflow: visible;">
                   </iframe>
                   <figcaption>
                       <p><b>Fig. 4.</b> Fast growing intracellular Mtb evade antibiotic treatment. <b>(A)</b> Timeline and experimental design of antibiotic-treated, Mtb-infected macrophages live-cell imaging. <b>(B)</b> Distribution of intracellular doubling times attributable solely to intrinsic, intracellular Mtb growth within host-macrophages. These doubling times are separated into control (untreated) wild-type Mtb, control (untreated) ∆RD1-Mtb and antibiotic-treated wild-type Mtb, with further subdivisions according to the concentration of antibiotics (EC50 and EC99). A Mann-Whitney U test accompanies these distributions, comparing the overall distribution of each condition to the wild-type control. The intracellular Mtb doubling times across PZA, INH and RIF treated macrophages exhibit heterogenous distributions that diverge further with increasing antibiotic concentrations. The proportion of fast, normal and slow growth phenotypes are also exhibited as percentages for each strain of Mtb and concentration of antibiotic. A Chi-squared (χ2) test accompanies these distributions, comparing the proportions of each growth phenotype in each condition to the wild-type control.</p>
@@ -383,29 +396,5 @@
         </section>
 
     </article>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('DOMContentLoaded event fired. Script is running.');
-
-            const iframes = document.querySelectorAll('.research-figure iframe');
-            console.log(`Found ${iframes.length} iframe(s).`);
-
-            iframes.forEach(iframe => {
-                iframe.addEventListener('load', () => {
-                    console.log(`Iframe with ID "${iframe.id}" has loaded.`);
-
-                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-                    if (iframeDoc) {
-                        const newHeight = iframeDoc.body.scrollHeight;
-                        console.log(`Calculated height for iframe: ${newHeight}px`);
-                        iframe.style.height = newHeight + 'px';
-                    } else {
-                        console.warn(`Could not access content for iframe with ID "${iframe.id}".`);
-                    }
-                });
-            });
-        });
-    </script>
-
 </body>
 </html>

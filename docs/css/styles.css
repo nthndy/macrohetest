@@ -23,14 +23,61 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Ensure the header spans the full width of the page */
+.landing-header {
+    position: relative;
+    width: 100%; /* Full width */
+    height: auto; /* Full viewport height */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    margin: 0; /* Remove default margins */
+}
+
+/* Make the container and image fill the header */
+.landing-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.landing-image {
+    width: 100%; /* Stretch the image to the full width */
+    height: auto; /* Stretch the image to the full height */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+/* Overlay text styles */
+/* .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+} */
+
+/* .landing-title {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+} */
+
+/* .landing-subtitle {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+} */
 
 /* Paper layout */
 .scientific-paper {
     max-width: var(--paper-width);
     margin: 0 auto;
     padding: var(--paper-margin);
+    overflow: visible;
     /* Remove duplicate font-family declaration since it's inherited from body */
 }
+
 
 .research-figure {
     width: 100%;
