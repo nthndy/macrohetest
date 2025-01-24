@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mycobacterium tuberculosis Research Paper</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <article class="scientific-paper">
+        <header>
+            <h1 class="paper-title">
+                Fast growing intracellular <i>Mycobacterium tuberculosis</i> populations evade antibiotic treatment
+            </h1>
+
+            <section class="author-info">
+                <div class="authors">
+                    <span>Nathan J. Day<sup>1</sup></span>,
+                    <span>Baptiste Pradel<sup>1</sup></span>,
+                    <span>Pierre Santucci<sup>1,2</sup></span>,
+                    <span>Beren Aylan<sup>1,3</sup></span>,
+                    <span>Julio Ortiz Canseco<sup>1</sup></span>,
+                    <span>Natalia Athanasiadi<sup>1</sup></span>,
+                    <span>Chak Hon Luk<sup>1</sup></span>,
+                    <span>Maximiliano G. Gutierrez<sup>1*</sup></span>
+                </div>
+
+                <div class="affiliations">
+                    <address><sup>1</sup>The Francis Crick Institute; London, United Kingdom</address>
+                    <address><sup>2</sup>Present address: Aix Marseille Univ., CNRS, LISM, IMM FR3479, IM2B; Marseille, France.</address>
+                    <address><sup>3</sup>Present address: Boston Children's Hospital, HMS; Boston, USA.</address>
+                </div>
+
+                <div class="corresponding-author">
+                    <address>* Corresponding author: <a href="mailto:max.g@crick.ac.uk">max.g@crick.ac.uk</a></address>
+                </div>
+            </section>
+        </header>
+
+        <section class="abstract">
+            <h2>Abstract</h2>
+            <p>Slow growth rates are a hallmark of Mycobacterium tuberculosis (Mtb), one of the deadliest human pathogens. Arrested growth of Mtb has been associated with antibiotic tolerance and the ability to persist in the host. A physiologically relevant subpopulation of Mtb localizes within host macrophages, although how this intracellular residence in heterogeneous host cells affect Mtb growth remains elusive. We developed a robust, high-content, live, single-cell imaging approach to track infected human macrophage populations with high spatiotemporal resolution. We discovered the presence of fast-growing intracellular Mtb populations with doubling times below 16 hours. These fast-growing subpopulations were more likely to evade the first-line antibiotics rifampicin, isoniazid and pyrazinamide when compared to the slow-growing populations. Our data identifies fast-growing intracellular Mtb as a mechanism of antibiotic evasion.</p>
+        </section>
+
+        <section class="introduction">
+            <h2>Introduction</h2>
+            <p> Tuberculosis (TB) has been one of the most devasting infectious diseases throughout human history, affecting humanity for over 15,000 years <i>(1)</i> and resulting in 1.25 million deaths in 2023 <i>(2)</i>. The current chemotherapy regimen for TB requires at least six months and four antibiotics to cure the disease. The reasons behind this prolonged treatment duration and multi-drug requirements are multifactorial and remain poorly understood <i>(3-5)</i>.</p>
+            <p><i>Mycobacterium tuberculosis</i> (Mtb), the causative agent of TB, can adopt an intracellular lifestyle and replicate within host cells during infection <i>(6)</i>. Compelling evidence indicates a host cell contribution to antibiotic accumulation and efficacy <i>(7-11)</i>, but the underlying mechanisms of these pharmacokinetic/dynamic interactions remain elusive. Further to that, Mtb will encounter a diverse set of both intracellular and extracellular microenvironments that lead to single-cell phenotypic variability <i>(12, 13)</i>. However, the relationship between the host and pathogen, the subsequent single-cell heterogeneity and resultant antimicrobial susceptibility are largely undefined.</p>
+            <p>Antibiotic efficacy has been primarily determined using in vitro bulk assays that measure conventional parameters such as minimal inhibitory and minimal bactericidal concentrations <i>(14)</i>. However, the use of such planktonic liquid cultures does not address single-cell heterogeneity and also precludes any host cell contribution towards antibiotic efficacy <i>(15)</i>. Single-cell image-based in vitro studies of antibiotic treatment responses that overcome bulk determinations are especially important to address the highly heterogenous nature of Mtb infection <i>(16, 17)</i>, but they too do not mimic intracellular environments. Single-cell image-based in cellulo studies overcome bulk determinations and mimic physiological intracellular environments <i>(18-21)</i>, but are often limited in the spatial and temporal resolution necessary to fully capture the heterogeneity of intracellular Mtb response to antibiotics.</p>
+            <p>To address these challenges, we designed an image-based approach to monitor Mtb intracellular replication at the single-macrophage level, with high spatiotemporal resolution capable of tracking infection initialization to endpoint. Using this approach, we discovered that a subpopulation of infected human macrophages harbored fast-growing Mtb populations. These fast-growing intracellular Mtb populations evade antibiotic treatment, likely representing a phenotypically and clinically relevant population of bacteria during TB chemotherapy.</p>
+        </section>
+
+        <section class="figures">
+          <section class="results">
+              <h2>An image-based pipeline to study Mtb replication in single human macrophages with high spatiotemporal resolution.</h2>
+              <figure class="research-figure">
+                  <div class="figure-results">
+                    <p>We developed a high-content, live-cell imaging approach that allows for the monitoring of Mtb replication in large populations of infected macrophages <a href="#fig:1"><b>Fig. 1A</b></a>. This system consists of human iPSC-derived macrophages (iPSDM) expressing EGFP from an AAV locus <i>(22)</i> infected with Mtb H37Rv-expressing E2-Crimson (<i>Fig. 1B</i>). Using this biological model, we established an imaging pipeline that allows for 2-channel imaging of Mtb-infected macrophages in 96-well plates, with 9 overlapping fields of view per well, across 3x 2 µm z-slices, for up to 75 hours at 30 minutes or 1 hour frame rates, after an initial 24h set-up of the infection <a href="#fig:1"><b>Fig. 1C-E,</b></a> <a href="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie+S1.mp4"><b>Movie S1</b></a>. This assay was repeated across n=4 biological replicates. After establishing a robust image tiling, segmentation and tracking strategy <a href="#fig:1"><b>Fig. 1F-G</b></a>, we were able to track N=1,107 control (untreated) macrophages over a period of 75 hours <a href="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Figure+S1.png"><b>Fig. S1</b></a>. An initial analysis of intracellular Mtb growth trajectories revealed a heterogeneity in Mtb replication dynamics. Some macrophage tracks showed a high intracellular Mtb load (magenta lines <b>Fig. 1H</b>, whilst others harbored only low-levels of Mtb intracellular populations across 3 days of imaging (green lines <b>Fig. 1H,</b> <a href="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Figure+S1.png"><b>Fig. S1</b></a>. Of the total control set of tracked macrophages, 55.8% (618) were infected, out of which 482 macrophages harbored doubling intracellular Mtb populations <a href="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Figure+S1.png"><b>Fig. S1</b></a>. The smaller subset populations that possessed non-doubling or no measurable growth (5.9% and 6.4%, respectively, <a href="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Figure+S1.png"><b>Fig. S1</b></a>) were not included in latter analysis as the time constraints of live-cell imaging precluded any guarantee that these populations were definitively arrested. Therefore, we included 482 macrophages that constituted the focus of our subsequent analysis, as they yielded clearly quantifiable intracellular population dynamics that could be compared to bulk canonical measures of population doubling times <a href="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Figure+S1.png"><b>Fig. S1</b></a>.
+                    </p>
+                  </div>
+                  <iframe
+                      id="fig:1"
+                      src="figures/F1.html"
+                      title="Figure 1: Methodology pipeline"
+                      loading="lazy">
+                  </iframe>
+                  <figcaption>
+                      <b>Fig. 1. A high-content live single-cell imaging approach to monitor Mtb replication in human macrophages.</b>
+                      <p><b>(A)</b> Timeline of the experimental design and imaging conditions. <b>(B)</b> A single image acquisition, showing EGFP-expressing macrophages infected with Mtb H37Rv WT-E2Crimson. <b>(C)</b> A full mosaic of 9 images (single tile shown as white square inset) with 10% overlap. <b>(D)</b> Each mosaic is composed of 2 fluorescent channels and 3 z-slices with a step of 2μm. <b>(E)</b> The image acquisition lasts for 75 h at 30/60min frame rates. <b>(F)</b> This image volume is then segmented using the EGFP channel. <b>(G)</b> Each segment in each frame is then localized and intracellular Mtb quantified, prior to linking each cell instance over time into a series of tracks, shown here as a visualization in 3 dimensions (x,y,t). <b>(H)</b> Single-cell trajectories (N=1,127) of intracellular Mtb growth in n=4 biological replicates, color-coded to the final intracellular Mtb burden.</p>
+                  </figcaption>
+              </figure>
+          </section>
+
+          <section class="results">
+            <h2>Infected macrophage tracking and quantification reveals extremely variegated growth rates.</h2>
+              <figure class="research-figure">
+                  <div class="figure-results">
+                    <p>To further investigate the heterogeneity of intracellular Mtb growth dynamics, we fitted a LOWESS smoothing model to the intracellular Mtb trajectories <i>(23)</i>. This approach made the quantification of intracellular doubling times more reliable by attenuating high-frequency noise from the intracellular Mtb measurements whilst retaining the underlying biological growth pattern <i>(Fig. 2A-C)</i>. It also served as a quality-control metric for tracking performance, as erroneous tracking jumps would result in a poorly fitting coefficient of determination (R2) between the raw Mtb data and growth curve.</p>
+                    <p>In cellulo studies have reported bulk intracellular Mtb doubling times of 21, 26-28, and 24.7 hours, respectively <i>(9, 24, 25)</i>. An in vivo study reported Mtb doubling times of 48 hours extracellularly and 24 hours intracellularly <i>(26)</i>. Whilst the average of our single-cell analysis resulted in a mean doubling time of 16 hours, we observed intracellular Mtb growth rates across a much wider range <i>(Fig. 2D)</i>. Following this, we defined three distinct intracellular Mtb growth phenotypes based on observations of doubling times: <b>normal growth</b> (between 16 and 24 hours) <i>(Fig. 2A, Movie S2)</i>, <b>slow growth</b> (more than 24 hours) <i>(Fig. 2B, Movie S3)</i> and <b>fast growth</b> (less than the 16 hours reported in vitro) <i>(16)</i> <i>(Fig. 2C, Movie S4)</i>.</p>
+                    <p>When analyzing the distribution of intracellular Mtb WT doubling times, we found that while 21% of doubling instances fell with the scope of normal growth, whilst 48% were of the fast-growing phenotype, and 31% the slow-growing phenotype <i>(Fig. 2D)</i>. To corroborate our observations, we measured the growth of a mutant of Mtb which lacks the RD1 genomic locus. This mutation restricts the Mtb ΔRD1 to membrane-bound compartments, preventing access to the pH-neutral and nutrient-rich cytosol of host cells. As a result of this, the Mtb ΔRD1 grows less within human macrophages <i>(27)</i>, a characteristic that is reflected in the total number of doubling times recorded (N=190), which is sharply reduced compared to Mtb WT (N=941) <i>(Fig. 2D)</i>.</p>
+                    <p>The growth phenotype proportions of the distribution of Mtb ∆RD1 populations were relatively similar to Mtb WT, at 45%, 10% and 45%. The average doubling time was increased to 19 hours with an increase of 14% in the slow growing population, confirming a reduced capacity for growth of Mtb ∆RD1 as previously reported <i>(27)</i>. Altogether, our single-cell Mtb replication analysis showed that contrary to the behavior observed in vitro, a fraction of Mtb can grow substantially faster in cellulo <i>(Fig. 2D)</i>. However, a subset of intracellular populations showed near instantaneous doubling times and extremely rapid growth, warranting further investigation.</p>
+                  </div>
+                  <iframe
+                      id="fig:2"
+                      src="figures/F2.html"
+                      title="Figure 2: Initial investigation of doubling times"
+                      loading="lazy">
+                  </iframe>
+                  <figcaption>
+                      <p><b>Fig. 2.</b> Infected macrophage tracking and quantification reveals extremely variegated growth rates. <b>(A)</b> Single cell example of normal doubling time (24 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with the doubling points in grey dotted lines (right). <b>(B)</b> Single cell example of slow doubling time (66 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with the doubling points in grey dotted lines. <b>(C)</b> Single cell example of fast doubling time (13 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with t dotted lines. The raw data is shown in magenta. <b>(D)</b> Box plots showing the distribution of intracellular doubling times for intracellular Mtb WT and Mtb ∆RD1.</p>
+                  </figcaption>
+              </figure>
+          </section>
+
+          <section class="results">
+            <h2>Intracellular fast-growing Mtb is a distinct subpopulation of infected macrophages.</h2>
+              <figure class="research-figure">
+                  <div class="figure-results">
+                    <p>At the infected macrophage level, we observed three clear phenotypes related to the fast growing Mtb populations: <i>(i)</i> Intracellular growth of Mtb, where rapid doublings were the result of intracellular replication <i>(Fig. 3A, Movie S5)</i>; <i>(ii)</i> Extracellular uptake of Mtb, where rapid increases in intracellular burden resulted in doubling times that do not reflect intrinsic intracellular growth <i>(Fig. 3B, uptake highlighted with a white arrow, Movie S6)</i>; and <i>(iii)</i> Intercellular transfer of Mtb between neighboring macrophages, where sudden increases in intracellular burden yielded doubling times not attributable to intracellular replication <i>(Fig. 3C, transfer highlighted with a white arrow, Movie S7)</i>. To exclude unrealistic doubling times from the phenotypes ii and iii in any subsequent analysis, we defined these macrophage processes as belonging to either intrinsic Mtb growth <i>(phenotype i)</i> <i>(Fig. 3A)</i> or extrinsic Mtb growth <i>(phenotypes ii, iii)</i> <i>(Fig. 3B-C)</i>. The classification of these phenotypes was achieved using a human-in-the-loop approach, wherein a set of napari <i>(28)</i> key-bindings were used to iterate over and label a corpus of single-cell video glimpses. Incidences of extrinsic Mtb growth occurred primarily at later time points of infection and could be attributable to macrophage cell death <i>(25, 27)</i>. The fact that both extracellular uptake and intercellular transfer primarily occurred at later stages of the time-lapse precluded an analysis of the Mtb doubling times after uptake and/or transfer.</p>
+                    <p>We then segregated the distribution of doubling times according to intrinsic/extrinsic Mtb growth <i>(Fig. 3D)</i>. The distributions showed that any near-instantaneous population doublings were exclusively attributable to extrinsic Mtb growth. Strikingly, there was a subpopulation <i>(11%)</i> of intrinsic growth patterns that resulted rapid doubling times below 16 hours, with the majority <i>(56%)</i> exhibiting much slower doubling times than the average and only a subset <i>(33%)</i> landing within the definition of normal growth <i>(Fig. 3D)</i>. Taking the mean of this distribution resulted in an average doubling time value of 25 hours, which was still in line with previous reports albeit with a much wider range than previously appreciated.</p>
+                    <p>Unexpectedly, this diversity of growth rates also extended to the Mtb ∆RD1 mutant, that is mostly restricted intracellularly <i>(27)</i>. The average ∆RD1 doubling time of 39 hours was considerably more than the Mtb WT, more faithfully reflecting the reduced capacity for intracellular proliferation than in the previous uptake/transfer-inclusive distributions. Regarding extrinsic Mtb ∆RD1 growth, there was a concomitant reduction in the proportion of intercellular transfer when compared to Mtb WT <i>(31% to 46%)</i> as the Mtb ∆RD1 mutant does not trigger cell death <i>(27)</i> <i>(Fig. 3E-F)</i>. Altogether, our single-cell analysis of Mtb growth in macrophages established that Mtb intracellular growth can indeed reach values considerably below 16 hours.</p>
+                  </div>
+                  <iframe
+                      id="fig:3"
+                      src="figures/F3.html"
+                      title="Figure 3: Quantifying macrophage phenotypes"
+                      loading="lazy">
+                  </iframe>
+                  <figcaption>
+                      <p><b>Fig. 3.</b> Intracellular fast-growing Mtb is a distinct subpopulation of infected macrophages. <b>(A)</b> Mtb population doublings of intracellular origin typically result in steady growth patterns well represented by the LOWESS growth model and subsequent R2 value. <b>(B)</b> Extracellular uptake of smaller populations of Mtb can result in an artificially quick doubling. <b>(C)</b> Intercellular transfer of larger populations of Mtb from neighboring cells results in more artificially quick doubling. <b>(D)</b> Distribution of Mtb doubling time separated by intrinsic versus extrinsic origin. <b>(E)</b> Sankey diagram illustrating how the proportion of each wild-type Mtb growth phenotype changes across the time-lapse. <b>(F)</b> The equivalent Sankey diagram for ∆RD1 reflects the mutants' reduced capacity to cause cell death and subsequent inter-cellular transfer.</p>
+                  </figcaption>
+              </figure>
+          </section>
+
+          <section class="results">
+            <h2>Fast growing intracellular Mtb evades antibiotic treatment.</h2>
+              <figure class="research-figure">
+                  <div class="figure-results">
+                    <p>Responses of Mtb to antibiotic treatment are commonly measured in vitro in planktonic cultures or at the single-bacilli level using microfluidic devices <i>(16, 17)</i>. To analyze the behavior of intracellular Mtb populations following antibiotic treatment, macrophages were treated with pre-determined EC50 and EC99 concentrations of first line antibiotics: Rifampicin (RIF), Isoniazid (INH), and Pyrazinamide (PZA) <i>(Fig. 4A)</i>. At the population level, RIF, INH and PZA reduced the replication of intracellular Mtb, resulting in a striking concentration-dependent decrease in the amount of measurable doubling populations <i>(Fig. 4B, Fig. S2)</i>.</p>
+                    <p>An analysis of the temporal evolution of infection status of each macrophage showed that in antibiotic-treated macrophages a higher proportion of initially infected macrophages finished the time-lapse as uninfected <i>(Fig. S3)</i>, confirming the efficacy of the antibiotics tested. Mtb ∆RD1 infection already resulted in a large reduction in the amount of measurable growth in untreated conditions and we found that under antibiotic-treated Mtb ∆RD1 conditions the number of doubling times was close to zero, precluding any further analysis.</p>
+                    <p>However, for Mtb WT, even at the EC99 concentrations of PZA, INH and RIF, we observed a population of macrophages harboring Mtb replication <i>(Fig 4B)</i>. The doubling times under antibiotic-treated conditions revealed statistically significant shifts in the distribution of Mtb growth distributions for INH EC50, RIF EC50 and RIF EC99 <i>(Table S1)</i>. At EC50 concentrations, there was an enrichment of the subpopulation of slow-growing bacteria, increasing from 56% in untreated controls to 68% with PZA, 65% with INH and 72% with RIF <i>(Fig. 4B)</i>.</p>
+                    <p>At EC99 concentrations, however, there was a notable selection for fast-growing subpopulations, increasing from 11% in the untreated control to 33% for PZA, 20% for INH and a significant 60% for RIF <i>(Fig. 4B, Table S2)</i>. Further Chi-squared statistical tests revealed that the proportion shifts in growth phenotype subpopulations were statistically significant for INH EC99 and RIF EC99, whilst PZA EC99 did not allow for enough doubling times measurements to yield significance for the fastest growth category. Altogether, our data indicate that these fast-growing intracellular Mtb populations evaded antibiotic treatment, particularly RIF and INH to a lesser extent PZA.</p>
+                  </div>
+                  <iframe
+                      id="fig:4"
+                      src="figures/F4.html"
+                      title="Figure 4: Antibiotic doubling time plot"
+                      loading="lazy">
+                  </iframe>
+                  <figcaption>
+                      <p><b>Fig. 4.</b> Fast growing intracellular Mtb evade antibiotic treatment. <b>(A)</b> Timeline and experimental design of antibiotic-treated, Mtb-infected macrophages live-cell imaging. <b>(B)</b> Distribution of intracellular doubling times attributable solely to intrinsic, intracellular Mtb growth within host-macrophages. These doubling times are separated into control (untreated) wild-type Mtb, control (untreated) ∆RD1-Mtb and antibiotic-treated wild-type Mtb, with further subdivisions according to the concentration of antibiotics (EC50 and EC99). A Mann-Whitney U test accompanies these distributions, comparing the overall distribution of each condition to the wild-type control. The intracellular Mtb doubling times across PZA, INH and RIF treated macrophages exhibit heterogenous distributions that diverge further with increasing antibiotic concentrations. The proportion of fast, normal and slow growth phenotypes are also exhibited as percentages for each strain of Mtb and concentration of antibiotic. A Chi-squared (χ2) test accompanies these distributions, comparing the proportions of each growth phenotype in each condition to the wild-type control.</p>
+                  </figcaption>
+              </figure>
+          </section>
+        </section>
+
+        <section class="discussion">
+            <h2>Discussion</h2>
+            <p>We show that <i>Mtb</i> has the facultative capacity to adopt a remarkably wide range of intracellular growth phenotypes. Whilst other approaches have previously described such heterogeneity in vitro, in cellulo and in vivo <i>(9, 16, 17, 21, 29, 30)</i>, our approach is capable of tracking individual infected macrophage populations and quantifying the intracellular Mtb growth dynamics. By focusing on intracellular Mtb populations that doubled, we yielded a metric that was comparable to previous bulk assessments of Mtb growth rates, as well as selecting for the host macrophages/intracellular Mtb populations that are the most permissive/proliferative and subsequently the most problematic when it comes to successfully treating infection.</p>
+            <p>The macrophages harboring fast-growing Mtb are likely to be relevant during the infection as Mtb permissive macrophages have been reported in human TB <i>(6)</i> and mouse models of TB <i>(29, 31)</i>. Thus, our data potentially explain the biphasic behavior of certain antibiotics in mouse models of TB, such as PZA <i>(32)</i>. Our results also agree with the observed intracellular growth of Mtb in animal models where the logarithmic increase of bacteria does not always match a slow growth rate <i>(32)</i>.</p>
+            <p>Antibiotic phenotypic tolerance or persistence is conventionally associated with the slow (or non) growth behavior of Mtb and other bacteria under host environmental stress <i>(33)</i>. Unexpectedly, we show that in the time frame of our experiments, fast-growing Mtb evades antibiotic action likely without developing resistance mutations and mostly owing to phenotypic changes triggered by the intracellular milieu <i>(34, 35)</i>. We identified here an additional mechanism by which fast-growing intracellular Mtb evades antibiotic treatment. Our data agrees with reports in E. coli, where fast-growing resilience has been postulated as a mechanism of antibiotic escape in vitro <i>(36)</i>.</p>
+            <p>Several scenarios could account for our findings. One possibility is that either macrophages or rapidly replicating Mtb fail to internalize effective concentrations of antibiotics <i>(36)</i>. Alternatively, infection may enhance the efflux capacity of the host macrophages or intracellular Mtb, subsequently reducing antibiotic accumulation <i>(37)</i>. Several mechanisms lead to RIF tolerance, heteroresistance, or persistence <i>(38)</i>. In E. Coli, fast growing bacteria are more resistant to irreversibly-binding, ribosome-targeting antibiotics such as streptomycin and kanamycin <i>(39)</i>.</p>
+            <p>Therefore, based on data presented here we propose a novel mechanism of antibiotic evasion in intracellular Mtb, where compounds targeting a canonically slow-growing infection are being evaded by a previously unknown fast-growing intracellular phenotype. Our findings have potential implications for TB chemotherapy. These observations raise the possibility that some anti-TB antibiotics may fail to target fast-growing populations effectively or that these fast-growing populations evade antibiotic treatment. Further exploration of the biology and resilience of these fast-growing intracellular populations could be important for designing improved TB treatment strategies.</p>
+        </section>
+
+        <section class="references">
+          <h2>References</h2>
+
+          <style>
+            a {
+              text-decoration: none;
+              color: inherit;
+            }
+          </style>
+
+          <ol>
+            <li>
+              <a href="https://doi.org/10.1016/j.rmed.2006.08.006" target="_blank">
+                Daniel, T.M. (2006). The history of tuberculosis. <i>Respir Med</i> <b>100</b>, 1862–1870.
+              </a>
+            </li>
+            <li>
+              <a href="https://www.who.int/teams/global-tuberculosis-programme/tb-reports" target="_blank">
+                WHO. (2024). <i>Global Tuberculosis Report 2024</i>. Geneva, World Health Organization.
+              </a>
+            </li>
+            <li>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/10529902" target="_blank">
+                Fox, W., Ellard, G.A., and Mitchison, D.A. (1999). Studies on the treatment of tuberculosis undertaken by the British Medical Research Council tuberculosis units, 1946–1986, with relevant subsequent publications. <i>Int J Tuberc Lung Dis</i> <b>3</b>, S231–279.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1038/s41579-022-00702-z" target="_blank">
+                Dartois, V.A., and Rubin, E.J. (2022). Anti-tuberculosis treatment strategies and drug development: challenges and priorities. <i>Nat Rev Microbiol</i> <b>20</b>, 685–701.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1371/journal.pmed.0040120" target="_blank">
+                Connolly, L.E., Edelstein, P.H., and Ramakrishnan, L. (2007). Why is long-term therapy required to cure tuberculosis? <i>PLoS Med</i> <b>4</b>, e120.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1128/IAI.71.12.7099-7108.2003" target="_blank">
+                Kaplan, G., Post, F.A., Moreira, A.L., Wainwright, H., Kreiswirth, B.N., Tanverdi, M., Mathema, B., Ramaswamy, S.V., Walther, G., Steyn, L.M., et al. (2003). Mycobacterium tuberculosis growth at the cavity surface: a microenvironment with failed immunity. <i>Infect Immun</i> <b>71</b>, 7099–7108.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1038/s41467-021-24144-5" target="_blank">
+                Santucci, P., Diaw, M.T., Morland, B.A., Prideaux, B., Sarathy, J., Maiga, M., Ammerman, N.C., Dhar, N., Godreuil, S., Jarlier, V., et al. (2021). Intracellular localisation of Mycobacterium tuberculosis affects efficacy of the antibiotic pyrazinamide. <i>Nat Commun</i> <b>12</b>, 3816.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1126/science.aaw6635" target="_blank">
+                Greenwood, D.J., Dos Santos, M.S., Huang, S., Russell, M.R.G., Collinson, L.M., MacRae, J.I., West, A., Jiang, H., and Gutierrez, M.G. (2019). Subcellular antibiotic visualization reveals a dynamic drug reservoir in infected macrophages. <i>Science</i> <b>364</b>, 1279–1282.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1038/s41598-017-00610-1" target="_blank">
+                Aljayyoussi, G., Jenkins, V.A., Sharma, R., Ardrey, A., Donnellan, S., Ward, S.A., and Biagini, G.A. (2017). Pharmacokinetic-Pharmacodynamic modelling of intracellular Mycobacterium tuberculosis growth and kill rates is predictive of clinical treatment duration. <i>Sci Rep</i> <b>7</b>, 502.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1007/BF01964352" target="_blank">
+                Tulkens, P.M. (1991). Intracellular distribution and activity of antibiotics. <i>Eur J Clin Microbiol Infect Dis</i> <b>10</b>, 100–106.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1128/AAC.50.3.841-851.2006" target="_blank">
+                Barcia-Macay, M., Seral, C., Mingeot-Leclercq, M.P., Tulkens, P.M., and Van Bambeke, F. (2006). Pharmacodynamic evaluation of the intracellular activities of antibiotics against Staphylococcus aureus in a model of THP-1 macrophages. <i>Antimicrob Agents Chemother</i> <b>50</b>, 841–851.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1038/s41579-022-00711-y" target="_blank">
+                Chung, E.S., Johnson, W.C., and Aldridge, B.B. (2022). Types and functions of heterogeneity in mycobacteria. <i>Nat Rev Microbiol</i> <b>20</b>, 529–541.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1128/microbiolspec.TBTB2-0021-2016" target="_blank">
+                Dhar, N., McKinney, J., and Manina, G. (2016). Phenotypic Heterogeneity in Mycobacterium tuberculosis. <i>Microbiol Spectr</i> <b>4</b>.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1016/j.bmcl.2013.06.008" target="_blank">
+                Dartois, V., and Barry, 3rd, C.E. (2013). A medicinal chemists’ guide to the unique difficulties of lead optimization for tuberculosis. <i>Bioorg Med Chem Lett</i> <b>23</b>, 4741–4750.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1016/j.tim.2023.08.009" target="_blank">
+                Day, N.J., Santucci, P., and Gutierrez, M.G. (2024). Host cell environments and antibiotic efficacy in tuberculosis. <i>Trends Microbiol</i> <b>32</b>, 270–279.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1038/s41564-024-01846-z" target="_blank">
+                Chung, E.S., Kar, P., Kamkaew, M., Amir, A., and Aldridge, B.B. (2024). Single-cell imaging of the Mycobacterium tuberculosis cell cycle reveals linear and heterogenous growth. <i>Nat Microbiol</i>.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1038/s41467-024-48269-2" target="_blank">
+                Mistretta, M., Olivieri, P., Manzoni, E.F.M., Valdebenito, S., Mooney, D.J., Cirillo, D.M., Geiser, T., Barer, M.R., Khara, J.S., and Kolter, R. (2024). Dynamic microfluidic single-cell screening identifies pheno-tuning compounds to potentiate tuberculosis therapy. <i>Nat Commun</i> <b>15</b>, 4175.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.4155/fmc.10.99" target="_blank">
+                Christophe, T., Ewann, F., Jeon, H.K., Cechetto, J., and Brodin, P. (2010). High-content imaging of Mycobacterium tuberculosis-infected macrophages: an in vitro model for tuberculosis drug discovery. <i>Future Med Chem</i> <b>2</b>, 1283–1293.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1128/mBio.02236-14" target="_blank">
+                Maglica, Z., Ozdemir, E., and McKinney, J.D. (2015). Single-cell tracking reveals antibiotic-induced changes in mycobacterial energy metabolism. <i>mBio</i> <b>6</b>, e02236–02214.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1099/mic.0.000281" target="_blank">
+                Mouton, J.M., Helaine, S., Holden, D.W., and Sampson, S.L. (2016). Elucidating population-wide mycobacterial replication dynamics at the single-cell level. <i>Microbiology (Reading)</i> <b>162</b>, 966–978.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1007/978-1-0716-3627-3_9" target="_blank">
+                Toniolo, C., Sage, D., McKinney, J.D., and Dhar, N. (2024). Quantification of Mycobacterium tuberculosis Growth in Cell-Based Infection Assays by Time-Lapse Fluorescence Microscopy. In <i>Methods Mol Biol</i>, pp. 167–188.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1016/j.ymeth.2019.05.005" target="_blank">
+                Skarnes, W.C., Pellegrino, E., and McDonough, J.A. (2019). Improving homology-directed repair efficiency in human stem cells. <i>Methods</i> <b>164–165</b>, 18–28.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.2307/2286407" target="_blank">
+                Cleveland, W.S. (1979). Robust Locally Weighted Regression and Smoothing Scatterplots. <i>Journal of the American Statistical Association</i> <b>74</b>, 829–836.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.4049/jimmunol.170.4.1939" target="_blank">
+                Tailleux, L., Neyrolles, O., Honore-Bouakline, S., Perret, E., Sanchez, F., Abastado, J.P., Lagrange, P.H., Gluckman, J.C., Rosenzwajg, M., and Herrmann, J.L. (2003). Constrained intracellular survival of Mycobacterium tuberculosis in human dendritic cells. <i>J Immunol</i> <b>170</b>, 1939–1948.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.7554/eLife.22028" target="_blank">
+                Mahamed, D., Boulle, M., Ganga, Y., Mc Arthur, C., Skroch, S., Oom, L., Catinas, O., Pillay, K., Naicker, M., Rampersad, S., et al. (2017). Intracellular growth of Mycobacterium tuberculosis after macrophage cell death leads to serial killing of host cells. <i>Elife</i> <b>6</b>.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1371/journal.ppat.1003190" target="_blank">
+                Repasy, T., Lee, J., Marino, S., Martinez, N., Kirschner, D.E., Hendricks, G., Baker, S., Wilson, A.A., Kotton, D.N., and Kornfeld, H. (2013). Intracellular bacillary burden reflects a burst size for Mycobacterium tuberculosis in vivo. <i>PLoS Pathog</i> <b>9</b>, e1003190.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1083/jcb.201603040" target="_blank">
+                Lerner, T.R., Queval, C.J., Fearns, A., Repnik, U., Griffiths, G., and Gutierrez, M.G. (2017). Mycobacterium tuberculosis replicates within necrotic human macrophages. <i>J Cell Biol</i> <b>216</b>, 583–594.
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/napari/napari" target="_blank">
+                Sofroniew, N., Talley, L., Bokota, G., Nunez-Iglesias, J., Sobolewski, P., Sweet, A., Gaifas, L., Evans, K., Burt, A., Pop, D.D., et al. (2019).
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1084/jem.20172008" target="_blank">
+                Huang, L., Nazarova, E.V., Tan, S., Liu, Y., and Russell, D.G. (2018). Growth of Mycobacterium tuberculosis in vivo segregates with host macrophage metabolism and ontogeny. <i>J Exp Med</i> <b>215</b>, 1135–1152.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1016/j.chom.2024.04.015" target="_blank">
+                Amoura, A., Zhou, D., Oufensou, S., Arkhipov, S.N., Plotkin, B.J., and Tirrell, D.A. (2024). Variability in cell division among anatomical sites shapes Escherichia coli antibiotic survival in a urinary tract infection mouse model. <i>Cell Host Microbe</i> <b>32</b>, 900–912 e904.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1038/nm.1915" target="_blank">
+                Gill, W.P., Harik, N.S., Whiddon, M.R., Liao, R.P., Mittler, J.E., and Sherman, D.R. (2009). A replication clock for Mycobacterium tuberculosis. <i>Nat Med</i> <b>15</b>, 211–214.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1021/acsinfecdis.6b00019" target="_blank">
+                Irwin, S.M., Prideaux, B., Lyon, E.R., Zimmerman, M.D., Brooks, E.J., Schrupp, C.A., Chen, C., Reichlen, M.J., Asay, B.C., Voskuil, M.I., et al. (2016). Bedaquiline and Pyrazinamide Treatment Responses Are Affected by Pulmonary Lesion Heterogeneity in Mycobacterium tuberculosis Infected C3HeB/FeJ Mice. <i>ACS Infect Dis</i> <b>2</b>, 251–267.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1016/j.chom.2024.04.019" target="_blank">
+                Helaine, S., Conlon, B.P., Davis, K.M., and Russell, D.G. (2024). Host stress drives tolerance and persistence: The bane of anti-microbial therapeutics. <i>Cell Host Microbe</i> <b>32</b>, 852–862.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1186/s13059-014-0520-0" target="_blank">
+                Koch, A., and Wilkinson, R.J. (2014). The road to drug resistance in Mycobacterium tuberculosis. <i>Genome Biol</i> <b>15</b>, 520.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1111/jam.14477" target="_blank">
+                Singh, R., Dwivedi, S.P., Gaharwar, U.S., Meena, R., Rajamani, P., and Prasad, T. (2020). Recent updates on drug resistance in Mycobacterium tuberculosis. <i>J Appl Microbiol</i> <b>128</b>, 1547–1567.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.7554/eLife.68624" target="_blank">
+                Lapinska, U., Zhu, J.H., He, M., Hiller, J., Chan-Hyams, J., Wang, J., De Sousa Linhares, A., Xu, J., Cui, K., Zhang, Y., et al. (2022). Fast bacterial growth reduces antibiotic accumulation and efficacy. <i>Elife</i> <b>11</b>.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1089/mdr.1997.3.277" target="_blank">
+                Bermudez, L.E., and Inderlied, C.B. (1997). Effect of Mycobacterium avium infection on the influx, accumulation, and efflux of KRM-1648 by human macrophages. <i>Microb Drug Resist</i> <b>3</b>, 277–282.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1038/s41429-021-00430-w" target="_blank">
+                Adams, R.A., Witt, D., Lin, X., Hua, X., Williams, R.J., Kock, C., Nigam, S., Chen, P., Mao, Y., and Drlica, K. (2021). Rifamycin antibiotics and the mechanisms of their failure. <i>J Antibiot (Tokyo)</i> <b>74</b>, 786–798.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.15252/msb.20145746" target="_blank">
+                Greulich, P., Scott, M., Evans, M.R., and Allen, R.J. (2015). Growth-dependent bacterial susceptibility to ribosome-targeting antibiotics. <i>Mol Syst Biol</i> <b>11</b>, 796.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1038/s41467-018-06691-5" target="_blank">
+                Zhu, J.H., Wang, B.W., Pan, M., Zeng, Y.N., Rego, H., and Javid, B. (2018). Rifampicin can induce antibiotic tolerance in mycobacteria via paradoxical changes in rpoB transcription. <i>Nat Commun</i> <b>9</b>, 4218.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1088/1478-3975/ab1c9c" target="_blank">
+                Sinclair, P., Carballo-Pacheco, M., and Allen, R.J. (2019). Growth-dependent drug susceptibility can prevent or enhance spatial expansion of a bacterial population. <i>Phys Biol</i> <b>16</b>, 046001.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1128/mbio.00659-22" target="_blank">
+                Ojkic, N., Serbanescu, D., and Banerjee, S. (2022). Antibiotic Resistance via Bacterial Cell Shape-Shifting. <i>mBio</i> <b>13</b>, e0065922.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1126/scitranslmed.aav2101" target="_blank">
+                Mishra, R., Kohli, S., Malhotra, N., Bandyopadhyay, P., Mehta, M., Munshi, M., Adiga, V., Ahuja, V.K., Shandil, R.K., and Rajmani, R.S. (2019). Targeting redox heterogeneity to counteract drug tolerance in replicating Mycobacterium tuberculosis. <i>Sci Transl Med</i> <b>11</b>.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1126/science.1229858" target="_blank">
+                Wakamoto, Y., Dhar, N., Chait, R., Schneider, K., Signorino-Gelo, F., Leibler, S., and McKinney, J.D. (2013). Dynamic persistence of antibiotic-stressed mycobacteria. <i>Science</i> <b>339</b>, 91–95.
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1128/MMBR.00462-19" target="_blank">
+                Lamont, E.A., Dillon, N.A., and Baughn, A.D. (2020). The Bewildering Antitubercular Action of Pyrazinamide. <i>Microbiol Mol Biol Rev</i> <b>84</b>.
+              </a>
+            </li>
+          </ol>
+        </section>
+
+    </article>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOMContentLoaded event fired. Script is running.');
+
+            const iframes = document.querySelectorAll('.research-figure iframe');
+            console.log(`Found ${iframes.length} iframe(s).`);
+
+            iframes.forEach(iframe => {
+                iframe.addEventListener('load', () => {
+                    console.log(`Iframe with ID "${iframe.id}" has loaded.`);
+
+                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    if (iframeDoc) {
+                        const newHeight = iframeDoc.body.scrollHeight;
+                        console.log(`Calculated height for iframe: ${newHeight}px`);
+                        iframe.style.height = newHeight + 'px';
+                    } else {
+                        console.warn(`Could not access content for iframe with ID "${iframe.id}".`);
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
