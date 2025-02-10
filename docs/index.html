@@ -5,6 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mycobacterium tuberculosis Research Paper</title>
     <link rel="stylesheet" href="css/styles.css">
+    // Add this script tag in your index.html's head section, before your existing script:
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    // Then replace your existing loadPlotlyFigure function with this:
+    async function loadPlotlyFigure() {
+        console.log('=== DEBUG START ===');
+
+        // 1. Check if Plotly is loaded
+        console.log('1. Checking Plotly:');
+        console.log('- Plotly available:', typeof Plotly !== 'undefined');
+
+        try {
+            // 2. Check if plot div exists
+            const plotDiv = document.getElementById('plot');
+            console.log('2. Plot div check:');
+            console.log('- Exists:', !!plotDiv);
+
+            // 3. Try to load the data
+            console.log('3. Loading data file');
+            const response = await fetch('/figures/data/F1_plot_data.json');
+            console.log('- Response status:', response.status);
+
+            if (!response.ok) {
+                throw new Error(`Failed to load data file (${response.status})`);
+            }
+
+            const data = await response.json();
+            console.log('- Data loaded successfully');
+
+            // 4. Create plot
+            console.log('4. Creating plot');
+            await Plotly.newPlot('plot', data.data, data.layout, {
+                responsive: true,
+                scrollZoom: true,
+                displaylogo: false,
+                modeBarButtonsToRemove: ['zoom2d', 'pan2d', 'select2d', 'lasso2d']
+            });
+            console.log('- Plot created successfully');
+
+        } catch (error) {
+            console.error('ERROR:', error.message);
+            console.error('Error details:', error);
+        }
+
+        console.log('=== DEBUG END ===');
+    }
+
+    // Initialize when DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Page loaded, starting initialization');
+        loadPlotlyFigure();
+    });
 </head>
 <body>
     <article class="scientific-paper">
