@@ -1,61 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mycobacterium tuberculosis Research Paper</title>
     <link rel="stylesheet" href="css/styles.css">
-    // Add this script tag in your index.html's head section, before your existing script:
-    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
-    // Then replace your existing loadPlotlyFigure function with this:
-    async function loadPlotlyFigure() {
-        console.log('=== DEBUG START ===');
-
-        // 1. Check if Plotly is loaded
-        console.log('1. Checking Plotly:');
-        console.log('- Plotly available:', typeof Plotly !== 'undefined');
-
-        try {
-            // 2. Check if plot div exists
-            const plotDiv = document.getElementById('plot');
-            console.log('2. Plot div check:');
-            console.log('- Exists:', !!plotDiv);
-
-            // 3. Try to load the data
-            console.log('3. Loading data file');
-            const response = await fetch('/figures/data/F1_plot_data.json');
-            console.log('- Response status:', response.status);
-
-            if (!response.ok) {
-                throw new Error(`Failed to load data file (${response.status})`);
-            }
-
-            const data = await response.json();
-            console.log('- Data loaded successfully');
-
-            // 4. Create plot
-            console.log('4. Creating plot');
-            await Plotly.newPlot('plot', data.data, data.layout, {
-                responsive: true,
-                scrollZoom: true,
-                displaylogo: false,
-                modeBarButtonsToRemove: ['zoom2d', 'pan2d', 'select2d', 'lasso2d']
-            });
-            console.log('- Plot created successfully');
-
-        } catch (error) {
-            console.error('ERROR:', error.message);
-            console.error('Error details:', error);
-        }
-
-        console.log('=== DEBUG END ===');
-    }
-
-    // Initialize when DOM is ready
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log('Page loaded, starting initialization');
-        loadPlotlyFigure();
-    });
 </head>
 <body>
     <article class="scientific-paper">
@@ -157,197 +107,7 @@
                           </video>
                       </div>
                   </div>
-                    <script>
-                        // Function to load large Plotly figure data
-                        async function loadPlotlyFigure() {
-                            try {
-                                // Fetch the pre-exported figure data
-                                const response = await fetch('figures/data/F1_plot_data.json');
-                                const figureData = await response.json();
 
-                                // Optimization for large datasets
-                                Plotly.newPlot('plot', figureData.data, figureData.layout, {
-                                    responsive: true,
-                                    scrollZoom: true,
-                                    displaylogo: false,
-                                    modeBarButtonsToRemove: ['zoom2d', 'pan2d', 'select2d', 'lasso2d']
-                                });
-
-                                // Add hover functionality
-                                document.getElementById('plot').on('plotly_hover', function(eventData) {
-                                    const point = eventData.points[0];
-                                    if (point.customdata) {
-                                        const hoverContent = document.createElement('div');
-                                        hoverContent.className = 'hover-popup';
-                                        hoverContent.innerHTML = `<img src="${point.customdata}" style="width: 350px; height: auto;">`;
-                                        document.body.appendChild(hoverContent);
-
-                                        hoverContent.style.left = `${eventData.event.clientX - 360}px`;
-                                        hoverContent.style.top = `${eventData.event.clientY + 10}px`;
-
-                                        document.getElementById('plot').on('plotly_unhover', function() {
-                                            hoverContent.remove();
-                                        });
-                                    }
-                                });
-
-                                // Add these global variables at the top of the script
-                                const PLOT_POPUP_WIDTH = 350;
-
-                                // Hover areas functionality
-                                const hoverAreas = document.querySelectorAll('.hover-area');
-                                const hoverPopup = document.getElementById('hover-popup');
-                                const popupImage = document.getElementById('popup-image');
-                                const modal = document.getElementById('imageModal');
-                                const modalImg = document.getElementById('modalImage');
-                                const closeButton = document.querySelector('.close-button');
-                                const modalVideo = document.getElementById('modalVideo');
-
-                                let scale = 1;
-                                let panning = false;
-                                let pointX = 0;
-                                let pointY = 0;
-                                let start = { x: 0, y: 0 };
-
-                                hoverAreas.forEach(area => {
-                                    let isHovering = false;
-
-                                    area.addEventListener('mousemove', (e) => {
-                                        isHovering = true;
-                                        const mediaType = area.getAttribute('data-type') || 'image';
-                                        const mediaUrl = mediaType === 'video' ?
-                                            area.getAttribute('data-media') :
-                                            area.getAttribute('data-image');
-
-                                        if (mediaType === 'video') {
-                                            hoverPopup.style.display = 'block';
-                                            if (!popupImage.parentElement.querySelector('video')) {
-                                                const video = document.createElement('video');
-                                                video.src = mediaUrl;
-                                                video.style.width = `${PLOT_POPUP_WIDTH}px`;
-                                                video.style.height = 'auto';
-                                                video.autoplay = true;
-                                                video.loop = true;
-                                                video.muted = true;
-                                                popupImage.parentElement.appendChild(video);
-                                                popupImage.style.display = 'none';
-                                            }
-                                        } else {
-                                            popupImage.src = mediaUrl;
-                                            popupImage.style.display = 'block';
-                                            const video = popupImage.parentElement.querySelector('video');
-                                            if (video) video.remove();
-                                        }
-
-                                        hoverPopup.style.display = 'block';
-                                        hoverPopup.style.left = `${e.clientX - PLOT_POPUP_WIDTH - 10}px`;
-                                        hoverPopup.style.top = `${e.clientY + 10}px`;
-                                    });
-
-                                    area.addEventListener('mouseleave', () => {
-                                        isHovering = false;
-                                        hoverPopup.style.display = 'none';
-                                        const video = popupImage.parentElement.querySelector('video');
-                                        if (video) video.remove();
-                                        popupImage.style.display = 'block';
-                                    });
-
-                                    // Image handling
-                                    if (!area.hasAttribute('data-type')) {
-                                        area.addEventListener('click', (e) => {
-                                            if (isHovering) {
-                                                modal.style.display = 'block';
-                                                modalImg.style.display = 'block';
-                                                modalVideo.style.display = 'none';
-                                                modalImg.src = popupImage.src;
-                                                scale = 1;
-                                                pointX = 0;
-                                                pointY = 0;
-                                                modalImg.style.transform = `scale(${scale}) translate(${pointX}px, ${pointY}px)`;
-                                            }
-                                        });
-                                    }
-                                    // Video handling
-                                    else if (area.getAttribute('data-type') === 'video') {
-                                        area.addEventListener('click', (e) => {
-                                            if (isHovering) {
-                                                modal.style.display = 'block';
-                                                modalImg.style.display = 'none';
-                                                modalVideo.style.display = 'block';
-                                                modalVideo.src = area.getAttribute('data-media');
-                                                modalVideo.play();
-                                            }
-                                        });
-                                    }
-                                });
-
-                                // Modal functionality
-                                closeButton.addEventListener('click', function() {
-                                    modal.style.display = 'none';
-                                });
-
-                                // Zoom with mouse wheel
-                                modalImg.addEventListener('wheel', function(e) {
-                                    e.preventDefault();
-
-                                    // Get dimensions of image and container
-                                    const rect = modalImg.getBoundingClientRect();
-                                    const container = modal.getBoundingClientRect();
-
-                                    // Get mouse position relative to container center
-                                    const mouseX = e.clientX - (container.left + container.width / 2);
-                                    const mouseY = e.clientY - (container.top + container.height / 2);
-
-                                    // Calculate new scale
-                                    if (e.deltaY < 0) {
-                                        scale = Math.min(scale * 1.1, 4);
-                                    } else {
-                                        scale = Math.max(scale / 1.1, 0.125);
-                                    }
-
-                                    // Update position to maintain mouse point position
-                                    pointX = mouseX * (1 - scale);
-                                    pointY = mouseY * (1 - scale);
-
-                                    modalImg.style.transformOrigin = 'center';
-                                    modalImg.style.transform = `scale(${scale}) translate(${pointX / scale}px, ${pointY / scale}px)`;
-                                });
-
-                                // Pan functionality
-                                modalImg.addEventListener('mousedown', function(e) {
-                                    e.preventDefault();
-                                    start = { x: e.clientX - pointX, y: e.clientY - pointY };
-                                    panning = true;
-                                });
-
-                                document.addEventListener('mousemove', function(e) {
-                                    if (!panning) return;
-                                    pointX = (e.clientX - start.x);
-                                    pointY = (e.clientY - start.y);
-                                    modalImg.style.transform = `scale(${scale}) translate(${pointX / scale}px, ${pointY / scale}px)`;
-                                });
-
-                                document.addEventListener('mouseup', function() {
-                                    panning = false;
-                                });
-
-                                modal.addEventListener('mousedown', function(e) {
-                                    if (e.target === modal) {
-                                        modal.style.display = 'none';
-                                        scale = 1;
-                                        pointX = 0;
-                                        pointY = 0;
-                                        modalImg.style.transform = `scale(1) translate(0px, 0px)`;
-                                    }
-                                });
-                                                } catch (error) {
-                              console.error('Error loading Plotly figure:', error);
-                          }
-                      }
-
-                      // Load the figure when the page is ready
-                      document.addEventListener('DOMContentLoaded', loadPlotlyFigure);
-                    </script>
                   <figcaption>
                       <b>Fig. 1. A high-content live single-cell imaging approach to monitor Mtb replication in human macrophages.</b>
                       <p><b>(A)</b> Timeline of the experimental design and imaging conditions. <b>(B)</b> A single image acquisition, showing EGFP-expressing macrophages infected with Mtb H37Rv WT-E2Crimson. <b>(C)</b> A full mosaic of 9 images (single tile shown as white square inset) with 10% overlap. <b>(D)</b> Each mosaic is composed of 2 fluorescent channels and 3 z-slices with a step of 2μm. <b>(E)</b> The image acquisition lasts for 75 h at 30/60min frame rates. <b>(F)</b> This image volume is then segmented using the EGFP channel. <b>(G)</b> Each segment in each frame is then localized and intracellular Mtb quantified, prior to linking each cell instance over time into a series of tracks, shown here as a visualization in 3 dimensions (x,y,t). <b>(H)</b> Single-cell trajectories (N=1,127) of intracellular Mtb growth in n=4 biological replicates, color-coded to the final intracellular Mtb burden.</p>
@@ -364,16 +124,60 @@
                     <p>When analyzing the distribution of intracellular Mtb WT doubling times, we found that while 21% of doubling instances fell with the scope of normal growth, whilst 48% were of the fast-growing phenotype, and 31% the slow-growing phenotype <i>(Fig. 2D)</i>. To corroborate our observations, we measured the growth of a mutant of Mtb which lacks the RD1 genomic locus. This mutation restricts the Mtb ΔRD1 to membrane-bound compartments, preventing access to the pH-neutral and nutrient-rich cytosol of host cells. As a result of this, the Mtb ΔRD1 grows less within human macrophages <i>(27)</i>, a characteristic that is reflected in the total number of doubling times recorded (N=190), which is sharply reduced compared to Mtb WT (N=941) <i>(Fig. 2D)</i>.</p>
                     <p>The growth phenotype proportions of the distribution of Mtb ∆RD1 populations were relatively similar to Mtb WT, at 45%, 10% and 45%. The average doubling time was increased to 19 hours with an increase of 14% in the slow growing population, confirming a reduced capacity for growth of Mtb ∆RD1 as previously reported <i>(27)</i>. Altogether, our single-cell Mtb replication analysis showed that contrary to the behavior observed in vitro, a fraction of Mtb can grow substantially faster in cellulo <i>(Fig. 2D)</i>. However, a subset of intracellular populations showed near instantaneous doubling times and extremely rapid growth, warranting further investigation.</p>
                   </div>
-                  <iframe
-                      id="fig:2"
-                      src="figures/F2.html"
-                      title="Figure 2: Initial investigation of doubling times"
-                      loading="lazy"
-                      width="100%"
-                      style="height: 1450px; border: none; overflow: visible;">
-                  </iframe>
+                  <!-- F2 Content -->
+                  <div class="main-container">
+                      <div class="pairs-container">
+                          <!-- First pair: F2A -->
+                          <div class="pair">
+                              <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S2.mp4">
+                                  <img src="images/Figure 2A.png" alt="Figure 2A">
+                                  <div class="video-hover">
+                                      <video style="width: 400px; height: 400px; object-fit: cover; object-position: left top;"
+                                             autoplay loop muted playsinline></video>
+                                  </div>
+                              </div>
+                              <div id="growth-plot-1" class="growth-plot"></div>
+                          </div>
+
+                          <!-- Second pair: F2B -->
+                          <div class="pair">
+                              <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S3.mp4">
+                                  <img src="images/Figure 2B.png" alt="Figure 2B">
+                                  <div class="video-hover">
+                                      <video style="width: 400px; height: 400px; object-fit: cover; object-position: left top;"
+                                             autoplay loop muted playsinline></video>
+                                  </div>
+                              </div>
+                              <div id="growth-plot-2" class="growth-plot"></div>
+                          </div>
+
+                          <!-- Third pair: F2C -->
+                          <div class="pair">
+                              <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S4.mp4">
+                                  <img src="images/Figure 2C.png" alt="Figure 2C">
+                                  <div class="video-hover">
+                                      <video style="width: 400px; height: 400px; object-fit: cover; object-position: left top;"
+                                             autoplay loop muted playsinline></video>
+                                  </div>
+                              </div>
+                              <div id="growth-plot-3" class="growth-plot"></div>
+                          </div>
+                      </div>
+
+                      <!-- Boxplot section: F2D -->
+                      <div class="boxplot-section">
+                          <div class="caption-image">
+                              <img src="images/Figure 2D caption.png" style="width: 100%; object-fit: cover; object-position: top; margin-left: -10px;" alt="Caption">
+                          </div>
+                          <div id="boxplot"></div>
+                          <div id="hover-popup" class="hover-popup">
+                              <video id="popup-video" style="width: 400px; height: 400px; object-fit: cover; object-position: left top;"
+                                     autoplay loop muted playsinline></video>
+                          </div>
+                      </div>
+                  </div>
                   <figcaption>
-                      <p><b>Fig. 2.</b> Infected macrophage tracking and quantification reveals extremely variegated growth rates. <b>(A)</b> Single cell example of normal doubling time (24 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with the doubling points in grey dotted lines (right). <b>(B)</b> Single cell example of slow doubling time (66 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with the doubling points in grey dotted lines. <b>(C)</b> Single cell example of fast doubling time (13 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with t dotted lines. The raw data is shown in magenta. <b>(D)</b> Box plots showing the distribution of intracellular doubling times for intracellular Mtb WT and Mtb ∆RD1.</p>
+                      <p><b>Fig. 2.</b> Infected macrophage tracking and quantification reveals extremely variegated growth rates. <b>(A)</b> Single cell example of normal doubling time (24 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with the doubling points in grey dotted lines (right). <b>(B)</b> Single cell example of slow doubling time (66 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with the doubling points in grey dotted lines. <b>(C)</b> Single cell example of fast doubling time (13 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with dotted lines. The raw data is shown in magenta. <b>(D)</b> Box plots showing the distribution of intracellular doubling times for intracellular Mtb WT and Mtb ∆RD1.</p>
                   </figcaption>
               </figure>
           </section>
@@ -696,5 +500,314 @@
         </section>
 
     </article>
+    <script>
+        // Constants and shared variables
+        const PLOT_POPUP_WIDTH = 350;
+        let scale = 1, panning = false, pointX = 0, pointY = 0, start = { x: 0, y: 0 };
+
+        // Generic plot loading function
+        async function loadPlotlyFigure(elementId, dataPath, options = {}) {
+            try {
+                const response = await fetch(dataPath);
+                const figureData = await response.json();
+                const layout = {...figureData.layout, ...options.layout};
+
+                await Plotly.newPlot(elementId, figureData.data, layout, {
+                    responsive: true,
+                    scrollZoom: true,
+                    displaylogo: false,
+                    modeBarButtonsToRemove: ['zoom2d', 'pan2d', 'select2d', 'lasso2d']
+                });
+
+                return true;
+            } catch (error) {
+                console.error(`Error loading plot ${elementId}:`, error);
+                return false;
+            }
+        }
+
+        // Generic hover setup for plots
+        function setupPlotHover(plotId, customHandler) {
+            const plotDiv = document.getElementById(plotId);
+            if (!plotDiv) return;
+
+            plotDiv.style.position = 'relative';
+            plotDiv.on('plotly_hover', function(eventData) {
+                const point = eventData.points[0];
+                if (point.customdata) {
+                    if (customHandler) {
+                        customHandler(eventData, point);
+                    } else {
+                        const hoverContent = document.createElement('div');
+                        hoverContent.className = 'hover-popup';
+                        const content = `
+                            <div class="hover-content" style="position: relative;">
+                                <img src="${point.customdata.image || point.customdata}" style="width: 350px; height: auto;">
+                                ${point.customdata.note ? `<div class="hover-note">${point.customdata.note}</div>` : ''}
+                            </div>
+                        `;
+                        hoverContent.innerHTML = content;
+                        document.body.appendChild(hoverContent);
+
+                        hoverContent.style.left = `${eventData.event.clientX - 360}px`;
+                        hoverContent.style.top = `${eventData.event.clientY + 10}px`;
+
+                        plotDiv.on('plotly_unhover', () => hoverContent.remove());
+                    }
+                }
+            });
+        }
+
+        // Initialize plots
+        async function initializePlots() {
+            try {
+                // F1 plot
+                if (document.getElementById('plot')) {
+                    await loadPlotlyFigure('plot', 'figures/data/F1_plot_data.json');
+                    setupPlotHover('plot');
+                }
+
+                // F2 plots
+                const f2Plots = [
+                    { id: 'growth-plot-1', path: 'figures/data/F2A_plot_data.json' },
+                    { id: 'growth-plot-2', path: 'figures/data/F2B_plot_data.json' },
+                    { id: 'growth-plot-3', path: 'figures/data/F2C_plot_data.json' }
+                ];
+
+                for (const plot of f2Plots) {
+                    if (document.getElementById(plot.id)) {
+                        await loadPlotlyFigure(plot.id, plot.path, {
+                            layout: { margin: {t: 50, b: 0, l: 20, r: 50} }
+                        });
+                        setupPlotHover(plot.id);
+                    }
+                }
+
+                // F2 boxplot
+                if (document.getElementById('boxplot')) {
+                  await loadPlotlyFigure('boxplot', 'figures/data/F2D_plot_data.json', {
+                        layout: {
+                            autosize: true,
+                            width: 900,
+                            height: 250,
+                            margin: {t: 0, b: 0, l: 0, r: 0},
+                            legend: {
+                                    title: {
+                                            text: 'Growth Phenotype<br>Key', // Your custom legend title
+                                            font: {
+                                                    family: 'Arial, sans-serif',
+                                                    size: 16,
+                                                    color: '#000000'
+                                                  }
+                                              },
+                                      x: 1,  // Move legend to the right of the plot (1.0 is the right edge of the plot)
+                                      y: 0.7,  // Vertically center the legend
+                                      xanchor: 'left', // Anchor point for x positioning
+                                      yanchor: 'middle' // Anchor point for y positioning
+                                  },
+                        }
+                      });
+                    // setupBoxplotHover(); here is the unfulfilled boxplot hovertool
+                }
+
+                // Setup additional interactions
+                setupVideoHovers();
+                setupHoverAreas();
+
+            } catch (error) {
+                console.error('Error initializing plots:', error);
+            }
+        }
+
+        // Hover media handling
+        function handleHoverMedia(mediaType, mediaUrl, event) {
+            const hoverPopup = document.getElementById('hover-popup');
+            const popupImage = document.getElementById('popup-image');
+
+            if (mediaType === 'video') {
+                hoverPopup.style.display = 'block';
+                if (!popupImage.parentElement.querySelector('video')) {
+                    const video = document.createElement('video');
+                    video.src = mediaUrl;
+                    video.style.width = `${PLOT_POPUP_WIDTH}px`;
+                    video.style.height = 'auto';
+                    video.autoplay = true;
+                    video.loop = true;
+                    video.muted = true;
+                    popupImage.parentElement.appendChild(video);
+                    popupImage.style.display = 'none';
+                }
+            } else {
+                popupImage.src = mediaUrl;
+                popupImage.style.display = 'block';
+                const video = popupImage.parentElement.querySelector('video');
+                if (video) video.remove();
+            }
+
+            hoverPopup.style.display = 'block';
+            hoverPopup.style.left = `${event.clientX - PLOT_POPUP_WIDTH - 10}px`;
+            hoverPopup.style.top = `${event.clientY + 10}px`;
+        }
+
+        // Hover and click handlers
+        function handleHoverLeave() {
+            const hoverPopup = document.getElementById('hover-popup');
+            const popupImage = document.getElementById('popup-image');
+
+            hoverPopup.style.display = 'none';
+            const video = popupImage.parentElement.querySelector('video');
+            if (video) video.remove();
+            popupImage.style.display = 'block';
+        }
+
+        function handleImageClick(event, isHovering) {
+            if (!isHovering) return;
+
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalVideo = document.getElementById('modalVideo');
+            const popupImage = document.getElementById('popup-image');
+
+            modal.style.display = 'block';
+            modalImg.style.display = 'block';
+            modalVideo.style.display = 'none';
+            modalImg.src = popupImage.src;
+            scale = 1;
+            pointX = 0;
+            pointY = 0;
+            modalImg.style.transform = `scale(${scale}) translate(${pointX}px, ${pointY}px)`;
+        }
+
+        function handleVideoClick(event, isHovering, area) {
+            if (!isHovering) return;
+
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalVideo = document.getElementById('modalVideo');
+
+            modal.style.display = 'block';
+            modalImg.style.display = 'none';
+            modalVideo.style.display = 'block';
+            modalVideo.src = area.getAttribute('data-media');
+            modalVideo.play();
+        }
+
+        // Setup hover areas
+        function setupHoverAreas() {
+            const hoverAreas = document.querySelectorAll('.hover-area');
+
+            hoverAreas.forEach(area => {
+                let isHovering = false;
+
+                area.addEventListener('mousemove', (e) => {
+                    isHovering = true;
+                    const mediaType = area.getAttribute('data-type') || 'image';
+                    const mediaUrl = mediaType === 'video' ?
+                        area.getAttribute('data-media') :
+                        area.getAttribute('data-image');
+
+                    handleHoverMedia(mediaType, mediaUrl, e);
+                });
+
+                area.addEventListener('mouseleave', handleHoverLeave);
+
+                // Click handlers
+                if (!area.hasAttribute('data-type')) {
+                    area.addEventListener('click', (e) => handleImageClick(e, isHovering));
+                } else if (area.getAttribute('data-type') === 'video') {
+                    area.addEventListener('click', (e) => handleVideoClick(e, isHovering, area));
+                }
+            });
+
+            setupModalControls();
+        }
+
+        // Modal controls (kept as is from your original script)
+        function setupModalControls() {
+            // ... (your existing modal control implementation)
+        }
+
+        // Video hover setup
+        function setupVideoHovers() {
+            document.querySelectorAll('.figure-image').forEach(container => {
+                const videoHover = container.querySelector('.video-hover');
+                const video = videoHover.querySelector('video');
+                const videoUrl = container.dataset.video;
+
+                container.addEventListener('mouseenter', (event) => {
+                    if (videoUrl) {
+                        video.src = videoUrl;
+                        videoHover.style.display = 'block';
+                    }
+                });
+
+                container.addEventListener('mousemove', (event) => {
+                    if (videoUrl) {
+                        // Position the video hover near the mouse cursor
+                        videoHover.style.position = 'fixed';
+                        videoHover.style.left = `${event.clientX + 10}px`;
+                        videoHover.style.top = `${event.clientY + 10}px`;
+                        videoHover.style.zIndex = '1000';
+                    }
+                });
+
+                container.addEventListener('mouseleave', () => {
+                    videoHover.style.display = 'none';
+                    video.pause();
+                    video.src = '';  // Clear source to stop loading
+                });
+            });
+        }
+
+        // Boxplot hover setup
+        function setupBoxplotHover() {
+            const boxplot = document.getElementById('boxplot');
+            const hoverPopup = document.getElementById('hover-popup');
+            const popupVideo = document.getElementById('popup-video');
+
+            if (!boxplot) return;
+
+            boxplot.on('plotly_hover', function(eventData) {
+                const point = eventData.points[0];
+                const videoUrl = point.customdata;
+
+                if (videoUrl) {
+                    popupVideo.src = videoUrl;
+                    hoverPopup.style.display = 'block';
+
+                    const hoverWidth = hoverPopup.offsetWidth;
+                    const hoverHeight = hoverPopup.offsetHeight;
+                    hoverPopup.style.left = `${eventData.event.clientX - hoverWidth}px`;
+                    hoverPopup.style.top = `${eventData.event.clientY + hoverHeight}px`;
+                }
+            });
+
+            boxplot.on('plotly_unhover', function() {
+                hoverPopup.style.display = 'none';
+                popupVideo.pause();
+                popupVideo.src = '';
+            });
+        }
+
+        // Video hover CSS
+        const style = document.createElement('style');
+        style.textContent = `
+        .video-hover {
+            position: absolute;
+            display: none;
+            z-index: 1000;
+            background: white;
+            border: 2px solid white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .video-hover video {
+            display: block;
+        }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize on DOM load
+        document.addEventListener('DOMContentLoaded', initializePlots);
+    </script>
 </body>
 </html>

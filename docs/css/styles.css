@@ -1,4 +1,4 @@
-/* Root variables - define our global custom properties */
+/* Root variables */
 :root {
     /* Document measurements */
     --paper-width: 8.5in;
@@ -8,9 +8,14 @@
     --base-font-size: 12pt;
     --paper-font: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-    /* Colors - adding these for consistency */
+    /* Colors */
     --text-color: #333333;
     --background-color: #ffffff;
+
+    /* Effects */
+    --hover-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    --hover-bg: rgba(255, 255, 255, 0.1);
+    --popup-z-index: 9999;
 }
 
 /* Base styles */
@@ -24,7 +29,15 @@ body {
     padding: 0;
 }
 
-/* Landing header and image styles */
+/* Scientific paper layout */
+.scientific-paper {
+    max-width: var(--paper-width);
+    margin: 0 auto;
+    padding: var(--paper-margin);
+    overflow: visible;
+}
+
+/* Landing section */
 .landing-header {
     position: relative;
     width: 100%;
@@ -45,15 +58,7 @@ body {
     object-fit: cover;
 }
 
-/* Scientific paper layout */
-.scientific-paper {
-    max-width: var(--paper-width);
-    margin: 0 auto;
-    padding: var(--paper-margin);
-    overflow: visible;
-}
-
-/* Research figure styles */
+/* Research figures */
 .research-figure {
     width: 100%;
     max-width: var(--paper-width);
@@ -70,7 +75,7 @@ body {
     overflow: visible;
 }
 
-/* Hover areas and image styles */
+/* Header images and hover areas */
 .header-image-container {
     position: relative;
     width: 100%;
@@ -78,53 +83,28 @@ body {
     margin: 0 auto;
 }
 
-.header-image-container .header-image {
+.header-image {
     width: 100%;
     height: auto;
     max-width: 100%;
 }
 
-.header-image-container .hover-area {
+.hover-area {
     position: absolute;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.0);
+    background: transparent;
     transition: background 0.01s;
 }
 
-.header-image-container .hover-area:hover {
-    background: rgba(255, 255, 255, 0.1);
+.hover-area:hover {
+    background: var(--hover-bg);
 }
 
-/* Popup and modal styles */
-.modal,
-.hover-popup {
-    position: fixed !important;
-    z-index: 9999 !important;
-    transform: none !important;
-    contain: none !important;
-}
-
-.hover-popup {
-    background-color: white;
-    border: 2px solid white;
-    padding: 5px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
-}
-
-/* Plot styling */
-#plot {
-    width: 100%;
-    max-width: var(--paper-width);
-    margin: 0 auto;
-    aspect-ratio: 22/9;
-}
-
+/* Methods section link */
 .methods-section-link {
     position: absolute;
     top: 5%;
-    left: 0%;
+    left: 0;
     width: 100%;
     height: 21.0%;
     background: transparent;
@@ -132,7 +112,124 @@ body {
 }
 
 .methods-section-link:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--hover-bg);
+    cursor: pointer;
+}
+
+/* Popups and modals */
+.modal,
+.hover-popup,
+.video-hover {
+    position: fixed !important;
+    z-index: var(--popup-z-index) !important;
+    background-color: white;
+    border: 2px solid white;
+    padding: 5px;
+    box-shadow: var(--hover-shadow);
+}
+
+.hover-popup {
+    display: flex;
+    align-items: center;
+    transform: none !important;
+    contain: none !important;
+}
+
+.video-hover {
+    display: none;
+    position: absolute;
+}
+
+/* Growth curves section */
+.pairs-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.pair {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Figure images */
+.figure-image {
+    flex: 0 0 auto;
+    width: 50%;
+    position: relative;
+}
+
+.figure-image img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Plots */
+#plot {
+    width: 100%;
+    max-width: var(--paper-width);
+    margin: 0 auto;
+    aspect-ratio: 22/9;
+}
+
+.growth-plot {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Boxplot section */
+.boxplot-section {
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+}
+
+.caption-image {
+    width: 35px;
+    flex: 0 0 auto;
+}
+
+#boxplot {
+    flex: 1;
+}
+
+/* Video elements */
+.video-hover video,
+.hover-popup video {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: left top;
+}
+
+/* Modal specific styles */
+.modal-content {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transform-origin: center;
+    cursor: move;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -151,4 +248,19 @@ body {
     #plot {
         max-width: 100%;
     }
+
+    .pair {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .figure-image {
+        width: 100%;
+    }
+}
+
+/* Plotly specific styles */
+.js-plotly-plot .plotly .modebar {
+    top: 0;
+    right: 0;
 }
