@@ -194,7 +194,26 @@ body {
 #boxplot {
     flex: 1;
 }
+.figure-container-with-sidebar {
+    display: flex;
+    gap: 20px;
+}
 
+.pairs-main-content {
+    flex: 1;
+}
+
+.vertical-image {
+    width: 600px;  /* Adjust width as needed */
+    align-self: flex-start;
+    position: sticky;
+    top: 20px;
+}
+
+.vertical-image img {
+    width: 100%;
+    height: auto;
+}
 /* Sankey plots section */
 .sankey-container {
     display: flex;
