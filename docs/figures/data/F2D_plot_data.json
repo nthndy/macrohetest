@@ -2847,7 +2847,7 @@
       ],
       "hoverinfo": "text",
       "marker": {
-        "color": "#a6d96a",
+        "color": "#1a9641",
         "line": {
           "color": "gray",
           "width": 1
@@ -5696,7 +5696,7 @@
       "boxpoints": false,
       "hoverinfo": "none",
       "marker": {
-        "color": "#d02c91"
+        "color": "#f1b6da"
       },
       "name": "RD1",
       "orientation": "h",
@@ -6883,7 +6883,7 @@
       ],
       "legendgroup": "Fast",
       "marker": {
-        "color": "#1a9641"
+        "color": "#a6d96a"
       },
       "name": "Fast",
       "opacity": 0.8,
@@ -6964,7 +6964,7 @@
       ],
       "legendgroup": "Fast",
       "marker": {
-        "color": "#1a9641"
+        "color": "#a6d96a"
       },
       "name": "Fast",
       "opacity": 0.8,

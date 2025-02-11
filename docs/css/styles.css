@@ -195,6 +195,19 @@ body {
     flex: 1;
 }
 
+/* Sankey plots section */
+.sankey-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.sankey-plot {
+    flex: 1;
+    max-width: 450px;
+}
+
 /* Video elements */
 .video-hover video,
 .hover-popup video {

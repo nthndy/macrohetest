@@ -183,22 +183,73 @@
           </section>
 
           <section class="results">
-            <h2>Intracellular fast-growing Mtb is a distinct subpopulation of infected macrophages.</h2>
+              <h2>Intracellular fast-growing Mtb is a distinct subpopulation of infected macrophages.</h2>
               <figure class="research-figure">
                   <div class="figure-results">
-                    <p>At the infected macrophage level, we observed three clear phenotypes related to the fast growing Mtb populations: <i>(i)</i> Intracellular growth of Mtb, where rapid doublings were the result of intracellular replication <i>(Fig. 3A, Movie S5)</i>; <i>(ii)</i> Extracellular uptake of Mtb, where rapid increases in intracellular burden resulted in doubling times that do not reflect intrinsic intracellular growth <i>(Fig. 3B, uptake highlighted with a white arrow, Movie S6)</i>; and <i>(iii)</i> Intercellular transfer of Mtb between neighboring macrophages, where sudden increases in intracellular burden yielded doubling times not attributable to intracellular replication <i>(Fig. 3C, transfer highlighted with a white arrow, Movie S7)</i>. To exclude unrealistic doubling times from the phenotypes ii and iii in any subsequent analysis, we defined these macrophage processes as belonging to either intrinsic Mtb growth <i>(phenotype i)</i> <i>(Fig. 3A)</i> or extrinsic Mtb growth <i>(phenotypes ii, iii)</i> <i>(Fig. 3B-C)</i>. The classification of these phenotypes was achieved using a human-in-the-loop approach, wherein a set of napari <i>(28)</i> key-bindings were used to iterate over and label a corpus of single-cell video glimpses. Incidences of extrinsic Mtb growth occurred primarily at later time points of infection and could be attributable to macrophage cell death <i>(25, 27)</i>. The fact that both extracellular uptake and intercellular transfer primarily occurred at later stages of the time-lapse precluded an analysis of the Mtb doubling times after uptake and/or transfer.</p>
-                    <p>We then segregated the distribution of doubling times according to intrinsic/extrinsic Mtb growth <i>(Fig. 3D)</i>. The distributions showed that any near-instantaneous population doublings were exclusively attributable to extrinsic Mtb growth. Strikingly, there was a subpopulation <i>(11%)</i> of intrinsic growth patterns that resulted rapid doubling times below 16 hours, with the majority <i>(56%)</i> exhibiting much slower doubling times than the average and only a subset <i>(33%)</i> landing within the definition of normal growth <i>(Fig. 3D)</i>. Taking the mean of this distribution resulted in an average doubling time value of 25 hours, which was still in line with previous reports albeit with a much wider range than previously appreciated.</p>
-                    <p>Unexpectedly, this diversity of growth rates also extended to the Mtb ∆RD1 mutant, that is mostly restricted intracellularly <i>(27)</i>. The average ∆RD1 doubling time of 39 hours was considerably more than the Mtb WT, more faithfully reflecting the reduced capacity for intracellular proliferation than in the previous uptake/transfer-inclusive distributions. Regarding extrinsic Mtb ∆RD1 growth, there was a concomitant reduction in the proportion of intercellular transfer when compared to Mtb WT <i>(31% to 46%)</i> as the Mtb ∆RD1 mutant does not trigger cell death <i>(27)</i> <i>(Fig. 3E-F)</i>. Altogether, our single-cell analysis of Mtb growth in macrophages established that Mtb intracellular growth can indeed reach values considerably below 16 hours.</p>
+                      <!-- Your existing figure text content -->
                   </div>
-                  <iframe
-                      id="fig:3"
-                      src="figures/F3.html"
-                      title="Figure 3: Quantifying macrophage phenotypes"
-                      loading="lazy"
-                      style="height: 2000px; border: none; overflow: visible;">
-                  </iframe>
+
+                  <div class="main-container">
+                      <!-- Growth Curves Section -->
+                      <div class="pairs-container">
+                          <!-- Pair 1 -->
+                          <div class="pair">
+                              <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S2.mp4">
+                                  <img src="images/Figure_3_1.png" alt="Figure 3A">
+                                  <div class="video-hover">
+                                      <video style="width: 400px; height: 400px; object-fit: cover; object-position: left top;"
+                                             autoplay loop muted playsinline></video>
+                                  </div>
+                              </div>
+                              <div id="growth-plot-1" class="growth-plot"></div>
+                          </div>
+
+                          <!-- Pair 2 -->
+                          <div class="pair">
+                              <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S3.mp4">
+                                  <img src="images/Figure_3_2.png" alt="Figure 3B">
+                                  <div class="video-hover">
+                                      <video style="width: 400px; height: 400px; object-fit: cover;"
+                                             autoplay loop muted playsinline></video>
+                                  </div>
+                              </div>
+                              <div id="growth-plot-2" class="growth-plot"></div>
+                          </div>
+
+                          <!-- Pair 3 -->
+                          <div class="pair">
+                              <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S4.mp4">
+                                  <img src="images/Figure_3_3.png" alt="Figure 3C">
+                                  <div class="video-hover">
+                                      <video style="width: 400px; height: 400px; object-fit: cover;"
+                                             autoplay loop muted playsinline></video>
+                                  </div>
+                              </div>
+                              <div id="growth-plot-3" class="growth-plot"></div>
+                          </div>
+                      </div>
+
+                      <!-- Boxplot Section -->
+                      <div class="boxplot-section">
+                          <div class="caption-image">
+                              <img src="images/D_caption.png" style="width: 100%; height: 80%; object-fit: cover; object-position: top; margin-left: -10px;" alt="Caption">
+                          </div>
+                          <div id="boxplot"></div>
+                          <div id="hover-popup" class="hover-popup">
+                              <video id="popup-video" style="width: 400px; height: 400px; object-fit: cover;"
+                                     autoplay loop muted playsinline></video>
+                          </div>
+                      </div>
+
+                      <!-- Sankey Plots -->
+                      <div class="sankey-container">
+                          <div id="sankey-wt" class="sankey-plot"></div>
+                          <div id="sankey-rd1" class="sankey-plot"></div>
+                      </div>
+                  </div>
+
                   <figcaption>
-                      <p><b>Fig. 3.</b> Intracellular fast-growing Mtb is a distinct subpopulation of infected macrophages. <b>(A)</b> Mtb population doublings of intracellular origin typically result in steady growth patterns well represented by the LOWESS growth model and subsequent R2 value. <b>(B)</b> Extracellular uptake of smaller populations of Mtb can result in an artificially quick doubling. <b>(C)</b> Intercellular transfer of larger populations of Mtb from neighboring cells results in more artificially quick doubling. <b>(D)</b> Distribution of Mtb doubling time separated by intrinsic versus extrinsic origin. <b>(E)</b> Sankey diagram illustrating how the proportion of each wild-type Mtb growth phenotype changes across the time-lapse. <b>(F)</b> The equivalent Sankey diagram for ∆RD1 reflects the mutants' reduced capacity to cause cell death and subsequent inter-cellular transfer.</p>
+                      <!-- Your figure caption -->
                   </figcaption>
               </figure>
           </section>
