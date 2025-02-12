@@ -58,13 +58,9 @@ body {
     object-fit: cover;
 }
 
-.title-heading {
-    /* Any specific title text styling I want */
-}
-
 /* Research figures */
 .research-figure {
-    width: 100%;
+    /* width: 100%; */
     max-width: var(--paper-width);
     margin: 2em auto;
     padding: 0;
@@ -90,13 +86,162 @@ body {
 
 }
 
+/* Ensure the F1-container fits within the page width */
 .F1-container {
     position: relative;
-    max-width: var(--paper-width);
+    max-width: var(--paper-width); /* Ensure it doesn't exceed the page width */
     width: 100%;
     margin: 0 auto;
-    overflow: visible;
+    overflow: hidden; /* Prevent overflow */
 }
+
+/* Ensure images within the container do not exceed the container width */
+.F1-container img {
+    max-width: 100%; /* Ensure images scale down to fit */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Grid layout adjustments */
+.F1-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 columns */
+    grid-template-rows: auto auto auto; /* 3 rows */
+    gap: 10px; /* Gap between grid items */
+    width: 100%; /* Ensure it matches the container width */
+    max-width: 100%; /* Prevent overflow */
+}
+
+/* need this for hyperlink */
+.F1A-container {
+    position: relative;
+}
+
+.methods-section-link {
+    position: absolute;
+    top: 0%; /* Adjust these values to match the exact region */
+    left: 0%;
+    width: 100%;
+    height: 100%; /* Adjust to match the specific region */
+    background: transparent;
+    z-index: 10;
+}
+
+.methods-section-link:hover {
+    background-color: rgba(208,28,139,0.1); /* Subtle hover effect */
+    cursor: pointer;
+}
+
+/* Panel A spans full width */
+#F1A {
+    grid-column: span 3;
+}
+
+/* Panels B, C, D in first content row */
+#F1B, #F1C, #F1D {
+    grid-row: 2;
+}
+
+/* Panels E, F, G in second content row */
+#F1E, #F1F, #F1G {
+    grid-row: 3;
+}
+
+/* Panel H spans full width */
+#F1H {
+    grid-column: span 3;
+}
+
+/* Styles for the caption and horizontal line - MIGHT HAVE TO CHANGE FOR F1H SPECFICITY */
+.caption-line-container {
+    display: flex;
+    flex-direction: column; /* Stack caption and line vertically */
+    align-items: flex-start; /* Align items to the left */
+    margin-bottom: 10px; /* Space between the line and the plot */
+}
+
+.caption {
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 2px; /* Space between the caption and the line */
+}
+
+.horizontal-line {
+    width: 100%; /* Make the line extend the full width of the container */
+    height: 3px; /* Thickness of the line */
+    background-color: black; /* Color of the line */
+}
+
+/* Ensure grid items take full width of grid */
+.F1-container > div {
+    width: 100%; /* Ensure grid items take full width of grid */
+}
+
+.F1B-container,
+.F1C-container,
+.F1D-container,
+.F1F-container,
+{
+    position: relative;
+}
+
+.image-popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.popup-content {
+    position: relative;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 1200px;
+    max-height: 90vh;
+}
+
+.zoomable-image-container {
+    position: relative;
+    overflow: hidden;
+    cursor: move;
+    width: 100%;
+    height: 80vh;
+}
+
+.zoomable-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: none;
+    max-height: none;
+    transition: transform 0.2s;
+}
+
+.close-popup {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -120,21 +265,7 @@ body {
     background: var(--hover-bg);
 }
 
-/* Methods section link */
-.methods-section-link {
-    position: absolute;
-    top: 5%;
-    left: 0;
-    width: 100%;
-    height: 21.0%;
-    background: transparent;
-    z-index: 10;
-}
 
-.methods-section-link:hover {
-    background-color: var(--hover-bg);
-    cursor: pointer;
-}
 
 /* Popups and modals */
 .modal,
