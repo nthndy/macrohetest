@@ -37,8 +37,8 @@ body {
     overflow: visible;
 }
 
-/* Title section styles */
-.title-header {
+/* Landing section */
+.landing-header {
     position: relative;
     width: 100%;
     height: auto;
@@ -46,20 +46,16 @@ body {
     margin: 0;
 }
 
-.title {
+.landing-container {
     position: relative;
     width: 100%;
     height: auto;
 }
 
-.title-image {
+.landing-image {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
-
-.title-heading {
-    /* Any specific title text styling I want */
 }
 
 /* Research figures */
@@ -72,41 +68,25 @@ body {
     position: relative;
 }
 
-.results-text p {
-    margin-bottom: 1.2em;
-}
-
-/* Links within results text */
-.results-text a {
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.results-text a:hover {
-  color: #d01c8b !important;
-
-    text-decoration: underline;
-    font-style: italic;
-
-}
-
-.F1-container {
-    position: relative;
-    max-width: var(--paper-width);
-    width: 100%;
-    margin: 0 auto;
-    overflow: visible;
-}
-
-
-
-
-
 .figure-container {
     position: relative;
     width: 100%;
     margin: 0 auto;
     overflow: visible;
+}
+
+/* Header images and hover areas */
+.header-image-container {
+    position: relative;
+    width: 100%;
+    max-width: var(--paper-width);
+    margin: 0 auto;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 .hover-area {
