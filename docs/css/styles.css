@@ -58,6 +58,31 @@ body {
     object-fit: cover;
 }
 
+
+.authors a:hover {
+  color: #d01c8b !important;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+.corresponding-author a:hover {
+  color: #276419 !important;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+.affiliations a:hover {
+  color: #d01c8b !important;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
 /* Research figures */
 .research-figure {
     /* width: 100%; */
