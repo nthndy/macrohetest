@@ -1,5 +1,4 @@
 // 1. Setup Clickable Image Popup (Zoom + Pan)
-// 1. Setup Clickable Image Popup (Zoom + Pan)
 function setupImagePopup(imageContainers) {
     imageContainers.forEach(container => {
         const popup = container.querySelector('.image-popup');

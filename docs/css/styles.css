@@ -83,6 +83,17 @@ body {
 
 }
 
+.introduction a:hover,
+.results a:hover,
+.discussion a:hover,
+.materials-and-methods a:hover {
+  color: #d01c8b !important;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
 /* Research figures */
 .research-figure {
     /* width: 100%; */
@@ -252,6 +263,8 @@ body {
     overflow: auto;
     background-color: rgba(0,0,0,0.9);
 }
+
+
 
 /* ### unsure about below */
 
