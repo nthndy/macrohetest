@@ -58,41 +58,69 @@ body {
     object-fit: cover;
 }
 
+/* General link styles */
+a {
+    text-decoration: none;
+}
 
+/* Reference links (italic, not bold) */
+.introduction a[href^="#ref"],
+.results a[href^="#ref"],
+.discussion a[href^="#ref"],
+.materials-and-methods a[href^="#ref"] {
+    font-style: italic;
+    font-weight: normal; /* Not bold */
+}
+
+/* Hover effect for reference links */
+.introduction a[href^="#ref"]:hover,
+.results a[href^="#ref"]:hover,
+.discussion a[href^="#ref"]:hover,
+.materials-and-methods a[href^="#ref"]:hover {
+    color: #d01c8b !important;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold; /* Keep normal weight */
+}
+
+/* Figure and section links (bold) */
+.results-text a,
+.research-figure a {
+    font-weight: bold;
+}
+
+/* Hover effect for figure/section links */
+.results-text a:hover,
+.research-figure a:hover {
+    color: #d01c8b !important;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+/* Author links */
 .authors a:hover {
-  color: #d01c8b !important;
+    color: #d01c8b !important;
     text-decoration: underline;
     font-style: italic;
     font-weight: bold;
-
 }
 
+/* Corresponding author links */
 .corresponding-author a:hover {
-  color: #276419 !important;
+    color: #276419 !important;
     text-decoration: underline;
     font-style: italic;
     font-weight: bold;
-
 }
 
+/* Affiliations links */
 .affiliations a:hover {
-  color: #d01c8b !important;
+    color: #d01c8b !important;
     text-decoration: underline;
     font-style: italic;
     font-weight: bold;
-
 }
 
-.introduction a:hover,
-.results a:hover,
-.discussion a:hover,
-.materials-and-methods a:hover {
-  color: #d01c8b !important;
-    text-decoration: underline;
-    font-style: italic;
-    font-weight: bold;
-
-}
 
 /* Research figures */
 .research-figure {
@@ -267,8 +295,6 @@ body {
 
 
 /* ### unsure about below */
-
-
 .popup-content {
     position: relative;
     margin: 5% auto;

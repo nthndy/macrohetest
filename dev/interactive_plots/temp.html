@@ -1,0 +1,323 @@
+
+      <section class="abstract">
+          <h2>Abstract</h2>
+          <p>Slow growth rates are a hallmark of Mycobacterium tuberculosis (Mtb), one of the deadliest human pathogens. Arrested growth of Mtb has been associated with antibiotic tolerance and the ability to persist in the host. A physiologically relevant subpopulation of Mtb localizes within host macrophages, although how this intracellular residence in heterogeneous host cells affect Mtb growth remains elusive. We developed a robust, high-content, live, single-cell imaging approach to track infected human macrophage populations with high spatiotemporal resolution. We discovered the presence of fast-growing intracellular Mtb populations with doubling times below 16 hours. These fast-growing subpopulations were more likely to evade the first-line antibiotics rifampicin, isoniazid and pyrazinamide when compared to the slow-growing populations. Our data identifies fast-growing intracellular Mtb as a mechanism of antibiotic evasion.</p>
+      </section>
+
+      <section class="introduction">
+          <h2>Introduction</h2>
+          <p> Tuberculosis (TB) has been one of the most devasting infectious diseases throughout human history, affecting humanity for over 15,000 years <a href='#ref1'><a href="#ref1"><i>(1)</i></a></a> and resulting in 1.25 million deaths in 2023 <a href="#ref2"><i>(2)</i></a>. The current chemotherapy regimen for TB requires at least six months and four antibiotics to cure the disease. The reasons behind this prolonged treatment duration and multi-drug requirements are multifactorial and remain poorly understood <a href="#ref3"><i>(3)</i></a>, <a href="#ref4"><i>(4)</i></a>, <a href="#ref5"><i>(5)</i></a>.</p>
+          <p><i>Mycobacterium tuberculosis</i> (Mtb), the causative agent of TB, can adopt an intracellular lifestyle and replicate within host cells during infection <a href="#ref6"><i>(6)</i></a>. Compelling evidence indicates a host cell contribution to antibiotic accumulation and efficacy <a href="#ref7"><i>(7)</i></a>, <a href="#ref8"><i>(8)</i></a>, <a href="#ref9"><i>(9)</i></a>, <a href="#ref10"><i>(10)</i></a>, <a href="#ref11"><i>(11)</i></a>, but the underlying mechanisms of these pharmacokinetic/dynamic interactions remain elusive. Further to that, Mtb will encounter a diverse set of both intracellular and extracellular microenvironments that lead to single-cell phenotypic variability <a href="#ref12"><i>(12)</i></a>, <a href="#ref13"><i>(13)</i></a>. However, the relationship between the host and pathogen, the subsequent single-cell heterogeneity and resultant antimicrobial susceptibility are largely undefined.</p>
+          <p>Antibiotic efficacy has been primarily determined using in vitro bulk assays that measure conventional parameters such as minimal inhibitory and minimal bactericidal concentrations <a href="#ref14"><i>(14)</i></a>. However, the use of such planktonic liquid cultures does not address single-cell heterogeneity and also precludes any host cell contribution towards antibiotic efficacy <a href="#ref15"><i>(15)</i></a>. Single-cell image-based in vitro studies of antibiotic treatment responses that overcome bulk determinations are especially important to address the highly heterogenous nature of Mtb infection <a href="#ref16"><i>(16)</i></a>, <a href="#ref17"><i>(17)</i></a>, but they too do not mimic intracellular environments. Single-cell image-based in cellulo studies overcome bulk determinations and mimic physiological intracellular environments <a href="#ref18"><i>(18)</i></a>, <a href="#ref19"><i>(19)</i></a>, <a href="#ref20"><i>(20)</i></a>, <a href="#ref21"><i>(21)</i></a>, but are often limited in the spatial and temporal resolution necessary to fully capture the heterogeneity of intracellular Mtb response to antibiotics.</p>
+          <p>To address these challenges, we designed an image-based approach to monitor Mtb intracellular replication at the single-macrophage level, with high spatiotemporal resolution capable of tracking infection initialization to endpoint. Using this approach, we discovered that a subpopulation of infected human macrophages harbored fast-growing Mtb populations. These fast-growing intracellular Mtb populations evade antibiotic treatment, likely representing a phenotypically and clinically relevant population of bacteria during TB chemotherapy.</p>
+      </section>
+
+      <section class="results">
+            <figure class="research-figure">
+              <h2>An image-based pipeline to study Mtb replication in single human macrophages with high spatiotemporal resolution.</h2>
+                <div class="results-text">
+                  <p>We developed a high-content, live-cell imaging approach that allows for the monitoring of Mtb replication in large populations of infected macrophages <a href="#fig:1"><b>Fig. 1A</b></a>. This system consists of human iPSC-derived macrophages (iPSDM) expressing EGFP from an AAV locus <a href="#ref22"><i>(22)</i></a> infected with Mtb H37Rv-expressing E2-Crimson (<i>Fig. 1B</i>). Using this biological model, we established an imaging pipeline that allows for 2-channel imaging of Mtb-infected macrophages in 96-well plates, with 9 overlapping fields of view per well, across 3x 2 µm z-slices, for up to 75 hours at 30 minutes or 1 hour frame rates, after an initial 24h set-up of the infection <a href="#fig:1"><b>Fig. 1C-E,</b></a> <a href="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie+S1.mp4"><b>Movie S1</b></a>. This assay was repeated across n=4 biological replicates. After establishing a robust image tiling, segmentation and tracking strategy <a href="#fig:1"><b>Fig. 1F-G</b></a>, we were able to track N=1,107 control (untreated) macrophages over a period of 75 hours <a href="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Figure+S1.png"><b>Fig. S1</b></a>. An initial analysis of intracellular Mtb growth trajectories revealed a heterogeneity in Mtb replication dynamics. Some macrophage tracks showed a high intracellular Mtb load (magenta lines <b>Fig. 1H</b>, whilst others harbored only low-levels of Mtb intracellular populations across 3 days of imaging (green lines <b>Fig. 1H,</b> <a href="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Figure+S1.png"><b>Fig. S1</b></a>. Of the total control set of tracked macrophages, 55.8% (618) were infected, out of which 482 macrophages harbored doubling intracellular Mtb populations <a href="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Figure+S1.png"><b>Fig. S1</b></a>. The smaller subset populations that possessed non-doubling or no measurable growth (5.9% and 6.4%, respectively, <a href="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Figure+S1.png"><b>Fig. S1</b></a>) were not included in latter analysis as the time constraints of live-cell imaging precluded any guarantee that these populations were definitively arrested. Therefore, we included 482 macrophages that constituted the focus of our subsequent analysis, as they yielded clearly quantifiable intracellular population dynamics that could be compared to bulk canonical measures of population doubling times <a href="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Figure+S1.png"><b>Fig. S1</b></a>.
+                  </p>
+                </div>
+              <div id="F1" class="F1-container">
+                <div id="F1A" class="F1A-container">
+                    <img src="images/Figure_1A.png" alt="Figure 1A">
+                    <a href="#materials-and-methods"
+                       class="methods-section-link"
+                       title="Navigate to Materials and Methods">
+                    </a>
+                </div>
+                <div id="F1B" class="F1B-container">
+                    <img src="images/Figure_1B.png"
+                         data-high-res="images/Figure_1B_full_res.png"
+                         alt="Figure 1B">
+                    <div class="image-popup">
+                        <div class="popup-content">
+                            <span class="close-popup">&times;</span>
+                            <div class="zoomable-image-container">
+                                <img src="images/Figure_1B_full_res.png" alt="Zoomed Figure 1B" class="zoomable-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="F1C" class="F1C-container">
+                    <img src="images/Figure_1C.png" alt="Figure 1C">
+                    <div class="image-popup">
+                        <div class="popup-content">
+                            <span class="close-popup">&times;</span>
+                            <div class="zoomable-image-container">
+                                <img src="images/Figure_1C_full_res.png" alt="Zoomed Figure 1C" class="zoomable-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="F1D" class="F1D-container">
+                    <img src="images/Figure_1D.png" alt="Figure 1D">
+                </div>
+                <div id="F1E" class="F1E-container">
+                <img src="images/Figure_1E.png" alt="Figure 1E" class="video-trigger">
+                <div class="image-popup video-popup">
+                    <div class="popup-content">
+                        <span class="close-popup">&times;</span>
+                        <div class="video-container">
+                            <video controls class="popup-video">
+                                <source src="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/misc/PS0000_(3%2C+5)_WT_CTRL_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+              </div>
+                <div id="F1F" class="F1F-container">
+                    <img src="images/Figure_1F.png" alt="Figure 1F">
+                    <div class="image-popup">
+                        <div class="popup-content">
+                            <span class="close-popup">&times;</span>
+                            <div class="zoomable-image-container">
+                                <img src="images/Figure_1F_full_res.png" alt="Zoomed Figure 1F" class="zoomable-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="F1G" class="F1G-container">
+                <img src="images/Figure_1G.png" alt="Figure 1G" class="video-trigger">
+                <div class="image-popup video-popup">
+                    <div class="popup-content">
+                        <span class="close-popup">&times;</span>
+                        <div class="video-container">
+                            <video controls class="popup-video">
+                                <source src="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/misc/s1_annotated.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+              </div>
+                <div id="F1H" class="F1H-container">
+                  <div class="caption-line-container">
+                      <div class="caption">H</div>
+                      <div class="horizontal-line"></div>
+                  </div>
+                      <div id="plot-1H"></div>
+                </div>
+              </div>
+
+                </div>
+
+                <!-- Modal for full image/video view -->
+                <div id="imageModal" class="modal">
+                    <span class="close-button">&times;</span>
+                    <div class="modal-content">
+                        <img id="modalImage" class="modal-image">
+                        <video id="modalVideo" class="modal-image" controls>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <figcaption>
+                    <b>Fig. 1. A high-content live single-cell imaging approach to monitor Mtb replication in human macrophages.</b>
+                    <p><b>(A)</b> Timeline of the experimental design and imaging conditions. <b>(B)</b> A single image acquisition, showing EGFP-expressing macrophages infected with Mtb H37Rv WT-E2Crimson. <b>(C)</b> A full mosaic of 9 images (single tile shown as white square inset) with 10% overlap. <b>(D)</b> Each mosaic is composed of 2 fluorescent channels and 3 z-slices with a step of 2μm. <b>(E)</b> The image acquisition lasts for 75 h at 30/60min frame rates. <b>(F)</b> This image volume is then segmented using the EGFP channel. <b>(G)</b> Each segment in each frame is then localized and intracellular Mtb quantified, prior to linking each cell instance over time into a series of tracks, shown here as a visualization in 3 dimensions (x,y,t). <b>(H)</b> Single-cell trajectories (N=1,127) of intracellular Mtb growth in n=4 biological replicates, color-coded to the final intracellular Mtb burden.</p>
+                </figcaption>
+            </figure>
+
+          <h2>Infected macrophage tracking and quantification reveals extremely variegated growth rates.</h2>
+            <figure class="research-figure">
+                <div class="figure-results">
+                  <p>To further investigate the heterogeneity of intracellular Mtb growth dynamics, we fitted a LOWESS smoothing model to the intracellular Mtb trajectories <a href="#ref23"><i>(23)</i></a>. This approach made the quantification of intracellular doubling times more reliable by attenuating high-frequency noise from the intracellular Mtb measurements whilst retaining the underlying biological growth pattern <i>(Fig. 2A-C)</i>. It also served as a quality-control metric for tracking performance, as erroneous tracking jumps would result in a poorly fitting coefficient of determination (R2) between the raw Mtb data and growth curve.</p>
+                  <p>In cellulo studies have reported bulk intracellular Mtb doubling times of 21, 26-28, and 24.7 hours, respectively <a href="#ref9"><i>(9)</i></a>, <a href="#ref24"><i>(24)</i></a>, <a href="#ref25"><i>(25)</i></a>. An in vivo study reported Mtb doubling times of 48 hours extracellularly and 24 hours intracellularly <a href="#ref26"><i>(26)</i></a>. Whilst the average of our single-cell analysis resulted in a mean doubling time of 16 hours, we observed intracellular Mtb growth rates across a much wider range <i>(Fig. 2D)</i>. Following this, we defined three distinct intracellular Mtb growth phenotypes based on observations of doubling times: <b>normal growth</b> (between 16 and 24 hours) <i>(Fig. 2A, Movie S2)</i>, <b>slow growth</b> (more than 24 hours) <i>(Fig. 2B, Movie S3)</i> and <b>fast growth</b> (less than the 16 hours reported in vitro) <a href="#ref16"><i>(16)</i></a> <i>(Fig. 2C, Movie S4)</i>.</p>
+                  <p>When analyzing the distribution of intracellular Mtb WT doubling times, we found that while 21% of doubling instances fell with the scope of normal growth, whilst 48% were of the fast-growing phenotype, and 31% the slow-growing phenotype <i>(Fig. 2D)</i>. To corroborate our observations, we measured the growth of a mutant of Mtb which lacks the RD1 genomic locus. This mutation restricts the Mtb ΔRD1 to membrane-bound compartments, preventing access to the pH-neutral and nutrient-rich cytosol of host cells. As a result of this, the Mtb ΔRD1 grows less within human macrophages <a href="#ref27"><i>(27)</i></a>, a characteristic that is reflected in the total number of doubling times recorded (N=190), which is sharply reduced compared to Mtb WT (N=941) <i>(Fig. 2D)</i>.</p>
+                  <p>The growth phenotype proportions of the distribution of Mtb ∆RD1 populations were relatively similar to Mtb WT, at 45%, 10% and 45%. The average doubling time was increased to 19 hours with an increase of 14% in the slow growing population, confirming a reduced capacity for growth of Mtb ∆RD1 as previously reported <a href="#ref27"><i>(27)</i></a>. Altogether, our single-cell Mtb replication analysis showed that contrary to the behavior observed in vitro, a fraction of Mtb can grow substantially faster in cellulo <i>(Fig. 2D)</i>. However, a subset of intracellular populations showed near instantaneous doubling times and extremely rapid growth, warranting further investigation.</p>
+                </div>
+                <!-- F2 Content -->
+                <div class="main-container">
+                    <div class="pairs-container">
+                        <!-- First pair: F2A -->
+                        <div class="pair">
+                            <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S2.mp4">
+                                <img src="images/Figure 2A.png" alt="Figure 2A">
+                                <div class="video-hover">
+                                    <video style="width: 400px; height: 400px; object-fit: cover; object-position: left top;"
+                                           autoplay loop muted playsinline></video>
+                                </div>
+                            </div>
+                            <div id="growth-plot-1" class="growth-plot"></div>
+                        </div>
+
+                        <!-- Second pair: F2B -->
+                        <div class="pair">
+                            <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S3.mp4">
+                                <img src="images/Figure 2B.png" alt="Figure 2B">
+                                <div class="video-hover">
+                                    <video style="width: 400px; height: 400px; object-fit: cover; object-position: left top;"
+                                           autoplay loop muted playsinline></video>
+                                </div>
+                            </div>
+                            <div id="growth-plot-2" class="growth-plot"></div>
+                        </div>
+
+                        <!-- Third pair: F2C -->
+                        <div class="pair">
+                            <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S4.mp4">
+                                <img src="images/Figure 2C.png" alt="Figure 2C">
+                                <div class="video-hover">
+                                    <video style="width: 400px; height: 400px; object-fit: cover; object-position: left top;"
+                                           autoplay loop muted playsinline></video>
+                                </div>
+                            </div>
+                            <div id="growth-plot-3" class="growth-plot"></div>
+                        </div>
+                    </div>
+
+                    <!-- Boxplot section: F2D -->
+                    <div class="boxplot-section">
+                        <div class="caption-image">
+                            <img src="images/Figure 2D caption.png" style="width: 100%; object-fit: cover; object-position: top; margin-left: -10px;" alt="Caption">
+                        </div>
+                        <div id="boxplot"></div>
+                        <div id="hover-popup" class="hover-popup">
+                            <video id="popup-video" style="width: 400px; height: 400px; object-fit: cover; object-position: left top;"
+                                   autoplay loop muted playsinline></video>
+                        </div>
+                    </div>
+                </div>
+                <figcaption>
+                    <p><b>Fig. 2.</b> Infected macrophage tracking and quantification reveals extremely variegated growth rates. <b>(A)</b> Single cell example of normal doubling time (24 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with the doubling points in grey dotted lines (right). <b>(B)</b> Single cell example of slow doubling time (66 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with the doubling points in grey dotted lines. <b>(C)</b> Single cell example of fast doubling time (13 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with dotted lines. The raw data is shown in magenta. <b>(D)</b> Box plots showing the distribution of intracellular doubling times for intracellular Mtb WT and Mtb ∆RD1.</p>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="results">
+            <h2>Intracellular fast-growing Mtb is a distinct subpopulation of infected macrophages.</h2>
+            <figure class="research-figure">
+                <div class="figure-container-with-sidebar">
+                    <!-- Your existing figure text content -->
+
+
+                <div class="pairs-main-container">
+                    <!-- Growth Curves Section -->
+                    <div class="pairs-container">
+                        <!-- Pair 1 -->
+                        <div class="pair">
+                            <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S2.mp4">
+                                <img src="images/Figure 3A.png" alt="Figure 3A">
+                                <div class="video-hover">
+                                    <video style="width: 400px; height: 400px; object-fit: cover; object-position: left top;"
+                                           autoplay loop muted playsinline></video>
+                                </div>
+                            </div>
+                            <div id="growth-plot-1" class="growth-plot"></div>
+                        </div>
+
+                        <!-- Pair 2 -->
+                        <div class="pair">
+                            <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S3.mp4">
+                                <img src="images/Figure 3B.png" alt="Figure 3B">
+                                <div class="video-hover">
+                                    <video style="width: 400px; height: 400px; object-fit: cover;"
+                                           autoplay loop muted playsinline></video>
+                                </div>
+                            </div>
+                            <div id="growth-plot-2" class="growth-plot"></div>
+                        </div>
+
+                        <!-- Pair 3 -->
+                        <div class="pair">
+                            <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S4.mp4">
+                                <img src="images/Figure 3C.png" alt="Figure 3C">
+                                <div class="video-hover">
+                                    <video style="width: 400px; height: 400px; object-fit: cover;"
+                                           autoplay loop muted playsinline></video>
+                                </div>
+                            </div>
+                            <div id="growth-plot-3" class="growth-plot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vertical image -->
+                <div class="vertical-image">
+                    <img src="images/Figure 3 diagram.png" alt="Vertical diagram">
+                </div>
+                    <!-- Boxplot Section -->
+                    <div class="boxplot-section">
+                        <div class="caption-image">
+                            <img src="images/Figure 3D caption.png" style="width: 100%; object-fit: cover; object-position: top; margin-left: -100px;" alt="Caption">
+                        </div>
+                        <div id="boxplot"></div>
+                        <div id="hover-popup" class="hover-popup">
+                            <video id="popup-video" style="width: 400px; height: 400px; object-fit: cover;"
+                                   autoplay loop muted playsinline></video>
+                        </div>
+                    </div>
+
+                    <!-- Sankey Plots -->
+                    <div class="sankey-container">
+                        <div id="sankey-wt" class="sankey-plot"></div>
+                        <div id="sankey-rd1" class="sankey-plot"></div>
+                    </div>
+                </div>
+
+                <figcaption>
+                    <!-- Your figure caption -->
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="results">
+          <h2>Fast growing intracellular Mtb evades antibiotic treatment.</h2>
+            <figure class="research-figure">
+                <div class="figure-results">
+                  <p>Responses of Mtb to antibiotic treatment are commonly measured in vitro in planktonic cultures or at the single-bacilli level using microfluidic devices <a href="#ref16"><i>(16)</i></a>, <a href="#ref17"><i>(17)</i></a>. To analyze the behavior of intracellular Mtb populations following antibiotic treatment, macrophages were treated with pre-determined EC50 and EC99 concentrations of first line antibiotics: Rifampicin (RIF), Isoniazid (INH), and Pyrazinamide (PZA) <i>(Fig. 4A)</i>. At the population level, RIF, INH and PZA reduced the replication of intracellular Mtb, resulting in a striking concentration-dependent decrease in the amount of measurable doubling populations <i>(Fig. 4B, Fig. S2)</i>.</p>
+                  <p>An analysis of the temporal evolution of infection status of each macrophage showed that in antibiotic-treated macrophages a higher proportion of initially infected macrophages finished the time-lapse as uninfected <i>(Fig. S3)</i>, confirming the efficacy of the antibiotics tested. Mtb ∆RD1 infection already resulted in a large reduction in the amount of measurable growth in untreated conditions and we found that under antibiotic-treated Mtb ∆RD1 conditions the number of doubling times was close to zero, precluding any further analysis.</p>
+                  <p>However, for Mtb WT, even at the EC99 concentrations of PZA, INH and RIF, we observed a population of macrophages harboring Mtb replication <i>(Fig 4B)</i>. The doubling times under antibiotic-treated conditions revealed statistically significant shifts in the distribution of Mtb growth distributions for INH EC50, RIF EC50 and RIF EC99 <i>(Table S1)</i>. At EC50 concentrations, there was an enrichment of the subpopulation of slow-growing bacteria, increasing from 56% in untreated controls to 68% with PZA, 65% with INH and 72% with RIF <i>(Fig. 4B)</i>.</p>
+                  <p>At EC99 concentrations, however, there was a notable selection for fast-growing subpopulations, increasing from 11% in the untreated control to 33% for PZA, 20% for INH and a significant 60% for RIF <i>(Fig. 4B, Table S2)</i>. Further Chi-squared statistical tests revealed that the proportion shifts in growth phenotype subpopulations were statistically significant for INH EC99 and RIF EC99, whilst PZA EC99 did not allow for enough doubling times measurements to yield significance for the fastest growth category. Altogether, our data indicate that these fast-growing intracellular Mtb populations evaded antibiotic treatment, particularly RIF and INH to a lesser extent PZA.</p>
+                </div>
+                <iframe
+                    id="fig:4"
+                    src="figures/F4.html"
+                    title="Figure 4: Antibiotic doubling time plot"
+                    loading="lazy"
+                    style="height: 800px; border: none; overflow: visible;">
+                </iframe>
+                <figcaption>
+                    <p><b>Fig. 4.</b> Fast growing intracellular Mtb evade antibiotic treatment. <b>(A)</b> Timeline and experimental design of antibiotic-treated, Mtb-infected macrophages live-cell imaging. <b>(B)</b> Distribution of intracellular doubling times attributable solely to intrinsic, intracellular Mtb growth within host-macrophages. These doubling times are separated into control (untreated) wild-type Mtb, control (untreated) ∆RD1-Mtb and antibiotic-treated wild-type Mtb, with further subdivisions according to the concentration of antibiotics (EC50 and EC99). A Mann-Whitney U test accompanies these distributions, comparing the overall distribution of each condition to the wild-type control. The intracellular Mtb doubling times across PZA, INH and RIF treated macrophages exhibit heterogenous distributions that diverge further with increasing antibiotic concentrations. The proportion of fast, normal and slow growth phenotypes are also exhibited as percentages for each strain of Mtb and concentration of antibiotic. A Chi-squared (χ2) test accompanies these distributions, comparing the proportions of each growth phenotype in each condition to the wild-type control.</p>
+                </figcaption>
+            </figure>
+        </section>
+      </section>
+
+      <section class="discussion">
+          <h2>Discussion</h2>
+          <p>We show that <i>Mtb</i> has the facultative capacity to adopt a remarkably wide range of intracellular growth phenotypes. Whilst other approaches have previously described such heterogeneity in vitro, in cellulo and in vivo <a href="#ref9"><i>(9)</i></a>, <a href="#ref16"><i>(16)</i></a>, <a href="#ref17"><i>(17)</i></a>, <a href="#ref21"><i>(21)</i></a>, <a href="#ref29"><i>(29)</i></a>, <a href="#ref30"><i>(30)</i></a>, our approach is capable of tracking individual infected macrophage populations and quantifying the intracellular Mtb growth dynamics. By focusing on intracellular Mtb populations that doubled, we yielded a metric that was comparable to previous bulk assessments of Mtb growth rates, as well as selecting for the host macrophages/intracellular Mtb populations that are the most permissive/proliferative and subsequently the most problematic when it comes to successfully treating infection.</p>
+          <p>The macrophages harboring fast-growing Mtb are likely to be relevant during the infection as Mtb permissive macrophages have been reported in human TB <a href="#ref6"><i>(6)</i></a> and mouse models of TB <a href="#ref29"><i>(29)</i></a>, <a href="#ref31"><i>(31)</i></a>. Thus, our data potentially explain the biphasic behavior of certain antibiotics in mouse models of TB, such as PZA <a href="#ref32"><i>(32)</i></a>. Our results also agree with the observed intracellular growth of Mtb in animal models where the logarithmic increase of bacteria does not always match a slow growth rate <a href="#ref32"><i>(32)</i></a>.</p>
+          <p>Antibiotic phenotypic tolerance or persistence is conventionally associated with the slow (or non) growth behavior of Mtb and other bacteria under host environmental stress <a href="#ref33"><i>(33)</i></a>. Unexpectedly, we show that in the time frame of our experiments, fast-growing Mtb evades antibiotic action likely without developing resistance mutations and mostly owing to phenotypic changes triggered by the intracellular milieu <a href="#ref34"><i>(34)</i></a>, <a href="#ref35"><i>(35)</i></a>. We identified here an additional mechanism by which fast-growing intracellular Mtb evades antibiotic treatment. Our data agrees with reports in E. coli, where fast-growing resilience has been postulated as a mechanism of antibiotic escape in vitro <a href="#ref36"><i>(36)</i></a>.</p>
+          <p>Several scenarios could account for our findings. One possibility is that either macrophages or rapidly replicating Mtb fail to internalize effective concentrations of antibiotics <a href="#ref36"><i>(36)</i></a>. Alternatively, infection may enhance the efflux capacity of the host macrophages or intracellular Mtb, subsequently reducing antibiotic accumulation <a href="#ref37"><i>(37)</i></a>. Several mechanisms lead to RIF tolerance, heteroresistance, or persistence <a href="#ref38"><i>(38)</i></a>. In E. Coli, fast growing bacteria are more resistant to irreversibly-binding, ribosome-targeting antibiotics such as streptomycin and kanamycin <a href="#ref39"><i>(39)</i></a>.</p>
+          <p>Therefore, based on data presented here we propose a novel mechanism of antibiotic evasion in intracellular Mtb, where compounds targeting a canonically slow-growing infection are being evaded by a previously unknown fast-growing intracellular phenotype. Our findings have potential implications for TB chemotherapy. These observations raise the possibility that some anti-TB antibiotics may fail to target fast-growing populations effectively or that these fast-growing populations evade antibiotic treatment. Further exploration of the biology and resilience of these fast-growing intracellular populations could be important for designing improved TB treatment strategies.</p>
+      </section>
+
+      <section class="materials-and-methods" id="materials-and-methods">
+          <h2>Materials and Methods</h2>
+          <h3 style="text-decoration: underline;">M. tuberculosis culture</h3>
+          <p>Fluorescent <i>M. tuberculosis</i> H37Rv pTEC19 WT and ΔRD1 strains were used in this study <a href="#ref7"><i>(7)</i></a>. Those strains were grown in Middlebrook 7H9 broth supplemented with 0.2% glycerol, 0.05% Tween-80, 10% ADC and 50mg/L Hygromycin B as a selection marker for fluorescent strains. Bacterial cultures were incubated at 37°C with rotation in 50mL conical tubes.</p>
+          <h3 style="text-decoration: underline;">Human iPSC culture</h3>
+          <p>KOLF2-C1 AAVS1:EGFP human iPSCs were a gift from the Skarnes Lab (The Jackson Laboratory, CT, USA) and were generated as previously described <a href="#ref22"><i>(22)</i></a>. Briefly, the KOLF2-C1 AAVS1 cells express a EGFP reporter under the control of the strong CAGG promoter in the safe harbor locus AAVS1. The cells were maintained in Vitronectin XF (StemCell Technologies, 100–0763)-coated plates with Essential 8 medium (Gibco, A1517001). Cells were authenticated by STR profiling and checked regularly for Mycoplasma contamination. Cells were passaged using Versene (Gibco, 15040066).</p>
+          <h3 style="text-decoration: underline;">iPSDM differentiation</h3>
+          <p>Monocyte factories were set up following a previously reported protocol <a href="#ref44"><i>(44)</i></a>. Embryoid bodies (EBs) were fed daily with two times 50% medium changes with E8 supplemented with 50ng ml−1 hBMP4 (Peprotech, 120-05), 50ng ml−1 hVEGF (Peprotech, 100-20) and 20ng ml−1 hSCF (Peprotech, 300-07) for 3 days. On day 4, the EBs were collected and seeded at 100–150 EBs per T175 or 250–300 per T225 flask in XVIVO-factory medium. These monocyte factories were fed weekly for 5 weeks until monocytes were observed in the supernatant. Up to 50% of the supernatant was collected weekly and centrifuged at 300g for 5 min. The cells were resuspended in XVIVO-differentiation medium. Monocytes were plated at 5 × 10<sup>6</sup> cells per 10cm Petri dish to differentiate over 7 days; on day 4, a 50% medium change was performed. To detach, cells were washed once with PBS (pH 7.4), then incubated with Versene for 15 min at 37 °C and 5% CO<sub>2</sub> before diluting 1:3 with PBS and gently scraping. Macrophages were centrifuged at 300g and plated for experiments.</p>
+          <h3 style="text-decoration: underline;">Infection of iPSDM with M. tuberculosis</h3>
+          <p>Induced pluripotent stem cell derived macrophages (iPSDM) were seeded at a density of 50,000 cells per well of an olefin-bottomed 96-well plate (Phenoplate, 605532, Perkin-Elmer). Mid-logarithmic-phase bacterial cultures (OD<sub>600</sub> 0.5–1.0) were centrifuged at 2,000g for 5 min and washed twice in PBS. Pellets were then shaken vigorously for 1 min with 2.5–3.5 mm glass beads (VWR, 332124 G) and bacteria resuspended in 10 ml macrophage culture medium before being centrifuged at 300g for 5 min to remove large clumps. The top 7 ml of bacterial suspension was taken, the OD<sub>600</sub> was measured, and the suspension was diluted appropriately for infection. After 2 h of uptake, extracellular bacteria were removed with two washes in PBS and macrophages were incubated at 37 °C and 5% CO<sub>2</sub> for 24h. Then, media was changed with media containing or not antibiotics before proceeding to the subsequent live-cell imaging.</p>
+          <h3 style="text-decoration: underline;">Antibiotic treatment</h3>
+          <p>Antibiotic concentrations used in this study, defined as in cellulo EC<sub>50</sub> and EC<sub>99</sub>, were previously determined in our group by measuring using in cellulo imaging <a href="#ref7"><i>(7)</i></a>, <a href="#ref45"><i>(45)</i></a>. The growth of E2Crimson-Mtb in iPSDM with various concentrations of Pyrazinamide (Sigma, PHR1576-500mg), Rifampicin (Sigma, R3501-1g) and Isoniazid (Sigma, I3377-5G). The values of EC<sub>50</sub> for PZA, RIF and INH were respectively 60μg/mL, 0.1μg/mL and 0.04μg/mL. The values of EC<sub>99</sub> for PZA, RIF and INH were respectively 400μg/mL, 2μg/mL and 2μg/mL. Antibiotics were added into the infected macrophages after 24 h of infection period.</p>
+          <h3 style="text-decoration: underline;">Image acquisition</h3>
+          <p>Image acquisition was achieved with the OPERA Phenix high-content, confocal, incubator microscope with a 40x water-immersion 1.1NA objective. A single image of 323µm x 323µm was acquired across 9 contiguous positions which were compiled together into a 3x3 mosaic of 904µm x 904µm with a 10% overlap between tiles. This tessellated field of view was repeated across 3x 2µm z-slices and the 2x green/red imaging channels. The channel acquisition parameters were λ<sub>ex</sub> = 488, λ<sub>em</sub> = 522 (exposure time 100ms) for KOLF-EGFP macrophages and λ<sub>ex</sub> = 640, λ<sub>em</sub> = 706 (exposure time 200ms) for E2Crimson-Mtb. This was then repeated every 30/60 minutes for 150/75 frames to reach a total timelapse acquisition of 75 hours. This process was repeated over 42 different imaging wells, each with a different Mtb strain or antibiotic condition within, resulting in a final acquisition of 349,72 images (2.58TB) per biological repeat. A total of 4 biological repeats were conducted. The untiled images were then exported out of the Harmony software (Revvity, version 4.9) to allow for an open-source Python-based image analysis.</p>
+          <h3 style="text-decoration: underline;">Image analysis</h3>
+          <p>The first step in the Python-based image analysis was to tile the images into full field-of-view mosaics. This facilitated the tracking of macrophages across individual tiles, greatly increasing the number of tracks. This tiling was achieved using a bespoke script, based on the DaskFusion repository <a href="#ref46"><i>(46)</i></a>, that extracts the Cartesian coordinates of each image tile from the OPERA Phenix metadata and stiches them together into a Dask image volume <a href="#ref47"><i>(47)</i></a>. This lazy-loading approach enabled the selective rendering of individual frames, z-slices, or cropped regions of interest, conserving computational power by avoiding the need to load the entire 62.95GB-per-condition image volume for each visual examination or partial analysis.</p>
+          <p>The next step in the analysis was to segment the cytoplasmic extent of the macrophages. Due to the inherent heterogeneity of macrophage morphology, we decided to train our own segmentation model using Cellpose 2 <a href="#ref48"><i>(48)</i></a>. We manually segmented 4934 individual cell segments across a range of 72 different images, representing a diverse range of time points, cellular densities, infection statuses and drug conditions. The resulting self-trained model improved the Jaccard index (a measure of the number of objects correctly identified) by 25% and the intersection over union (IoU, a measure of the accuracy of individual segments) by 2.2%. The increase in the Jaccard index metric highlights an improvement upon the primary limitation of using the pre-trained model, which would frequently over- or under-segment cells into merged- or multiply-fragmented instances. The marginal improvement of the IoU indicates that the boundary accuracy of individual segments was already robust, underscoring the quality of the Cellpose generalist approach.</p>
+          <p>After segmentation, each cell was localized and tracked using the btrack multi-object tracking algorithm <a href="#ref49"><i>(49)</i></a>. This localization step included the quantification of several cellular properties, most importantly the total intracellular Mtb content. This was defined as the area of E2-crimson fluorescence above a threshold pixel value (480) that was obtained through manual segmentation of Mtb using a custom napari <a href="#ref28"><i>(28)</i></a> key-binding script. These cellular properties were then stored, along with the centroid and time coordinates of each segment, as Pytracklet objects that serve as the input to the tracking. The btrack algorithm utilizes a combination of a motion model and a visual feature comparison to predict the movement of each cell and compare the visual properties measured in the localization step across frames to ensure that each segment is accurately linked to its correct temporal evolution. The result of this is a time series of united objects that chart the trajectory of a single macrophage with associated properties, including intracellular Mtb burden.</p>
+          <h3 style="text-decoration: underline;">Statistical analysis</h3>
+          <p>The final step in the image analysis pipeline was to process the time-series information of intracellular Mtb content for each cell into growth curves, from which single-cell intracellular doubling amounts and times could be extracted. This firstly involves a linear interpolation of the data to account for points at which the segmentation may have been missed or image frame skipped. A nonparametric locally weighted scatterplot smoothing (LOWESS) model <a href="#ref50"><i>(50)</i></a> was then applied to this time series to generate a smooth, continuous curve. This allowed for a reliable estimation of intracellular Mtb doubling times as it removes any fluctuations from the data that could result in an inaccurate assessment of population doubling.</p>
+          <p>Two types of statistical test were applied to the populations of doubling times. Firstly, to assess the overall differences in distributions between the control, untreated doubling times and the antibiotic treated populations, a Mann-Whitney U test was conducted. This test was chosen as the populations of doubling times for each condition did not meet the requirements of normal distribution as verified by a Shapiro-Wilk test. The results of the Mann-Whitney U tests are shown in Table S1. Secondly, to qualify the differences in the subpopulations of fast, normal and slow doubling times a Chi-Squared statistic (χ<sup>2</sup>) was calculated. This test was appropriately chosen because it measures the discrepancies between observed and expected counts for each subpopulation, meaning that a significant p-value indicates that the differences in proportions are unlikely to have occurred by chance. The results of these tests are shown in Table S2. All statistical tests were conducted using Python.</p>
+          <h3 style="text-decoration: underline;">Visualization</h3>
+          <p>Visualization of timelapse imagery, accompanying segmentation and tracked macrophage populations were all conducted within napari, a multi-dimensional image viewer for Python <a href="#ref28"><i>(28)</i></a>. Cropped video glimpses of macrophages and Mtb were compiled as RGB .mp4 video files to facilitate the iterative loading and classification of macrophage phenotypes using napari key-bindings.</p>
+        </section>
+
