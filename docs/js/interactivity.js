@@ -212,6 +212,14 @@ function setupVideoHoverAndPopup(videoContainers) {
         let hoverDisabled = false;
         let previewWrapper = null;
 
+        // Add escape key handler
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && popup.style.display === 'block') {
+                popup.style.display = 'none';
+                enableHoverPreview();
+            }
+        });
+
         // Add hover preview functionality
         container.addEventListener('mouseenter', (event) => {
             if (hoverDisabled) return;
@@ -302,7 +310,7 @@ function setupVideoHoverAndPopup(videoContainers) {
 }
 
 // ===========================================
-// 5. Load Plotly Data from JSON (Fixed)
+// 5. Load Plotly Data from JSON
 // ===========================================
 function loadPlotlyFigure(plotId, jsonPath) {
     const plotDiv = document.getElementById(plotId);
@@ -340,7 +348,7 @@ function loadPlotlyFigure(plotId, jsonPath) {
 }
 
 // ===========================================
-// 6. Setup Plotly Hover Interaction (Fixed)
+// 6. Setup Plotly Hover Interaction
 // ===========================================
 function setupPlotHover(plotId) {
     const plotDiv = document.getElementById(plotId);
@@ -391,7 +399,7 @@ function setupPlotHover(plotId) {
 }
 
 // ===========================================
-// 7. Initialize All Components (Fixed)
+// 7. Initialize All Components
 // ===========================================
 function initializeFigures() {
     setupImagePopup(document.querySelectorAll('.F1B-container, .F1C-container, .F1F-container'));
