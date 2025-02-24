@@ -84,33 +84,45 @@
                           </div>
                       </div>
                       <div id="F1C" class="F1C-container">
-                          <img src="images/Figure_1C.png" alt="Figure 1C">
+                          <img src="images/Figure_1C.png"
+                               alt="Figure 1C"
+                               data-preview-image="images/Figure_1C_low_res.png">
                           <div class="image-popup">
                               <div class="popup-content">
                                   <span class="close-popup">&times;</span>
                                   <div class="zoomable-image-container">
-                                      <img src="images/Figure_1C_full_res.png" alt="Zoomed Figure 1C" class="zoomable-image">
+                                      <img src="images/Figure_1C_full_res.png"
+                                           alt="Zoomed Figure 1C"
+                                           class="zoomable-image"
+                                           loading="lazy"
+                                           decoding="async">
                                   </div>
                               </div>
                           </div>
                       </div>
                       <div id="F1D" class="F1D-container">
                           <img src="images/Figure_1D.png" alt="Figure 1D">
+                          <a href="#fluorescent-reporter-section"
+                             class="fluorescent-reporter-section-link"
+                             title="Navigate to fluorescent reporter information">
+                          </a>
                       </div>
                       <div id="F1E" class="F1E-container">
-                      <img src="images/Figure_1E.png" alt="Figure 1E" class="video-trigger">
-                      <div class="image-popup video-popup">
-                          <div class="popup-content">
-                              <span class="close-popup">&times;</span>
-                              <div class="video-container">
-                                  <video controls class="popup-video">
-                                      <source src="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/misc/PS0000_(3%2C+5)_WT_CTRL_0.mp4" type="video/mp4">
-                                      Your browser does not support the video tag.
-                                  </video>
+                          <img src="images/Figure_1E.png"
+                               alt="Figure 1E"
+                               class="video-trigger"
+                               data-preview-image="images/Figure_1C_low_res.png">
+                          <div class="image-popup video-popup">
+                              <div class="popup-content">
+                                  <span class="close-popup">&times;</span>
+                                  <div class="video-container">
+                                      <video controls class="popup-video">
+                                          <source src="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/misc/PS0000_(3%2C+5)_WT_CTRL_0.mp4" type="video/mp4">
+                                      </video>
+                                  </div>
                               </div>
                           </div>
                       </div>
-                    </div>
                       <div id="F1F" class="F1F-container">
                           <img src="images/Figure_1F.png" alt="Figure 1F">
                           <div class="image-popup">
@@ -123,29 +135,35 @@
                           </div>
                       </div>
                       <div id="F1G" class="F1G-container">
-                      <img src="images/Figure_1G.png" alt="Figure 1G" class="video-trigger">
-                      <div class="image-popup video-popup">
-                          <div class="popup-content">
-                              <span class="close-popup">&times;</span>
-                              <div class="video-container">
-                                  <video controls class="popup-video">
-                                      <source src="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/misc/s1_annotated.mp4" type="video/mp4">
-                                      Your browser does not support the video tag.
-                                  </video>
+                          <img src="images/Figure_1G.png"
+                               alt="Figure 1G"
+                               class="video-trigger"
+                               data-preview-image="images/Figure_1G_low_res.png">   <!-- Added this line -->
+                          <div class="image-popup video-popup">
+                              <div class="popup-content">
+                                  <span class="close-popup">&times;</span>
+                                  <div class="video-container">
+                                      <video controls class="popup-video">
+                                          <source src="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/misc/s1_annotated.mp4" type="video/mp4">
+                                          Your browser does not support the video tag.
+                                      </video>
+                                  </div>
                               </div>
                           </div>
                       </div>
-                    </div>
                       <div id="F1H" class="F1H-container">
                         <div class="caption-line-container">
                             <div class="caption">H</div>
                             <div class="horizontal-line"></div>
                         </div>
-                            <div id="plot-1H"></div>
-                      </div>
-                    </div>
 
+                        <!-- Hover Preview Container for F1H -->
+                        <div class="plot-preview-container">
+                            <img id="plot-hover-image" src="" alt="Single-cell glimpse">
+                        </div>
+                        <div id="plot-1H"></div>
                       </div>
+
 
                       <!-- Modal for full image/video view -->
                       <div id="imageModal" class="modal">
@@ -157,12 +175,15 @@
                               </video>
                           </div>
                       </div>
+                    </div>
 
                       <figcaption>
                           <b>Fig. 1. A high-content live single-cell imaging approach to monitor Mtb replication in human macrophages.</b>
                           <p><b>(A)</b> Timeline of the experimental design and imaging conditions. <b>(B)</b> A single image acquisition, showing EGFP-expressing macrophages infected with Mtb H37Rv WT-E2Crimson. <b>(C)</b> A full mosaic of 9 images (single tile shown as white square inset) with 10% overlap. <b>(D)</b> Each mosaic is composed of 2 fluorescent channels and 3 z-slices with a step of 2μm. <b>(E)</b> The image acquisition lasts for 75 h at 30/60min frame rates. <b>(F)</b> This image volume is then segmented using the EGFP channel. <b>(G)</b> Each segment in each frame is then localized and intracellular Mtb quantified, prior to linking each cell instance over time into a series of tracks, shown here as a visualization in 3 dimensions (x,y,t). <b>(H)</b> Single-cell trajectories (N=1,127) of intracellular Mtb growth in n=4 biological replicates, color-coded to the final intracellular Mtb burden.</p>
                       </figcaption>
                   </figure>
+
+
 
                 <h2>Infected macrophage tracking and quantification reveals extremely variegated growth rates.</h2>
                   <figure class="research-figure">
@@ -173,57 +194,73 @@
                         <p>The growth phenotype proportions of the distribution of Mtb ∆RD1 populations were relatively similar to Mtb WT, at 45%, 10% and 45%. The average doubling time was increased to 19 hours with an increase of 14% in the slow growing population, confirming a reduced capacity for growth of Mtb ∆RD1 as previously reported <a href="#ref27"><i>(27)</i></a>. Altogether, our single-cell Mtb replication analysis showed that contrary to the behavior observed in vitro, a fraction of Mtb can grow substantially faster in cellulo <i>(Fig. 2D)</i>. However, a subset of intracellular populations showed near instantaneous doubling times and extremely rapid growth, warranting further investigation.</p>
                       </div>
                       <!-- F2 Content -->
-                      <div class="main-container">
-                          <div class="pairs-container">
-                              <!-- First pair: F2A -->
-                              <div class="pair">
-                                  <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S2.mp4">
-                                      <img src="images/Figure_2A.png" alt="Figure 2A">
-                                      <div class="video-hover">
-                                          <video style="width: 400px; height: 400px; object-fit: cover; object-position: left top;"
-                                                 autoplay loop muted playsinline></video>
-                                      </div>
-                                  </div>
-                                  <div id="growth-plot-1" class="growth-plot"></div>
-                              </div>
+                      <div class="F2-container">
+                        <!-- Paired plots container -->
+                        <div class="pairs-container">
+                            <!-- F2A -->
+                            <div class="pair">
+                                <div class="F2A-container">
+                                    <img src="images/Figure_2A.png" alt="Figure 2A" class="video-trigger">
+                                    <div class="image-popup video-popup">
+                                        <div class="popup-content">
+                                            <span class="close-popup">&times;</span>
+                                            <div class="video-container">
+                                                <video controls class="popup-video">
+                                                    <source src="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S2.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="plot-2A" class="F2-growth-plot"></div>
+                            </div>
 
-                              <!-- Second pair: F2B -->
-                              <div class="pair">
-                                  <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S3.mp4">
-                                      <img src="images/Figure_2B.png" alt="Figure 2B">
-                                      <div class="video-hover">
-                                          <video style="width: 400px; height: 400px; object-fit: cover; object-position: left top;"
-                                                 autoplay loop muted playsinline></video>
-                                      </div>
-                                  </div>
-                                  <div id="growth-plot-2" class="growth-plot"></div>
-                              </div>
+                            <!-- F2B -->
+                            <div class="pair">
+                                <div class="F2B-container">
+                                    <img src="images/Figure_2B.png" alt="Figure 2B" class="video-trigger">
+                                    <div class="image-popup video-popup">
+                                        <div class="popup-content">
+                                            <span class="close-popup">&times;</span>
+                                            <div class="video-container">
+                                                <video controls class="popup-video">
+                                                    <source src="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S3.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="plot-2B" class="F2-growth-plot"></div>
+                            </div>
 
-                              <!-- Third pair: F2C -->
-                              <div class="pair">
-                                  <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S4.mp4">
-                                      <img src="images/Figure_2C.png" alt="Figure 2C">
-                                      <div class="video-hover">
-                                          <video style="width: 400px; height: 400px; object-fit: cover; object-position: left top;"
-                                                 autoplay loop muted playsinline></video>
-                                      </div>
-                                  </div>
-                                  <div id="growth-plot-3" class="growth-plot"></div>
-                              </div>
-                          </div>
+                            <!-- F2C -->
+                            <div class="pair">
+                                <div class="F2C-container">
+                                    <img src="images/Figure_2C.png" alt="Figure 2C" class="video-trigger">
+                                    <div class="image-popup video-popup">
+                                        <div class="popup-content">
+                                            <span class="close-popup">&times;</span>
+                                            <div class="video-container">
+                                                <video controls class="popup-video">
+                                                    <source src="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S4.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="plot-2C" class="F2-growth-plot"></div>
+                            </div>
+                        </div>
 
-                          <!-- Boxplot section: F2D -->
-                          <div class="boxplot-section">
-                              <div class="caption-image">
-                                  <img src="images/Figure_2D_caption.png" style="width: 100%; object-fit: cover; object-position: top; margin-left: -10px;" alt="Caption">
-                              </div>
-                              <div id="boxplot"></div>
-                              <div id="hover-popup" class="hover-popup">
-                                  <video id="popup-video" style="width: 400px; height: 400px; object-fit: cover; object-position: left top;"
-                                         autoplay loop muted playsinline></video>
-                              </div>
-                          </div>
-                      </div>
+                        <!-- F2D Boxplot Section -->
+                        <div class="F2D-container">
+                            <div class="caption-line-container">
+                                <div class="caption">D</div>
+                                <div class="horizontal-line"></div>
+                            </div>
+                            <div id="plot-2D" class="F2D-boxplot"></div>
+                        </div>
+                    </div>
                       <figcaption>
                           <p><b>Fig. 2.</b> Infected macrophage tracking and quantification reveals extremely variegated growth rates. <b>(A)</b> Single cell example of normal doubling time (24 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with the doubling points in grey dotted lines (right). <b>(B)</b> Single cell example of slow doubling time (66 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with the doubling points in grey dotted lines. <b>(C)</b> Single cell example of fast doubling time (13 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with dotted lines. The raw data is shown in magenta. <b>(D)</b> Box plots showing the distribution of intracellular doubling times for intracellular Mtb WT and Mtb ∆RD1.</p>
                       </figcaption>
@@ -237,7 +274,7 @@
                           <!-- Your existing figure text content -->
 
 
-                      <div class="pairs-main-container">
+                      <div class="pairs-F2-container">
                           <!-- Growth Curves Section -->
                           <div class="pairs-container">
                               <!-- Pair 1 -->
@@ -341,8 +378,7 @@
 
             <section class="materials-and-methods" id="materials-and-methods">
                 <h2>Materials and Methods</h2>
-                <h3 style="text-decoration: underline;">M. tuberculosis culture</h3>
-                <p>Fluorescent <i>M. tuberculosis</i> H37Rv pTEC19 WT and ΔRD1 strains were used in this study <a href="#ref7"><i>(7)</i></a>. Those strains were grown in Middlebrook 7H9 broth supplemented with 0.2% glycerol, 0.05% Tween-80, 10% ADC and 50mg/L Hygromycin B as a selection marker for fluorescent strains. Bacterial cultures were incubated at 37°C with rotation in 50mL conical tubes.</p>
+                <h3 id="fluorescent-reporter-section" style="text-decoration: underline;">M. tuberculosis culture</h3>                <p>Fluorescent <i>M. tuberculosis</i> H37Rv pTEC19 WT and ΔRD1 strains were used in this study <a href="#ref7"><i>(7)</i></a>. Those strains were grown in Middlebrook 7H9 broth supplemented with 0.2% glycerol, 0.05% Tween-80, 10% ADC and 50mg/L Hygromycin B as a selection marker for fluorescent strains. Bacterial cultures were incubated at 37°C with rotation in 50mL conical tubes.</p>
                 <h3 style="text-decoration: underline;">Human iPSC culture</h3>
                 <p>KOLF2-C1 AAVS1:EGFP human iPSCs were a gift from the Skarnes Lab (The Jackson Laboratory, CT, USA) and were generated as previously described <a href="#ref22"><i>(22)</i></a>. Briefly, the KOLF2-C1 AAVS1 cells express a EGFP reporter under the control of the strong CAGG promoter in the safe harbor locus AAVS1. The cells were maintained in Vitronectin XF (StemCell Technologies, 100–0763)-coated plates with Essential 8 medium (Gibco, A1517001). Cells were authenticated by STR profiling and checked regularly for Mycoplasma contamination. Cells were passaged using Versene (Gibco, 15040066).</p>
                 <h3 style="text-decoration: underline;">iPSDM differentiation</h3>

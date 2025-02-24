@@ -1,0 +1,1667 @@
+{
+  "data": [
+    {
+      "hoverinfo": "skip",
+      "line": {
+        "color": "#1a9641",
+        "width": 6
+      },
+      "mode": "lines",
+      "name": "Growth Curve",
+      "opacity": 0.6,
+      "showlegend": true,
+      "x": [
+        null,
+        null,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        9.0,
+        10.0,
+        11.0,
+        12.0,
+        13.0,
+        14.0,
+        15.0,
+        16.0,
+        17.0,
+        18.0,
+        19.0,
+        20.0,
+        21.0,
+        22.0,
+        23.0,
+        24.0,
+        25.0,
+        26.0,
+        27.0,
+        28.0,
+        29.0,
+        30.0,
+        31.0,
+        32.0,
+        33.0,
+        34.0,
+        35.0,
+        36.0,
+        37.0,
+        38.0,
+        39.0,
+        40.0,
+        41.0,
+        42.0,
+        43.0,
+        44.0,
+        45.0,
+        46.0,
+        47.0,
+        48.0,
+        49.0,
+        50.0,
+        51.0,
+        52.0,
+        53.0,
+        54.0,
+        55.0,
+        56.0,
+        57.0,
+        58.0,
+        59.0,
+        60.0,
+        61.0,
+        62.0,
+        63.0,
+        64.0,
+        65.0,
+        66.0,
+        67.0,
+        68.0,
+        69.0,
+        70.0,
+        71.0,
+        72.0,
+        null,
+        null
+      ],
+      "y": [
+        null,
+        null,
+        24.478365022259364,
+        25.416414423355178,
+        26.358576091150137,
+        27.305119075289724,
+        28.25797395420787,
+        29.219697374677775,
+        30.192012545304525,
+        31.175482292140895,
+        32.175151311293995,
+        33.27856507375626,
+        34.4350469129159,
+        35.67427418283285,
+        37.00569451839418,
+        38.42861747593583,
+        39.933143537248185,
+        41.49204167867255,
+        43.07577099744021,
+        44.664562098681046,
+        46.242297217912295,
+        47.800199040878624,
+        49.33155486795586,
+        50.833900076609545,
+        52.30344681211229,
+        53.72963674196356,
+        55.11997574398252,
+        56.56992043816619,
+        58.18130881349443,
+        59.95865490757112,
+        61.828673371621406,
+        63.75179972054221,
+        65.75947148828257,
+        67.86060825993302,
+        70.06114099696936,
+        72.38060790257427,
+        74.81249349035654,
+        77.30429821254528,
+        79.79272323464599,
+        82.26697485299293,
+        84.74908286603997,
+        87.29140000824022,
+        89.93877831963181,
+        92.6948848817182,
+        95.5117403290403,
+        98.39467420255586,
+        101.47836102353207,
+        104.83833346523815,
+        108.34414653755208,
+        111.9199637743165,
+        115.55564404418566,
+        119.22187228516962,
+        122.92389503932677,
+        126.67469437156122,
+        130.44136752433562,
+        134.1842907222223,
+        137.88813480070652,
+        141.58184182685855,
+        145.29186188304766,
+        149.044942467554,
+        152.84988576958335,
+        156.6855280022923,
+        161.64555086543578,
+        168.09912308453204,
+        173.66305840110576,
+        179.23168995693902,
+        184.6130649526787,
+        189.9558140242815,
+        195.30385308776158,
+        200.66556839179202,
+        206.04294559720864,
+        211.4377975857844,
+        216.84843969448144,
+        null,
+        null
+      ],
+      "type": "scatter"
+    },
+    {
+      "hoverinfo": "skip",
+      "legendgroup": "raw_data",
+      "line": {
+        "color": "#f1b6da",
+        "width": 4
+      },
+      "mode": "lines",
+      "name": "Raw data",
+      "showlegend": true,
+      "x": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        9.0,
+        10.0,
+        11.0,
+        12.0,
+        13.0,
+        14.0,
+        15.0,
+        16.0,
+        17.0,
+        18.0,
+        19.0,
+        20.0,
+        21.0,
+        22.0,
+        23.0,
+        24.0,
+        25.0,
+        26.0,
+        27.0,
+        28.0,
+        29.0,
+        30.0,
+        31.0,
+        32.0,
+        33.0,
+        34.0,
+        35.0,
+        36.0,
+        37.0,
+        38.0,
+        39.0,
+        40.0,
+        41.0,
+        42.0,
+        43.0,
+        44.0,
+        45.0,
+        46.0,
+        47.0,
+        48.0,
+        49.0,
+        50.0,
+        51.0,
+        52.0,
+        53.0,
+        54.0,
+        55.0,
+        56.0,
+        57.0,
+        58.0,
+        59.0,
+        60.0,
+        61.0,
+        62.0,
+        63.0,
+        64.0,
+        65.0,
+        66.0,
+        67.0,
+        68.0,
+        69.0,
+        70.0,
+        71.0,
+        72.0,
+        73.0,
+        74.0
+      ],
+      "y": [
+        24.426869061392093,
+        21.38747821752263,
+        25.27611062070856,
+        25.499595241581318,
+        25.119671386097632,
+        29.455273031029076,
+        27.443911443174283,
+        29.05300071345812,
+        29.96928765903641,
+        30.595044597480126,
+        31.131407687574736,
+        32.78519388203312,
+        33.88026852430962,
+        35.712842415466206,
+        36.785568595655434,
+        37.90299170001921,
+        42.32798719329975,
+        39.57912635656486,
+        41.65753333068148,
+        44.98745418168553,
+        45.456771885518314,
+        48.45146580521323,
+        50.90979663481353,
+        50.932145096900804,
+        52.54123436718464,
+        54.06092978911937,
+        54.86547442426129,
+        56.4075183082833,
+        57.547289874734346,
+        59.26812145545456,
+        60.34084763564378,
+        60.877210725738394,
+        63.44728386577507,
+        67.76053704861924,
+        70.86697327875054,
+        72.87833486660533,
+        74.39803028854006,
+        75.13552953742014,
+        80.25332735540623,
+        81.59423508064276,
+        84.32074745529036,
+        87.98589523760354,
+        90.62301376390205,
+        91.98626995122585,
+        93.863540766557,
+        97.88626394226658,
+        99.91997399220865,
+        103.9650456300055,
+        107.4290572535332,
+        111.60821966385372,
+        121.39684605808037,
+        124.81616075743352,
+        124.52563075029894,
+        141.55515886080286,
+        126.58168926232828,
+        130.1350947342051,
+        137.39834491256963,
+        140.12485728721722,
+        145.66727588486154,
+        149.15363597047653,
+        155.52294766535002,
+        157.57900617737937,
+        162.5627132228418,
+        159.61271622732144,
+        154.0926460917644,
+        167.34528410951876,
+        175.0555035296288,
+        178.54186361524376,
+        186.18503764909198,
+        199.68350874980638,
+        207.81834894957464,
+        216.89182455700848,
+        222.56833392717644,
+        214.7910691208046,
+        218.67970152399053
+      ],
+      "type": "scatter"
+    },
+    {
+      "customdata": [
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_000.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_001.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_002.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_003.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_004.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_005.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_006.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_007.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_008.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_009.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_010.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_011.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_012.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_013.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_014.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_015.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_016.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_017.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_018.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_019.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_020.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_021.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_022.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_023.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_024.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_025.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_026.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_027.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_028.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_029.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_030.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_031.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_032.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_033.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_034.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_035.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_036.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_037.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_038.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_039.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_040.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_041.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_042.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_043.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_044.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_045.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_046.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_047.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_048.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_049.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_050.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_051.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_052.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_053.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_054.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_055.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_056.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_057.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_058.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_059.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_060.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_061.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_062.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_063.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_064.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_065.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_066.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_067.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_068.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_069.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_070.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_071.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_072.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_073.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/330.3.5.PS0000/frame_074.png"
+      ],
+      "hoverinfo": "text",
+      "legendgroup": "raw_data",
+      "marker": {
+        "color": "#d02c91",
+        "size": 4
+      },
+      "mode": "markers",
+      "showlegend": false,
+      "text": [
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> nan hours<br><b>Mtb Growth Curve:</b> nan \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 24.43 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> nan hours<br><b>Mtb Growth Curve:</b> nan \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 21.39 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 2.00 hours<br><b>Mtb Growth Curve:</b> 24.48 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 25.28 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 3.00 hours<br><b>Mtb Growth Curve:</b> 25.42 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 25.50 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 4.00 hours<br><b>Mtb Growth Curve:</b> 26.36 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 25.12 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 5.00 hours<br><b>Mtb Growth Curve:</b> 27.31 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 29.46 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 6.00 hours<br><b>Mtb Growth Curve:</b> 28.26 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 27.44 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 7.00 hours<br><b>Mtb Growth Curve:</b> 29.22 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 29.05 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 8.00 hours<br><b>Mtb Growth Curve:</b> 30.19 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 29.97 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 9.00 hours<br><b>Mtb Growth Curve:</b> 31.18 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 30.60 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 10.00 hours<br><b>Mtb Growth Curve:</b> 32.18 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 31.13 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 11.00 hours<br><b>Mtb Growth Curve:</b> 33.28 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 32.79 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 12.00 hours<br><b>Mtb Growth Curve:</b> 34.44 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 33.88 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 13.00 hours<br><b>Mtb Growth Curve:</b> 35.67 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 35.71 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 14.00 hours<br><b>Mtb Growth Curve:</b> 37.01 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 36.79 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 15.00 hours<br><b>Mtb Growth Curve:</b> 38.43 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 37.90 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 16.00 hours<br><b>Mtb Growth Curve:</b> 39.93 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 42.33 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 17.00 hours<br><b>Mtb Growth Curve:</b> 41.49 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 39.58 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 18.00 hours<br><b>Mtb Growth Curve:</b> 43.08 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 41.66 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 19.00 hours<br><b>Mtb Growth Curve:</b> 44.66 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 44.99 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 20.00 hours<br><b>Mtb Growth Curve:</b> 46.24 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 45.46 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 21.00 hours<br><b>Mtb Growth Curve:</b> 47.80 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 48.45 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 22.00 hours<br><b>Mtb Growth Curve:</b> 49.33 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 50.91 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 23.00 hours<br><b>Mtb Growth Curve:</b> 50.83 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 50.93 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 24.00 hours<br><b>Mtb Growth Curve:</b> 52.30 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 52.54 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 25.00 hours<br><b>Mtb Growth Curve:</b> 53.73 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 54.06 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 26.00 hours<br><b>Mtb Growth Curve:</b> 55.12 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 54.87 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 27.00 hours<br><b>Mtb Growth Curve:</b> 56.57 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 56.41 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 28.00 hours<br><b>Mtb Growth Curve:</b> 58.18 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 57.55 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 29.00 hours<br><b>Mtb Growth Curve:</b> 59.96 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 59.27 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 30.00 hours<br><b>Mtb Growth Curve:</b> 61.83 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 60.34 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 31.00 hours<br><b>Mtb Growth Curve:</b> 63.75 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 60.88 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 32.00 hours<br><b>Mtb Growth Curve:</b> 65.76 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 63.45 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 33.00 hours<br><b>Mtb Growth Curve:</b> 67.86 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 67.76 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 34.00 hours<br><b>Mtb Growth Curve:</b> 70.06 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 70.87 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 35.00 hours<br><b>Mtb Growth Curve:</b> 72.38 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 72.88 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 36.00 hours<br><b>Mtb Growth Curve:</b> 74.81 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 74.40 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 37.00 hours<br><b>Mtb Growth Curve:</b> 77.30 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 75.14 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 38.00 hours<br><b>Mtb Growth Curve:</b> 79.79 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 80.25 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 39.00 hours<br><b>Mtb Growth Curve:</b> 82.27 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 81.59 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 40.00 hours<br><b>Mtb Growth Curve:</b> 84.75 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 84.32 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 41.00 hours<br><b>Mtb Growth Curve:</b> 87.29 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 87.99 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 42.00 hours<br><b>Mtb Growth Curve:</b> 89.94 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 90.62 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 43.00 hours<br><b>Mtb Growth Curve:</b> 92.69 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 91.99 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 44.00 hours<br><b>Mtb Growth Curve:</b> 95.51 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 93.86 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 45.00 hours<br><b>Mtb Growth Curve:</b> 98.39 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 97.89 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 46.00 hours<br><b>Mtb Growth Curve:</b> 101.48 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 99.92 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 47.00 hours<br><b>Mtb Growth Curve:</b> 104.84 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 103.97 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 48.00 hours<br><b>Mtb Growth Curve:</b> 108.34 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 107.43 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 49.00 hours<br><b>Mtb Growth Curve:</b> 111.92 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 111.61 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 50.00 hours<br><b>Mtb Growth Curve:</b> 115.56 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 121.40 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 51.00 hours<br><b>Mtb Growth Curve:</b> 119.22 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 124.82 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 52.00 hours<br><b>Mtb Growth Curve:</b> 122.92 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 124.53 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 53.00 hours<br><b>Mtb Growth Curve:</b> 126.67 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 141.56 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 54.00 hours<br><b>Mtb Growth Curve:</b> 130.44 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 126.58 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 55.00 hours<br><b>Mtb Growth Curve:</b> 134.18 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 130.14 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 56.00 hours<br><b>Mtb Growth Curve:</b> 137.89 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 137.40 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 57.00 hours<br><b>Mtb Growth Curve:</b> 141.58 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 140.12 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 58.00 hours<br><b>Mtb Growth Curve:</b> 145.29 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 145.67 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 59.00 hours<br><b>Mtb Growth Curve:</b> 149.04 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 149.15 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 60.00 hours<br><b>Mtb Growth Curve:</b> 152.85 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 155.52 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 61.00 hours<br><b>Mtb Growth Curve:</b> 156.69 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 157.58 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 62.00 hours<br><b>Mtb Growth Curve:</b> 161.65 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 162.56 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 63.00 hours<br><b>Mtb Growth Curve:</b> 168.10 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 159.61 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 64.00 hours<br><b>Mtb Growth Curve:</b> 173.66 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 154.09 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 65.00 hours<br><b>Mtb Growth Curve:</b> 179.23 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 167.35 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 66.00 hours<br><b>Mtb Growth Curve:</b> 184.61 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 175.06 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 67.00 hours<br><b>Mtb Growth Curve:</b> 189.96 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 178.54 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 68.00 hours<br><b>Mtb Growth Curve:</b> 195.30 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 186.19 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 69.00 hours<br><b>Mtb Growth Curve:</b> 200.67 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 199.68 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 70.00 hours<br><b>Mtb Growth Curve:</b> 206.04 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 207.82 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 71.00 hours<br><b>Mtb Growth Curve:</b> 211.44 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 216.89 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> 72.00 hours<br><b>Mtb Growth Curve:</b> 216.85 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 222.57 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> nan hours<br><b>Mtb Growth Curve:</b> nan \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 214.79 \u00b5m\u00b2",
+        "<b>ID:</b> 330.3.5.PS0000<br><b>Time:</b> nan hours<br><b>Mtb Growth Curve:</b> nan \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 218.68 \u00b5m\u00b2"
+      ],
+      "x": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        9.0,
+        10.0,
+        11.0,
+        12.0,
+        13.0,
+        14.0,
+        15.0,
+        16.0,
+        17.0,
+        18.0,
+        19.0,
+        20.0,
+        21.0,
+        22.0,
+        23.0,
+        24.0,
+        25.0,
+        26.0,
+        27.0,
+        28.0,
+        29.0,
+        30.0,
+        31.0,
+        32.0,
+        33.0,
+        34.0,
+        35.0,
+        36.0,
+        37.0,
+        38.0,
+        39.0,
+        40.0,
+        41.0,
+        42.0,
+        43.0,
+        44.0,
+        45.0,
+        46.0,
+        47.0,
+        48.0,
+        49.0,
+        50.0,
+        51.0,
+        52.0,
+        53.0,
+        54.0,
+        55.0,
+        56.0,
+        57.0,
+        58.0,
+        59.0,
+        60.0,
+        61.0,
+        62.0,
+        63.0,
+        64.0,
+        65.0,
+        66.0,
+        67.0,
+        68.0,
+        69.0,
+        70.0,
+        71.0,
+        72.0,
+        73.0,
+        74.0
+      ],
+      "y": [
+        24.426869061392093,
+        21.38747821752263,
+        25.27611062070856,
+        25.499595241581318,
+        25.119671386097632,
+        29.455273031029076,
+        27.443911443174283,
+        29.05300071345812,
+        29.96928765903641,
+        30.595044597480126,
+        31.131407687574736,
+        32.78519388203312,
+        33.88026852430962,
+        35.712842415466206,
+        36.785568595655434,
+        37.90299170001921,
+        42.32798719329975,
+        39.57912635656486,
+        41.65753333068148,
+        44.98745418168553,
+        45.456771885518314,
+        48.45146580521323,
+        50.90979663481353,
+        50.932145096900804,
+        52.54123436718464,
+        54.06092978911937,
+        54.86547442426129,
+        56.4075183082833,
+        57.547289874734346,
+        59.26812145545456,
+        60.34084763564378,
+        60.877210725738394,
+        63.44728386577507,
+        67.76053704861924,
+        70.86697327875054,
+        72.87833486660533,
+        74.39803028854006,
+        75.13552953742014,
+        80.25332735540623,
+        81.59423508064276,
+        84.32074745529036,
+        87.98589523760354,
+        90.62301376390205,
+        91.98626995122585,
+        93.863540766557,
+        97.88626394226658,
+        99.91997399220865,
+        103.9650456300055,
+        107.4290572535332,
+        111.60821966385372,
+        121.39684605808037,
+        124.81616075743352,
+        124.52563075029894,
+        141.55515886080286,
+        126.58168926232828,
+        130.1350947342051,
+        137.39834491256963,
+        140.12485728721722,
+        145.66727588486154,
+        149.15363597047653,
+        155.52294766535002,
+        157.57900617737937,
+        162.5627132228418,
+        159.61271622732144,
+        154.0926460917644,
+        167.34528410951876,
+        175.0555035296288,
+        178.54186361524376,
+        186.18503764909198,
+        199.68350874980638,
+        207.81834894957464,
+        216.89182455700848,
+        222.56833392717644,
+        214.7910691208046,
+        218.67970152399053
+      ],
+      "type": "scatter"
+    }
+  ],
+  "layout": {
+    "template": {
+      "data": {
+        "histogram2dcontour": [
+          {
+            "type": "histogram2dcontour",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "choropleth": [
+          {
+            "type": "choropleth",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            }
+          }
+        ],
+        "histogram2d": [
+          {
+            "type": "histogram2d",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "heatmap": [
+          {
+            "type": "heatmap",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "heatmapgl": [
+          {
+            "type": "heatmapgl",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "contourcarpet": [
+          {
+            "type": "contourcarpet",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            }
+          }
+        ],
+        "contour": [
+          {
+            "type": "contour",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "surface": [
+          {
+            "type": "surface",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "mesh3d": [
+          {
+            "type": "mesh3d",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            }
+          }
+        ],
+        "scatter": [
+          {
+            "fillpattern": {
+              "fillmode": "overlay",
+              "size": 10,
+              "solidity": 0.2
+            },
+            "type": "scatter"
+          }
+        ],
+        "parcoords": [
+          {
+            "type": "parcoords",
+            "line": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatterpolargl": [
+          {
+            "type": "scatterpolargl",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "bar": [
+          {
+            "error_x": {
+              "color": "#2a3f5f"
+            },
+            "error_y": {
+              "color": "#2a3f5f"
+            },
+            "marker": {
+              "line": {
+                "color": "#E5ECF6",
+                "width": 0.5
+              },
+              "pattern": {
+                "fillmode": "overlay",
+                "size": 10,
+                "solidity": 0.2
+              }
+            },
+            "type": "bar"
+          }
+        ],
+        "scattergeo": [
+          {
+            "type": "scattergeo",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatterpolar": [
+          {
+            "type": "scatterpolar",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "histogram": [
+          {
+            "marker": {
+              "pattern": {
+                "fillmode": "overlay",
+                "size": 10,
+                "solidity": 0.2
+              }
+            },
+            "type": "histogram"
+          }
+        ],
+        "scattergl": [
+          {
+            "type": "scattergl",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatter3d": [
+          {
+            "type": "scatter3d",
+            "line": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            },
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scattermapbox": [
+          {
+            "type": "scattermapbox",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatterternary": [
+          {
+            "type": "scatterternary",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scattercarpet": [
+          {
+            "type": "scattercarpet",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "carpet": [
+          {
+            "aaxis": {
+              "endlinecolor": "#2a3f5f",
+              "gridcolor": "white",
+              "linecolor": "white",
+              "minorgridcolor": "white",
+              "startlinecolor": "#2a3f5f"
+            },
+            "baxis": {
+              "endlinecolor": "#2a3f5f",
+              "gridcolor": "white",
+              "linecolor": "white",
+              "minorgridcolor": "white",
+              "startlinecolor": "#2a3f5f"
+            },
+            "type": "carpet"
+          }
+        ],
+        "table": [
+          {
+            "cells": {
+              "fill": {
+                "color": "#EBF0F8"
+              },
+              "line": {
+                "color": "white"
+              }
+            },
+            "header": {
+              "fill": {
+                "color": "#C8D4E3"
+              },
+              "line": {
+                "color": "white"
+              }
+            },
+            "type": "table"
+          }
+        ],
+        "barpolar": [
+          {
+            "marker": {
+              "line": {
+                "color": "#E5ECF6",
+                "width": 0.5
+              },
+              "pattern": {
+                "fillmode": "overlay",
+                "size": 10,
+                "solidity": 0.2
+              }
+            },
+            "type": "barpolar"
+          }
+        ],
+        "pie": [
+          {
+            "automargin": true,
+            "type": "pie"
+          }
+        ]
+      },
+      "layout": {
+        "autotypenumbers": "strict",
+        "colorway": [
+          "#636efa",
+          "#EF553B",
+          "#00cc96",
+          "#ab63fa",
+          "#FFA15A",
+          "#19d3f3",
+          "#FF6692",
+          "#B6E880",
+          "#FF97FF",
+          "#FECB52"
+        ],
+        "font": {
+          "color": "#2a3f5f"
+        },
+        "hovermode": "closest",
+        "hoverlabel": {
+          "align": "left"
+        },
+        "paper_bgcolor": "white",
+        "plot_bgcolor": "#E5ECF6",
+        "polar": {
+          "bgcolor": "#E5ECF6",
+          "angularaxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          },
+          "radialaxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          }
+        },
+        "ternary": {
+          "bgcolor": "#E5ECF6",
+          "aaxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          },
+          "baxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          },
+          "caxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          }
+        },
+        "coloraxis": {
+          "colorbar": {
+            "outlinewidth": 0,
+            "ticks": ""
+          }
+        },
+        "colorscale": {
+          "sequential": [
+            [
+              0.0,
+              "#0d0887"
+            ],
+            [
+              0.1111111111111111,
+              "#46039f"
+            ],
+            [
+              0.2222222222222222,
+              "#7201a8"
+            ],
+            [
+              0.3333333333333333,
+              "#9c179e"
+            ],
+            [
+              0.4444444444444444,
+              "#bd3786"
+            ],
+            [
+              0.5555555555555556,
+              "#d8576b"
+            ],
+            [
+              0.6666666666666666,
+              "#ed7953"
+            ],
+            [
+              0.7777777777777778,
+              "#fb9f3a"
+            ],
+            [
+              0.8888888888888888,
+              "#fdca26"
+            ],
+            [
+              1.0,
+              "#f0f921"
+            ]
+          ],
+          "sequentialminus": [
+            [
+              0.0,
+              "#0d0887"
+            ],
+            [
+              0.1111111111111111,
+              "#46039f"
+            ],
+            [
+              0.2222222222222222,
+              "#7201a8"
+            ],
+            [
+              0.3333333333333333,
+              "#9c179e"
+            ],
+            [
+              0.4444444444444444,
+              "#bd3786"
+            ],
+            [
+              0.5555555555555556,
+              "#d8576b"
+            ],
+            [
+              0.6666666666666666,
+              "#ed7953"
+            ],
+            [
+              0.7777777777777778,
+              "#fb9f3a"
+            ],
+            [
+              0.8888888888888888,
+              "#fdca26"
+            ],
+            [
+              1.0,
+              "#f0f921"
+            ]
+          ],
+          "diverging": [
+            [
+              0,
+              "#8e0152"
+            ],
+            [
+              0.1,
+              "#c51b7d"
+            ],
+            [
+              0.2,
+              "#de77ae"
+            ],
+            [
+              0.3,
+              "#f1b6da"
+            ],
+            [
+              0.4,
+              "#fde0ef"
+            ],
+            [
+              0.5,
+              "#f7f7f7"
+            ],
+            [
+              0.6,
+              "#e6f5d0"
+            ],
+            [
+              0.7,
+              "#b8e186"
+            ],
+            [
+              0.8,
+              "#7fbc41"
+            ],
+            [
+              0.9,
+              "#4d9221"
+            ],
+            [
+              1,
+              "#276419"
+            ]
+          ]
+        },
+        "xaxis": {
+          "gridcolor": "white",
+          "linecolor": "white",
+          "ticks": "",
+          "title": {
+            "standoff": 15
+          },
+          "zerolinecolor": "white",
+          "automargin": true,
+          "zerolinewidth": 2
+        },
+        "yaxis": {
+          "gridcolor": "white",
+          "linecolor": "white",
+          "ticks": "",
+          "title": {
+            "standoff": 15
+          },
+          "zerolinecolor": "white",
+          "automargin": true,
+          "zerolinewidth": 2
+        },
+        "scene": {
+          "xaxis": {
+            "backgroundcolor": "#E5ECF6",
+            "gridcolor": "white",
+            "linecolor": "white",
+            "showbackground": true,
+            "ticks": "",
+            "zerolinecolor": "white",
+            "gridwidth": 2
+          },
+          "yaxis": {
+            "backgroundcolor": "#E5ECF6",
+            "gridcolor": "white",
+            "linecolor": "white",
+            "showbackground": true,
+            "ticks": "",
+            "zerolinecolor": "white",
+            "gridwidth": 2
+          },
+          "zaxis": {
+            "backgroundcolor": "#E5ECF6",
+            "gridcolor": "white",
+            "linecolor": "white",
+            "showbackground": true,
+            "ticks": "",
+            "zerolinecolor": "white",
+            "gridwidth": 2
+          }
+        },
+        "shapedefaults": {
+          "line": {
+            "color": "#2a3f5f"
+          }
+        },
+        "annotationdefaults": {
+          "arrowcolor": "#2a3f5f",
+          "arrowhead": 0,
+          "arrowwidth": 1
+        },
+        "geo": {
+          "bgcolor": "white",
+          "landcolor": "#E5ECF6",
+          "subunitcolor": "white",
+          "showland": true,
+          "showlakes": true,
+          "lakecolor": "white"
+        },
+        "title": {
+          "x": 0.05
+        },
+        "mapbox": {
+          "style": "light"
+        }
+      }
+    },
+    "xaxis": {
+      "title": {
+        "font": {
+          "family": "Helvetica",
+          "size": 16
+        },
+        "text": "Time (hours)"
+      },
+      "tickfont": {
+        "family": "Helvetica",
+        "size": 16
+      },
+      "gridcolor": "rgba(200,200,200,0.3)",
+      "showline": false,
+      "zeroline": false,
+      "showgrid": false,
+      "range": [
+        -4,
+        82
+      ]
+    },
+    "yaxis": {
+      "title": {
+        "font": {
+          "family": "Helvetica",
+          "size": 16
+        },
+        "text": "Mtb Area (\u00b5m\u00b2)"
+      },
+      "tickfont": {
+        "family": "Helvetica",
+        "size": 16
+      },
+      "gridcolor": "rgba(200,200,200,0.3)",
+      "showline": false,
+      "showgrid": false,
+      "zeroline": false,
+      "range": [
+        -20,
+        300
+      ]
+    },
+    "font": {
+      "family": "Helvetica",
+      "size": 16
+    },
+    "margin": {
+      "r": 50,
+      "t": 0,
+      "b": 50
+    },
+    "legend": {
+      "x": 0.1,
+      "y": 0.9,
+      "xanchor": "left",
+      "yanchor": "top"
+    },
+    "plot_bgcolor": "white",
+    "width": 400,
+    "height": 300,
+    "shapes": [
+      {
+        "line": {
+          "color": "gray",
+          "dash": "dash",
+          "width": 1
+        },
+        "opacity": 0.5,
+        "type": "line",
+        "x0": 2.0,
+        "x1": 2.0,
+        "y0": 0,
+        "y1": 300
+      },
+      {
+        "line": {
+          "color": "gray",
+          "dash": "dash",
+          "width": 1
+        },
+        "opacity": 0.5,
+        "type": "line",
+        "x0": 0,
+        "x1": 80,
+        "y0": 24.478365022259364,
+        "y1": 24.478365022259364
+      },
+      {
+        "line": {
+          "color": "gray",
+          "dash": "dash",
+          "width": 1
+        },
+        "opacity": 0.5,
+        "type": "line",
+        "x0": 22.0,
+        "x1": 22.0,
+        "y0": 0,
+        "y1": 300
+      },
+      {
+        "line": {
+          "color": "gray",
+          "dash": "dash",
+          "width": 1
+        },
+        "opacity": 0.5,
+        "type": "line",
+        "x0": 0,
+        "x1": 80,
+        "y0": 48.95673004451873,
+        "y1": 48.95673004451873
+      },
+      {
+        "line": {
+          "color": "gray",
+          "dash": "dash",
+          "width": 1
+        },
+        "opacity": 0.5,
+        "type": "line",
+        "x0": 45.0,
+        "x1": 45.0,
+        "y0": 0,
+        "y1": 300
+      },
+      {
+        "line": {
+          "color": "gray",
+          "dash": "dash",
+          "width": 1
+        },
+        "opacity": 0.5,
+        "type": "line",
+        "x0": 0,
+        "x1": 80,
+        "y0": 97.91346008903746,
+        "y1": 97.91346008903746
+      },
+      {
+        "line": {
+          "color": "gray",
+          "dash": "dash",
+          "width": 1
+        },
+        "opacity": 0.5,
+        "type": "line",
+        "x0": 68.0,
+        "x1": 68.0,
+        "y0": 0,
+        "y1": 300
+      },
+      {
+        "line": {
+          "color": "gray",
+          "dash": "dash",
+          "width": 1
+        },
+        "opacity": 0.5,
+        "type": "line",
+        "x0": 0,
+        "x1": 80,
+        "y0": 195.82692017807491,
+        "y1": 195.82692017807491
+      },
+      {
+        "line": {
+          "color": "black",
+          "dash": "solid",
+          "width": 2
+        },
+        "type": "line",
+        "x0": -2,
+        "x1": -2,
+        "xref": "x",
+        "y0": 0,
+        "y1": 300,
+        "yref": "y"
+      },
+      {
+        "line": {
+          "color": "black",
+          "dash": "solid",
+          "width": 2
+        },
+        "type": "line",
+        "x0": 0,
+        "x1": 80,
+        "xref": "x",
+        "y0": -10,
+        "y1": -10,
+        "yref": "y"
+      }
+    ]
+  }
+}
