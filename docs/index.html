@@ -267,81 +267,96 @@
                   </figure>
               </section>
 
+              <!-- Refactored Figure 3 HTML structure with 3x3 grid layout -->
               <section class="results">
-                  <h2>Intracellular fast-growing Mtb is a distinct subpopulation of infected macrophages.</h2>
-                  <figure class="research-figure">
-                      <div class="figure-container-with-sidebar">
-                          <!-- Your existing figure text content -->
+                <h2>Intracellular fast-growing Mtb is a distinct subpopulation of infected macrophages.</h2>
+                <figure class="research-figure">
+                  <div class="figure-results">
+                    <!-- Text content for Figure 3 goes here -->
+                  </div>
 
-
-                      <div class="pairs-F2-container">
-                          <!-- Growth Curves Section -->
-                          <div class="pairs-container">
-                              <!-- Pair 1 -->
-                              <div class="pair">
-                                  <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S2.mp4">
-                                      <img src="images/Figure_3A.png" alt="Figure 3A">
-                                      <div class="video-hover">
-                                          <video style="width: 400px; height: 400px; object-fit: cover; object-position: left top;"
-                                                 autoplay loop muted playsinline></video>
-                                      </div>
-                                  </div>
-                                  <div id="growth-plot-1" class="growth-plot"></div>
-                              </div>
-
-                              <!-- Pair 2 -->
-                              <div class="pair">
-                                  <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S3.mp4">
-                                      <img src="images/Figure_3B.png" alt="Figure 3B">
-                                      <div class="video-hover">
-                                          <video style="width: 400px; height: 400px; object-fit: cover;"
-                                                 autoplay loop muted playsinline></video>
-                                      </div>
-                                  </div>
-                                  <div id="growth-plot-2" class="growth-plot"></div>
-                              </div>
-
-                              <!-- Pair 3 -->
-                              <div class="pair">
-                                  <div class="figure-image" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S4.mp4">
-                                      <img src="images/Figure_3C.png" alt="Figure 3C">
-                                      <div class="video-hover">
-                                          <video style="width: 400px; height: 400px; object-fit: cover;"
-                                                 autoplay loop muted playsinline></video>
-                                      </div>
-                                  </div>
-                                  <div id="growth-plot-3" class="growth-plot"></div>
-                              </div>
-                          </div>
+                  <div class="fig3-grid-container">
+                    <!-- Row 1 -->
+                    <div class="fig3-cell fig3-cell-1-1">
+                      <!-- First column, first row: Image A -->
+                      <div class="fig3-image-container" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S2.mp4">
+                        <img src="images/Figure_3A.png" alt="Figure 3A">
+                        <div class="video-hover">
+                          <video style="width: 400px; height: 400px; object-fit: cover; object-position: left top;"
+                                autoplay loop muted playsinline></video>
+                        </div>
                       </div>
+                    </div>
 
-                      <!-- Vertical image -->
-                      <div class="vertical-image">
-                          <img src="images/Figure_3_diagram.png" alt="Vertical diagram">
+                    <div class="fig3-cell fig3-cell-1-2">
+                      <!-- Second column, first row: Plot A -->
+                      <div id="plot-3A" class="fig3-growth-plot"></div>
+                    </div>
+
+                    <div class="fig3-cell fig3-cell-1-3 fig3-cell-diagram" rowspan="3">
+                      <!-- Third column, spans all rows: Diagram -->
+                      <div class="fig3-diagram">
+                        <img src="images/Figure_3_diagram.png" alt="Vertical diagram">
                       </div>
-                          <!-- Boxplot Section -->
-                          <div class="boxplot-section">
-                              <div class="caption-image">
-                                  <img src="images/Figure_3D_caption.png" style="width: 100%; object-fit: cover; object-position: top; margin-left: -100px;" alt="Caption">
-                              </div>
-                              <div id="boxplot"></div>
-                              <div id="hover-popup" class="hover-popup">
-                                  <video id="popup-video" style="width: 400px; height: 400px; object-fit: cover;"
-                                         autoplay loop muted playsinline></video>
-                              </div>
-                          </div>
+                    </div>
 
-                          <!-- Sankey Plots -->
-                          <div class="sankey-container">
-                              <div id="sankey-wt" class="sankey-plot"></div>
-                              <div id="sankey-rd1" class="sankey-plot"></div>
-                          </div>
+                    <!-- Row 2 -->
+                    <div class="fig3-cell fig3-cell-2-1">
+                      <!-- First column, second row: Image B -->
+                      <div class="fig3-image-container" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S3.mp4">
+                        <img src="images/Figure_3B.png" alt="Figure 3B">
+                        <div class="video-hover">
+                          <video style="width: 400px; height: 400px; object-fit: cover;"
+                                autoplay loop muted playsinline></video>
+                        </div>
                       </div>
+                    </div>
 
-                      <figcaption>
-                          <!-- Your figure caption -->
-                      </figcaption>
-                  </figure>
+                    <div class="fig3-cell fig3-cell-2-2">
+                      <!-- Second column, second row: Plot B -->
+                      <div id="plot-3B" class="fig3-growth-plot"></div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="fig3-cell fig3-cell-3-1">
+                      <!-- First column, third row: Image C -->
+                      <div class="fig3-image-container" data-video="https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/figs/Movie S4.mp4">
+                        <img src="images/Figure_3C.png" alt="Figure 3C">
+                        <div class="video-hover">
+                          <video style="width: 400px; height: 400px; object-fit: cover;"
+                                autoplay loop muted playsinline></video>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="fig3-cell fig3-cell-3-2">
+                      <!-- Second column, third row: Plot C -->
+                      <div id="plot-3C" class="fig3-growth-plot"></div>
+                    </div>
+                  </div>
+
+                  <!-- Boxplot Section - Below the grid -->
+                  <div class="fig3-boxplot-section">
+                    <div class="fig3-caption">
+                      <img src="images/Figure_3D_caption.png" alt="Caption">
+                    </div>
+                    <div id="plot-3D"></div>
+                    <div id="fig3-hover-popup" class="hover-popup">
+                      <video id="fig3-popup-video"
+                            autoplay loop muted playsinline></video>
+                    </div>
+                  </div>
+
+                  <!-- Sankey Plots - Below the boxplot -->
+                  <div class="fig3-sankey-container">
+                    <div id="plot-3E" class="fig3-sankey-plot"></div>
+                    <div id="plot-3F" class="fig3-sankey-plot"></div>
+                  </div>
+
+                  <figcaption>
+                    <p><b>Fig. 3.</b> Intracellular fast-growing Mtb is a distinct subpopulation of infected macrophages. <b>(A)</b> ... [Your caption text here] ... </p>
+                  </figcaption>
+                </figure>
               </section>
 
               <section class="results">

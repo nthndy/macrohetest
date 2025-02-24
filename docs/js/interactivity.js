@@ -402,22 +402,37 @@ function setupPlotHover(plotId) {
 // 7. Initialize All Components
 // ===========================================
 function initializeFigures() {
+    // Setup for Figure 1 and 2
     setupImagePopup(document.querySelectorAll('.F1B-container, .F1C-container, .F1F-container'));
     setupHoverPreview(document.querySelectorAll('.F1B-container, .F1C-container, .F1F-container'));
     setupVideoHoverAndPopup(document.querySelectorAll('.F1E-container, .F1G-container, .F2A-container, .F2B-container, .F2C-container'));
 
+    // Setup for Figure 3
+    setupImagePopup(document.querySelectorAll('.fig3-image-container'));
+    setupVideoHoverAndPopup(document.querySelectorAll('.fig3-image-container'));
+
     // **Dynamically load all figures**
     const plotFigures = [
+        // Figure 1 and 2 plots
         { id: 'plot-1H', jsonPath: './figures/data/F1H_plot_data.json' },
         { id: 'plot-2A', jsonPath: './figures/data/F2A_plot_data.json' },
         { id: 'plot-2B', jsonPath: './figures/data/F2B_plot_data.json' },
         { id: 'plot-2C', jsonPath: './figures/data/F2C_plot_data.json' },
-        { id: 'plot-2D', jsonPath: './figures/data/F2D_plot_data.json' }
+        { id: 'plot-2D', jsonPath: './figures/data/F2D_plot_data.json' },
+
+        // Figure 3 plots
+        { id: 'plot-3A', jsonPath: './figures/data/F3A_plot_data.json' },
+        { id: 'plot-3B', jsonPath: './figures/data/F3B_plot_data.json' },
+        { id: 'plot-3C', jsonPath: './figures/data/F3C_plot_data.json' },
+        { id: 'plot-3D', jsonPath: './figures/data/F3D_plot_data.json' },
+        { id: 'plot-3E', jsonPath: './figures/data/F3E_plot_data.json' },
+        { id: 'plot-3F', jsonPath: './figures/data/F3F_plot_data.json' }
     ];
 
-    plotFigures.forEach(fig => {
-        loadPlotlyFigure(fig.id, fig.jsonPath);
-    });
+
+        plotFigures.forEach(fig => {
+            loadPlotlyFigure(fig.id, fig.jsonPath);
+        });
 }
 
 // ===========================================
