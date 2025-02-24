@@ -117,7 +117,7 @@ function enableHoverPreview() {
 // ===========================================
 function setupHoverPreview(imageContainers) {
     imageContainers.forEach(container => {
-        console.log("🔍 Hover detected on", container);
+        // console.log("🔍 Hover detected on", container); keep the debug step in for now
 
         const zoomableImage = container.querySelector('.image-popup .zoomable-image');
         const popup = container.querySelector('.image-popup');
@@ -312,7 +312,7 @@ function setupVideoHoverAndPopup(videoContainers) {
 // ===========================================
 // 5. Load Plotly Data from JSON
 // ===========================================
-function loadPlotlyFigure(plotId, jsonPath) {
+function loadPlotlyFigure(plotId, jsonPath, containerPrefix) {
     const plotDiv = document.getElementById(plotId);
     if (!plotDiv) {
         console.error(`❌ Error: Could not find div for ${plotId}`);
@@ -326,23 +326,54 @@ function loadPlotlyFigure(plotId, jsonPath) {
             return Plotly.newPlot(plotDiv, data.data, data.layout);
         })
         .then(() => {
-            // After plot is rendered, get its height and update images
+            // After plot is rendered, get its height and update images if needed
             const plotHeight = plotDiv.clientHeight;
             const figureNumber = plotId.charAt(plotId.length - 1);  // Get A, B, or C
-            const imageContainer = document.querySelector(`.F2${figureNumber}-container`);
-            if (imageContainer) {
-                imageContainer.style.height = `${plotHeight}px`;
-                // Ensure image fills container while maintaining aspect ratio
-                const img = imageContainer.querySelector('img');
-                if (img) {
-                    img.style.height = '100%';
-                    img.style.width = 'auto';
-                    img.style.objectFit = 'contain';
+
+            // Use containerPrefix if provided, otherwise extract from plotId
+            const prefix = containerPrefix || (plotId.includes('plot-2') ? 'F2' :
+                            plotId.includes('plot-3') ? 'F3' : null);
+
+            if (prefix) {
+                const imageContainer = document.querySelector(`.${prefix}${figureNumber}-container`);
+                if (imageContainer) {
+                    // Apply different handling for F2 vs F3
+                    if (prefix === 'F2') {
+                        // For F2, set explicit height on container
+                        imageContainer.style.height = `${plotHeight}px`;
+
+                        // Ensure image fills container while maintaining aspect ratio
+                        const img = imageContainer.querySelector('img');
+                        if (img) {
+                            img.style.height = '100%';
+                            img.style.width = 'auto';
+                            img.style.objectFit = 'contain';
+                        }
+                    } else if (prefix === 'F3') {
+                        // For F3, set matching height but preserve grid layout
+                        imageContainer.style.height = `${plotHeight}px`;
+
+                        // Set the image to fill the container
+                        const img = imageContainer.querySelector('img');
+                        if (img) {
+                            img.style.height = '100%';
+                            img.style.width = '100%';
+                            img.style.objectFit = 'contain';
+                        }
+                    }
                 }
             }
 
-            console.log(`✅ Plotly ${plotId} Loaded Successfully!`);
-            setupPlotHover(plotId);
+            // Only setup hover for F1H plots
+            if (plotId === 'plot-1H') {
+                setupPlotHover(plotId);
+            }
+
+            // // If this is a Figure 3 plot, call overall adjustment after all plots load
+            // if (plotId.includes('plot-3')) {
+            //     // Use setTimeout to ensure plot has fully rendered
+            //     setTimeout(adjustFigure3GridLayout, 200);
+            // }
         })
         .catch(error => console.error(`❌ Error loading ${jsonPath}:`, error));
 }
@@ -376,7 +407,7 @@ function setupPlotHover(plotId) {
         const mediaSrc = point.customdata?.image || null;
         if (!mediaSrc) return;
 
-        console.log("🎥 Media detected:", mediaSrc);
+        // console.log("🎥 Media detected:", mediaSrc); keep this debug step in for now
         hoverImage.src = mediaSrc;
         hoverPopup.style.display = 'block';
         hoverPopup.style.position = 'fixed';
@@ -402,40 +433,105 @@ function setupPlotHover(plotId) {
 // 7. Initialize All Components
 // ===========================================
 function initializeFigures() {
-    // Setup for Figure 1 and 2
+    // Existing code
     setupImagePopup(document.querySelectorAll('.F1B-container, .F1C-container, .F1F-container'));
     setupHoverPreview(document.querySelectorAll('.F1B-container, .F1C-container, .F1F-container'));
-    setupVideoHoverAndPopup(document.querySelectorAll('.F1E-container, .F1G-container, .F2A-container, .F2B-container, .F2C-container'));
+    setupVideoHoverAndPopup(document.querySelectorAll('.F1E-container, .F1G-container, .F2A-container, .F2B-container, .F2C-container, .F3A-container, .F3B-container, .F3C-container'));
 
-    // Setup for Figure 3
-    setupImagePopup(document.querySelectorAll('.fig3-image-container'));
-    setupVideoHoverAndPopup(document.querySelectorAll('.fig3-image-container'));
-
-    // **Dynamically load all figures**
+    // Dynamically load all figures
     const plotFigures = [
-        // Figure 1 and 2 plots
         { id: 'plot-1H', jsonPath: './figures/data/F1H_plot_data.json' },
         { id: 'plot-2A', jsonPath: './figures/data/F2A_plot_data.json' },
         { id: 'plot-2B', jsonPath: './figures/data/F2B_plot_data.json' },
         { id: 'plot-2C', jsonPath: './figures/data/F2C_plot_data.json' },
         { id: 'plot-2D', jsonPath: './figures/data/F2D_plot_data.json' },
+        // Add Figure 3 plots
+        { id: 'plot-3A', jsonPath: './figures/data/F3A_plot_data.json', container: 'F3A' },
+        { id: 'plot-3B', jsonPath: './figures/data/F3B_plot_data.json', container: 'F3B' },
+        { id: 'plot-3C', jsonPath: './figures/data/F3C_plot_data.json', container: 'F3C' },
+        { id: 'plot-3D', jsonPath: './figures/data/F3D_plot_data.json', container: 'F3D' }
 
-        // Figure 3 plots
-        { id: 'plot-3A', jsonPath: './figures/data/F3A_plot_data.json' },
-        { id: 'plot-3B', jsonPath: './figures/data/F3B_plot_data.json' },
-        { id: 'plot-3C', jsonPath: './figures/data/F3C_plot_data.json' },
-        { id: 'plot-3D', jsonPath: './figures/data/F3D_plot_data.json' },
-        { id: 'plot-3E', jsonPath: './figures/data/F3E_plot_data.json' },
-        { id: 'plot-3F', jsonPath: './figures/data/F3F_plot_data.json' }
     ];
 
+    plotFigures.forEach(fig => {
+        loadPlotlyFigure(fig.id, fig.jsonPath, fig.container);
+    });
 
-        plotFigures.forEach(fig => {
-            loadPlotlyFigure(fig.id, fig.jsonPath);
-        });
+    // Setup Sankey diagrams if they exist
+    const sankeyPlots = document.querySelectorAll('#plot-3E, #plot-3F');
+    if (sankeyPlots.length > 0) {
+        setupSankeyDiagrams();
+    }
 }
 
 // ===========================================
-// 8. Wait for DOM to Load
+// 8. Set up the sankey diagrams
+// ===========================================
+function setupSankeyDiagrams() {
+    const sankeyDataFiles = [
+        './figures/data/F3E_plot_data.json',
+        './figures/data/F3F_plot_data.json'
+    ];
+
+    const sankeyIds = ['plot-3E', 'plot-3F'];
+
+    sankeyIds.forEach((id, index) => {
+        const sankeyDiv = document.getElementById(id);
+        if (!sankeyDiv) return;
+
+        fetch(sankeyDataFiles[index])
+            .then(response => response.json())
+            .then(data => {
+                Plotly.newPlot(id, data.data, data.layout);
+            })
+            .catch(error => console.error(`❌ Error loading ${sankeyDataFiles[index]}:`, error));
+    });
+}
+
+// ===========================================
+// 9. Adjust figure 3
+// ===========================================
+// function adjustFigure3GridLayout() {
+//     // Get all plot containers in Figure 3
+//     const plots = document.querySelectorAll('#plot-3A, #plot-3B, #plot-3C');
+//
+//     // Find the tallest plot
+//     let maxHeight = 0;
+//     plots.forEach(plot => {
+//         const height = plot.clientHeight;
+//         if (height > maxHeight) {
+//             maxHeight = height;
+//         }
+//     });
+//
+//     // Set all plots and image containers to the same height
+//     plots.forEach(plot => {
+//         const plotId = plot.id.charAt(plot.id.length - 1);
+//         const imageContainer = document.querySelector(`.F3${plotId}-container`);
+//
+//         // Set uniform heights
+//         plot.style.height = `${maxHeight}px`;
+//         if (imageContainer) {
+//             imageContainer.style.height = `${maxHeight}px`;
+//
+//             // Make the image fill the container
+//             const img = imageContainer.querySelector('img');
+//             if (img) {
+//                 img.style.height = '100%';
+//                 img.style.width = '100%';
+//                 img.style.objectFit = 'contain';
+//             }
+//         }
+//     });
+//
+//     // Make sure the grid rows have consistent height
+//     const grid = document.querySelector('.F3-grid');
+//     if (grid) {
+//         grid.style.gridTemplateRows = `${maxHeight}px ${maxHeight}px ${maxHeight}px`;
+//     }
+// }
+
+// ===========================================
+// 10. Wait for DOM to Load
 // ===========================================
 document.addEventListener('DOMContentLoaded', initializeFigures);
