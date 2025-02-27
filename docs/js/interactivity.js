@@ -327,7 +327,7 @@ function loadPlotlyFigure(plotId, jsonPath, containerPrefix) {
                 ...data.layout,
                 autosize: true,
                 responsive: true,
-                margin: { l: 60, r: 30, t: 30, b: 60 }  // Adjust margins as needed
+                margin: { l: 10, r: 10, t: 10, b: 10 }  // Adjust margins as needed
             };
 
             // Use Plotly.newPlot with responsive configuration

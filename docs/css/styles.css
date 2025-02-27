@@ -417,6 +417,8 @@ a {
 
 /* Let plots determine their natural size */
 .F2-container .F2-growth-plot {
+    max-width: 100%;  /* Limit to container width */
+    max-height: auto;  /* Limit to container height */
     flex-grow: 1;
     margin-left: 0px;
 
@@ -428,6 +430,8 @@ a {
     align-items: stretch;
     margin-bottom: 0;
     overflow: visible;
+    height: auto !important;  /* Force auto height */
+    max-height: none !important;  /* Prevent max-height constraints */
 }
 
 .F2D-container .vertical-caption-container {
@@ -455,8 +459,10 @@ a {
 }
 
 .F2D-boxplot {
+    max-height: 100%;  /* Limit to container height */
     width: calc(100% - 40px);  /* Adjust width to account for caption margin */
     margin-left: 40px;  /* Make space for caption + line */
+    /* height: auto !important;  /* Ensure plot can determine its own height */ */
 }
 
 .video-popup {
