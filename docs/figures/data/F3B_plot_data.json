@@ -2437,7 +2437,7 @@
             "x": 0.1,
             "y": 0.9,
             "xanchor": "left",
-            "yanchor": "top"
+            "yanchor": "top",
         },
         "plot_bgcolor": "white",
         "width": 400,

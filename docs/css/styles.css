@@ -245,15 +245,15 @@ a {
     grid-column: span 3;
 }
 
-/* Styles for the caption and horizontal line - MIGHT HAVE TO CHANGE FOR F1H SPECFICITY */
-.caption-line-container {
+/* Horizontal line caption styles */
+.horizontal-caption-container {
     display: flex;
     flex-direction: column; /* Stack caption and line vertically */
     align-items: flex-start; /* Align items to the left */
     margin-bottom: 10px; /* Space between the line and the plot */
 }
 
-.caption {
+.horizontal-caption-container .caption {
     font-weight: bold;
     font-size: 26px;
     margin-bottom: 2px; /* Space between the caption and the line */
@@ -263,6 +263,30 @@ a {
     width: 100%; /* Make the line extend the full width of the container */
     height: 3px; /* Thickness of the line */
     background-color: black; /* Color of the line */
+}
+
+.vertical-caption-container {
+    position: absolute; /* Take out of normal flow */
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.vertical-caption-container .caption {
+    font-weight: bold;
+    font-size: 26px;
+    margin-right: 10px;
+}
+
+.vertical-line {
+    width: 3px;
+    height: 100%; /* Match the container height */
+    background-color: black;
+    margin-top: 0px;
 }
 
 /* Ensure grid items take full width of grid */
@@ -374,7 +398,8 @@ a {
 .F2-container .F2A-container,
 .F2-container .F2B-container,
 .F2-container .F2C-container {
-    width: auto;
+    max-width: 100%;  /* Limit to container width
+    /* max-height: auto;  /* Limit to container height */ */ */
     display: flex;
     justify-content: center;
 }
@@ -382,8 +407,11 @@ a {
 .F2-container .F2A-container img,
 .F2-container .F2B-container img,
 .F2-container .F2C-container img {
-    height: 100%;
+    max-width: 100%;  /* Limit to container width */
+    max-height: auto;  /* Limit to container height */
+    /* margin-right: -10%;  */
     width: auto;
+    height: auto;  /* Maintain aspect ratio */
     object-fit: contain;
 }
 
@@ -391,19 +419,44 @@ a {
 .F2-container .F2-growth-plot {
     flex-grow: 1;
     margin-left: 0px;
-    margin-bottom: -55px;
-    min-width: 300px;
-}
 
-.F2D-boxplot {
-    height: 250px; /* Set a fixed height */
-    margin-bottom: 40px; /* Add space between plot and caption */
-    width: 100%;
 }
 
 .F2D-container {
-    margin-bottom: 60px; /* Add space after the entire F2D container */
-    overflow: visible; /* Ensure content doesn't get cut off */
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 0;
+    overflow: visible;
+}
+
+.F2D-container .vertical-caption-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.F2D-container .vertical-caption-container .caption {
+    font-weight: bold;
+    font-size: 26px;
+    margin-right: 10px;
+}
+
+.F2D-container .vertical-line {
+    width: 3px;
+    height: 100%;
+    background-color: black;
+    margin-top: 0px;
+}
+
+.F2D-boxplot {
+    width: calc(100% - 40px);  /* Adjust width to account for caption margin */
+    margin-left: 40px;  /* Make space for caption + line */
 }
 
 .video-popup {
@@ -430,32 +483,34 @@ a {
 }
 
 /* Main container styles */
- .F3-container {
-   width: 150%;  /* Make wider than text */
-   margin-left: -25%;  /* Pull left to help center */
-   margin-right: -25%;  /* Pull right to help center */
-   align-items: center;  /* Center all content */
- }
+.F3-container {
+  width: 120%;  /* Match F2 container width */
+  margin-left: -10%;  /* Match F2 container margin */
+  margin-right: -10%;  /* Match F2 container margin */
+  align-items: center;
+}
 
- /* Grid layout */
- .F3-grid {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-auto-rows: 1fr 1fr 1fr 1.45fr 1.4fr; /* This makes rows stretch evenly */
-   grid-gap: 0px;
-   margin-bottom: 0px;
- }
+/* Grid layout - adjust for narrower container */
+.F3-grid {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) minmax(250px, 1.5fr) minmax(150px, 0.8fr);
+  grid-auto-rows: auto;
+  grid-gap: 10px; /* Add some gap for better spacing */
+  margin-bottom: 0px;
+}
 
- /* Image containers - make them match the plots */
+/* Image containers - make them match the plots */
 .F3A-container, .F3B-container, .F3C-container {
-  height: 300px;
-  position: relative;
+  width: 100%;  /* Ensure full width */
+    height: auto; /* Allow natural height */
+  padding-right: 10px;
 }
 
 /* Images inside containers */
 .F3A-container img, .F3B-container img, .F3C-container img {
-  height: 300px;
+  height: 100%;
   width: auto;
+  max-width: 100%;
   object-fit: contain;
   cursor: pointer;
   border-radius: 2px;
@@ -463,61 +518,93 @@ a {
 
 /* Plot containers - keep consistent height */
 .F3-plot {
-  width: 100%;
-  height: 300px; /* Fixed height */
-  border-radius: -5px;
+  width: 100%;  /* Ensure full width */
+  height: auto; /* Allow natural height */
+  min-width: 0; /* Prevent overflow */
 }
 
- /* Vertical image that spans all rows */
- .F3-vertical-image {
-   grid-column: 3;
-   grid-row: 1 / span 3;
-   position: relative;
-   /* height: 300px; */
-   display: flex;
-   align-items: center;
-   justify-content: center;
- }
+/* Vertical image that spans all rows */
+.F3-vertical-image {
+  grid-column: 3;
+  grid-row: 1 / span 3;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
- .F3-vertical-image img {
-   max-height: 900px;
-   width: auto;
-   object-fit: contain;
-   border-radius: 5px;
- }
+.F3-vertical-image img {
+  width: 100%;  /* Ensure full width */
+  height: auto; /* Allow natural height */
+  object-fit: contain;
+  overflow: hidden;
+  border-radius: 5px;
+}
 
- .F3D-container {
-     max-height: 450px;
-     grid-column: 1 / span 3;
-     margin-bottom: 0px; /* Add space after the entire F2D container */
-     overflow: visible; /* Ensure content doesn't get cut off */
- }
+.F3D-container {
+  position: relative; /* Create positioning context */
+  max-height: 100%;
+  grid-column: 1 / span 3;
+  overflow: visible;
+}
 
+.F3D-container .F3-boxplot {
+  margin-left: 40px; /* Make space for caption + line */
+  width: calc(100% - 40px); /* Adjust width to account for margin */
+}
 
- /* Sankey container at the bottom */
- .F3EF-container {
-   grid-column: 1 / span 3;
-   /* margin-top: -20px; */
- }
+/* Sankey container at the bottom */
+.F3EF-container {
+  grid-column: 1 / span 3;
+}
 
- .sankey-container {
-   display: flex;
-   justify-content: space-between;
-   gap: 0px;
+/* Sankey container styling */
+.sankey-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Reduce gap for better fit */
+  width: 100%;  /* Ensure full width */
+  height: auto; /* Allow natural height */
+}
 
- }
+/* Wrapper for each sankey plot and its caption */
+.sankey-wrapper {
+  flex: 1;
+  position: relative;
+  min-width: 0; /* Prevents overflow */
+}
 
+/* Sankey plot styling */
+.sankey-plot {
+  width: 100%;
+  height: auto;
+  margin-left: 30px; /* Slightly smaller margin */
+}
 
- .sankey-plot {
-     flex: 1;
-     /* max-width: 450px; */
- }
+/* Caption container position */
+.sankey-wrapper .vertical-caption-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  z-index: 2;
+}
 
+/* Caption styling */
+.sankey-wrapper .vertical-caption-container .caption {
+  font-weight: bold;
+  font-size: 26px;
+  margin-right: 10px;
+}
 
-
-
-/* ### unsure about below */
-/* ### unsure about below */
-/* ### unsure about below */
-/* ### unsure about below */
-/* ### unsure about below */
+/* Vertical line styling */
+.sankey-wrapper .vertical-line {
+  width: 3px;
+  height: 100%;
+  background-color: black;
+  margin-top: 8px;
+}

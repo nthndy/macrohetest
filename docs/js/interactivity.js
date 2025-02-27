@@ -322,58 +322,38 @@ function loadPlotlyFigure(plotId, jsonPath, containerPrefix) {
     fetch(jsonPath)
         .then(response => response.json())
         .then(data => {
-            // Let Plotly handle initial render at its natural size
-            return Plotly.newPlot(plotDiv, data.data, data.layout);
+            // Modify layout to be fully responsive
+            const layout = {
+                ...data.layout,
+                autosize: true,
+                responsive: true,
+                margin: { l: 60, r: 30, t: 30, b: 60 }  // Adjust margins as needed
+            };
+
+            // Use Plotly.newPlot with responsive configuration
+            return Plotly.newPlot(plotId, data.data, layout, {
+                responsive: true,
+                displayModeBar: false  // Optional: hide mode bar
+            });
         })
         .then(() => {
-            // After plot is rendered, get its height and update images if needed
-            const plotHeight = plotDiv.clientHeight;
-            const figureNumber = plotId.charAt(plotId.length - 1);  // Get A, B, or C
+            // Add resize listener to ensure responsiveness
+            window.addEventListener('resize', () => {
+                Plotly.Plots.resize(plotDiv);
+            });
 
-            // Use containerPrefix if provided, otherwise extract from plotId
+            // Remove any fixed height constraints for the container
+            const figureNumber = plotId.charAt(plotId.length - 1);  // Get A, B, or C
             const prefix = containerPrefix || (plotId.includes('plot-2') ? 'F2' :
                             plotId.includes('plot-3') ? 'F3' : null);
 
             if (prefix) {
-                const imageContainer = document.querySelector(`.${prefix}${figureNumber}-container`);
-                if (imageContainer) {
-                    // Apply different handling for F2 vs F3
-                    if (prefix === 'F2') {
-                        // For F2, set explicit height on container
-                        imageContainer.style.height = `${plotHeight}px`;
-
-                        // Ensure image fills container while maintaining aspect ratio
-                        const img = imageContainer.querySelector('img');
-                        if (img) {
-                            img.style.height = '100%';
-                            img.style.width = 'auto';
-                            img.style.objectFit = 'contain';
-                        }
-                    } else if (prefix === 'F3') {
-                        // For F3, set matching height but preserve grid layout
-                        imageContainer.style.height = `${plotHeight}px`;
-
-                        // Set the image to fill the container
-                        const img = imageContainer.querySelector('img');
-                        if (img) {
-                            img.style.height = '100%';
-                            img.style.width = '100%';
-                            img.style.objectFit = 'contain';
-                        }
-                    }
+                const plotContainer = document.querySelector(`.${prefix}${figureNumber}-container`);
+                if (plotContainer) {
+                    // Remove any fixed height
+                    plotContainer.style.height = 'auto';
                 }
             }
-
-            // Only setup hover for F1H plots
-            if (plotId === 'plot-1H') {
-                setupPlotHover(plotId);
-            }
-
-            // // If this is a Figure 3 plot, call overall adjustment after all plots load
-            // if (plotId.includes('plot-3')) {
-            //     // Use setTimeout to ensure plot has fully rendered
-            //     setTimeout(adjustFigure3GridLayout, 200);
-            // }
         })
         .catch(error => console.error(`❌ Error loading ${jsonPath}:`, error));
 }
@@ -482,10 +462,45 @@ function setupSankeyDiagrams() {
         fetch(sankeyDataFiles[index])
             .then(response => response.json())
             .then(data => {
-                Plotly.newPlot(id, data.data, data.layout);
+                // Modify the layout to stretch the diagram
+                if (data.layout) {
+                    // Make sure we have a defined width and height
+                    data.layout.width = data.layout.width || 450;
+                    data.layout.height = data.layout.height || 300;
+
+                    // Adjust aspect ratio if needed
+                    // You can make it wider by increasing width or decreasing height
+                    data.layout.width = data.layout.width * 2; // Make 50% wider
+
+                    // Remove any fixed autosize settings if present
+                    data.layout.autosize = true;
+                }
+
+                return Plotly.newPlot(id, data.data, data.layout);
+            })
+            .then(() => {
+                // After rendering, you can also adjust the container
+                const container = sankeyDiv.closest('.sankey-plot');
+                if (container) {
+                    container.style.flex = 1;
+                    container.style.minWidth = 0; // Prevents overflow
+                }
             })
             .catch(error => console.error(`❌ Error loading ${sankeyDataFiles[index]}:`, error));
     });
+    // Add a resize handler to redraw the plots when the window is resized
+    window.addEventListener('resize', function() {
+        sankeyIds.forEach(id => {
+            const div = document.getElementById(id);
+            if (div) {
+                Plotly.relayout(id, {
+                    autosize: true
+                });
+            }
+        });
+    });
+
+
 }
 
 // ===========================================

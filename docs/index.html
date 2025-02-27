@@ -152,7 +152,7 @@
                           </div>
                       </div>
                       <div id="F1H" class="F1H-container">
-                        <div class="caption-line-container">
+                        <div class="horizontal-caption-container">
                             <div class="caption">H</div>
                             <div class="horizontal-line"></div>
                         </div>
@@ -165,8 +165,8 @@
                       </div>
                     </div>
                       <figcaption>
-                          <b>Fig. 1. A high-content live single-cell imaging approach to monitor Mtb replication in human macrophages.</b>
-                          <p><b>(A)</b> Timeline of the experimental design and imaging conditions. <b>(B)</b> A single image acquisition, showing EGFP-expressing macrophages infected with Mtb H37Rv WT-E2Crimson. <b>(C)</b> A full mosaic of 9 images (single tile shown as white square inset) with 10% overlap. <b>(D)</b> Each mosaic is composed of 2 fluorescent channels and 3 z-slices with a step of 2μm. <b>(E)</b> The image acquisition lasts for 75 h at 30/60min frame rates. <b>(F)</b> This image volume is then segmented using the EGFP channel. <b>(G)</b> Each segment in each frame is then localized and intracellular Mtb quantified, prior to linking each cell instance over time into a series of tracks, shown here as a visualization in 3 dimensions (x,y,t). <b>(H)</b> Single-cell trajectories (N=1,127) of intracellular Mtb growth in n=4 biological replicates, color-coded to the final intracellular Mtb burden.</p>
+                          <p><b>Fig. 1. A high-content live single-cell imaging approach to monitor Mtb replication in human macrophages.</b></p>
+                          <b>(A)</b> Timeline of the experimental design and imaging conditions. <b>(B)</b> A single image acquisition, showing EGFP-expressing macrophages infected with Mtb H37Rv WT-E2Crimson. <b>(C)</b> A full mosaic of 9 images (single tile shown as white square inset) with 10% overlap. <b>(D)</b> Each mosaic is composed of 2 fluorescent channels and 3 z-slices with a step of 2μm. <b>(E)</b> The image acquisition lasts for 75 h at 30/60min frame rates. <b>(F)</b> This image volume is then segmented using the EGFP channel. <b>(G)</b> Each segment in each frame is then localized and intracellular Mtb quantified, prior to linking each cell instance over time into a series of tracks, shown here as a visualization in 3 dimensions (x,y,t). <b>(H)</b> Single-cell trajectories (N=1,127) of intracellular Mtb growth in n=4 biological replicates, color-coded to the final intracellular Mtb burden.
                       </figcaption>
                   </figure>
 
@@ -238,15 +238,16 @@
 
                         <!-- F2D Boxplot Section -->
                         <div class="F2D-container">
-                            <div class="caption-line-container">
+                            <div class="vertical-caption-container">
                                 <div class="caption">D</div>
-                                <div class="horizontal-line"></div>
+                                <div class="vertical-line"></div>
                             </div>
                             <div id="plot-2D" class="F2D-boxplot"></div>
                         </div>
                     </div>
                       <figcaption>
-                          <p><b>Fig. 2.</b> Infected macrophage tracking and quantification reveals extremely variegated growth rates. <b>(A)</b> Single cell example of normal doubling time (24 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with the doubling points in grey dotted lines (right). <b>(B)</b> Single cell example of slow doubling time (66 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with the doubling points in grey dotted lines. <b>(C)</b> Single cell example of fast doubling time (13 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with dotted lines. The raw data is shown in magenta. <b>(D)</b> Box plots showing the distribution of intracellular doubling times for intracellular Mtb WT and Mtb ∆RD1.</p>
+                          <p><b>Fig. 2. Infected macrophage tracking and quantification reveals extremely variegated growth rates.</b></p>
+                            <b>(A)</b> Single cell example of normal doubling time (24 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with the doubling points in grey dotted lines (right). <b>(B)</b> Single cell example of slow doubling time (66 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with the doubling points in grey dotted lines. <b>(C)</b> Single cell example of fast doubling time (13 hours) of intracellular Mtb. Representative images (left) and LOWESS growth curve in green with dotted lines. The raw data is shown in magenta. <b>(D)</b> Box plots showing the distribution of intracellular doubling times for intracellular Mtb WT and Mtb ∆RD1.
                       </figcaption>
                   </figure>
 
@@ -313,23 +314,40 @@
                         <div id="plot-3C" class="F3-plot"></div>
 
                         <div class="F3D-container">
-                          <div id="plot-3D" class="F3-boxplot"></div>
-                        <!-- Additional sections if needed (e.g., Sankey plots) -->
-
-                      </div>
-
-                      <div class="F3EF-container">
-                        <div class="sankey-container">
-                          <div id="plot-3E" class="sankey-plot"></div>
-                          <div id="plot-3F" class="sankey-plot"></div>
+                            <div class="vertical-caption-container">
+                                <div class="caption">D</div>
+                                <div class="vertical-line"></div>
+                            </div>
+                            <div id="plot-3D" class="F3-boxplot"></div>
                         </div>
-                      </div>
+
+                        <div class="F3EF-container">
+                          <div class="sankey-container">
+                            <div class="sankey-wrapper">
+                              <div class="vertical-caption-container">
+                                <div class="caption">E</div>
+                                <div class="vertical-line"></div>
+                              </div>
+                              <div id="plot-3E" class="sankey-plot"></div>
+                            </div>
+                            <div class="sankey-wrapper">
+                              <div class="vertical-caption-container">
+                                <div class="caption">F</div>
+                                <div class="vertical-line"></div>
+                              </div>
+                              <div id="plot-3F" class="sankey-plot"></div>
+                            </div>
+                          </div>
+                        </div>
 
                     </div>
-                  <!-- <figcaption>
-                    <p><b>Fig. 3.</b> Intracellular fast-growing Mtb is a distinct subpopulation of infected macrophages. <b>(A)</b> Description of first row content. <b>(B)</b> Description of second row content. <b>(C)</b> Description of third row content.</p>
-                  </figcaption> -->
+
                   </div>
+                  <figcaption>
+                    <p><b>Fig. 3. Intracellular fast-growing Mtb is a distinct subpopulation of infected macrophages.</b></p>
+                      <b>(A)</b> Mtb population doublings of intracellular origin typically result in steady growth patterns well represented by the LOWESS growth model and subsequent R<sup>2</sup> value. <b>(B)</b> Extracellular uptake of smaller populations of Mtb can result in an artificially quick doubling. <b>(C)</b> Intercellular transfer of larger populations of Mtb from neighboring cells results in more artificially quick doubling. <b>(D)</b> Distribution of Mtb doubling time separated by intrinsic versus extrinsic origin. <b>(E)</b> Sankey diagram illustrating how the proportion of each wild-type Mtb growth phenotype changes across the time-lapse. <b>(F)</b> The equivalent Sankey diagram for &Delta;RD1 reflects the mutants’ reduced capacity to cause cell death and subsequent inter-cellular transfer.
+
+                  </figcaption>
                 </figure>
 
               </section>
