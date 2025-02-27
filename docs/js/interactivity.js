@@ -369,11 +369,11 @@ function loadPlotlyFigure(plotId, jsonPath, containerPrefix) {
                 setupPlotHover(plotId);
             }
 
-            // // If this is a Figure 3 plot, call overall adjustment after all plots load
-            // if (plotId.includes('plot-3')) {
-            //     // Use setTimeout to ensure plot has fully rendered
-            //     setTimeout(adjustFigure3GridLayout, 200);
-            // }
+            // If this is a Figure 3 plot, call overall adjustment after all plots load
+            if (plotId.includes('plot-3')) {
+                // Use setTimeout to ensure plot has fully rendered
+                setTimeout(adjustFigure3GridLayout, 200);
+            }
         })
         .catch(error => console.error(`❌ Error loading ${jsonPath}:`, error));
 }
@@ -491,45 +491,45 @@ function setupSankeyDiagrams() {
 // ===========================================
 // 9. Adjust figure 3
 // ===========================================
-// function adjustFigure3GridLayout() {
-//     // Get all plot containers in Figure 3
-//     const plots = document.querySelectorAll('#plot-3A, #plot-3B, #plot-3C');
-//
-//     // Find the tallest plot
-//     let maxHeight = 0;
-//     plots.forEach(plot => {
-//         const height = plot.clientHeight;
-//         if (height > maxHeight) {
-//             maxHeight = height;
-//         }
-//     });
-//
-//     // Set all plots and image containers to the same height
-//     plots.forEach(plot => {
-//         const plotId = plot.id.charAt(plot.id.length - 1);
-//         const imageContainer = document.querySelector(`.F3${plotId}-container`);
-//
-//         // Set uniform heights
-//         plot.style.height = `${maxHeight}px`;
-//         if (imageContainer) {
-//             imageContainer.style.height = `${maxHeight}px`;
-//
-//             // Make the image fill the container
-//             const img = imageContainer.querySelector('img');
-//             if (img) {
-//                 img.style.height = '100%';
-//                 img.style.width = '100%';
-//                 img.style.objectFit = 'contain';
-//             }
-//         }
-//     });
-//
-//     // Make sure the grid rows have consistent height
-//     const grid = document.querySelector('.F3-grid');
-//     if (grid) {
-//         grid.style.gridTemplateRows = `${maxHeight}px ${maxHeight}px ${maxHeight}px`;
-//     }
-// }
+function adjustFigure3GridLayout() {
+    // Get all plot containers in Figure 3
+    const plots = document.querySelectorAll('#plot-3A, #plot-3B, #plot-3C');
+
+    // Find the tallest plot
+    let maxHeight = 0;
+    plots.forEach(plot => {
+        const height = plot.clientHeight;
+        if (height > maxHeight) {
+            maxHeight = height;
+        }
+    });
+
+    // Set all plots and image containers to the same height
+    plots.forEach(plot => {
+        const plotId = plot.id.charAt(plot.id.length - 1);
+        const imageContainer = document.querySelector(`.F3${plotId}-container`);
+
+        // Set uniform heights
+        plot.style.height = `${maxHeight}px`;
+        if (imageContainer) {
+            imageContainer.style.height = `${maxHeight}px`;
+
+            // Make the image fill the container
+            const img = imageContainer.querySelector('img');
+            if (img) {
+                img.style.height = '100%';
+                img.style.width = '100%';
+                img.style.objectFit = 'contain';
+            }
+        }
+    });
+
+    // Make sure the grid rows have consistent height
+    const grid = document.querySelector('.F3-grid');
+    if (grid) {
+        grid.style.gridTemplateRows = `${maxHeight}px ${maxHeight}px ${maxHeight}px`;
+    }
+}
 
 // ===========================================
 // 10. Wait for DOM to Load
