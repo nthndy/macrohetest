@@ -432,44 +432,40 @@ a {
 /* Main container styles */
  .F3-container {
    width: 150%;  /* Make wider than text */
-   /* margin-left: -10%;  /* Pull left to help center */ */
-   /* margin-right: -10%;  /* Pull right to help center */ */
-   display: flex;
-   flex-direction: column;
+   margin-left: -25%;  /* Pull left to help center */
+   margin-right: -25%;  /* Pull right to help center */
    align-items: center;  /* Center all content */
  }
 
  /* Grid layout */
  .F3-grid {
    display: grid;
-   grid-template-columns: 1fr 2fr 1fr;
-   grid-auto-rows: 1fr; /* This makes rows stretch evenly */
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-auto-rows: 1fr 1fr 1fr 1.45fr 1.4fr; /* This makes rows stretch evenly */
    grid-gap: 0px;
    margin-bottom: 0px;
  }
 
  /* Image containers - make them match the plots */
 .F3A-container, .F3B-container, .F3C-container {
+  height: 300px;
   position: relative;
-  width: 150%;
-
-  /* height: 250px; /* Match the plot height from your CSS */
 }
 
 /* Images inside containers */
 .F3A-container img, .F3B-container img, .F3C-container img {
-  height: 100%;
-  width: 100%;
+  height: 300px;
+  width: auto;
   object-fit: contain;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 /* Plot containers - keep consistent height */
 .F3-plot {
   width: 100%;
-  height: 250px; /* Fixed height */
-  border-radius: 5px;
+  height: 300px; /* Fixed height */
+  border-radius: -5px;
 }
 
  /* Vertical image that spans all rows */
@@ -477,20 +473,21 @@ a {
    grid-column: 3;
    grid-row: 1 / span 3;
    position: relative;
-   height: 300px;
+   /* height: 300px; */
    display: flex;
    align-items: center;
    justify-content: center;
  }
 
  .F3-vertical-image img {
-   max-height: 300px;
+   max-height: 900px;
    width: auto;
    object-fit: contain;
    border-radius: 5px;
  }
 
  .F3D-container {
+     max-height: 450px;
      grid-column: 1 / span 3;
      margin-bottom: 0px; /* Add space after the entire F2D container */
      overflow: visible; /* Ensure content doesn't get cut off */
@@ -500,295 +497,27 @@ a {
  /* Sankey container at the bottom */
  .F3EF-container {
    grid-column: 1 / span 3;
-   margin-top: 20px;
+   /* margin-top: -20px; */
  }
 
  .sankey-container {
    display: flex;
    justify-content: space-between;
-   gap: 20px;
+   gap: 0px;
+
  }
+
 
  .sankey-plot {
-   flex: 1;
-   height: 250px;
-   background-color: #f9f9f9;
-   border-radius: 5px;
+     flex: 1;
+     /* max-width: 450px; */
  }
 
 
 
 
-
 /* ### unsure about below */
 /* ### unsure about below */
 /* ### unsure about below */
 /* ### unsure about below */
 /* ### unsure about below */
-.popup-content {
-    position: relative;
-    margin: 5% auto;
-    width: 90%;
-    max-width: 1200px;
-    max-height: 90vh;
-}
-
-.zoomable-image-container {
-    position: relative;
-    overflow: hidden;
-    cursor: move;
-    width: 100%;
-    height: 80vh;
-}
-
-.popup-image-container {
-    position: absolute;
-    overflow: visible;
-    cursor: move;
-    width: 100%;
-    height: 100%;
-}
-
-.zoomable-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: none;
-    max-height: none;
-    transition: transform 0.2s;
-    user-select: none;  /* Prevent text selection */
-    -webkit-user-drag: none;  /* Prevent image dragging */
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
-}
-
-.close-popup {
-    position: absolute;
-    top: -40px;
-    right: 0;
-    color: white;
-    font-size: 35px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.F1H-container .image-popup {
-    position: absolute;
-    display: none; /* Hide by default */
-    z-index: 99999;
-    background-color: white;
-    border: 2px solid white;
-    padding: 1px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    max-height: 300px;
-    opacity: 1;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.figure-container {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    overflow: visible;
-}
-
-.hover-area {
-    position: absolute;
-    cursor: pointer;
-    background: transparent;
-    transition: background 0.01s;
-}
-
-.hover-area:hover {
-    background: var(--hover-bg);
-}
-
-
-
-/* Popups and modals */
-.modal,
-.hover-popup,
-.video-hover {
-    position: fixed !important;
-    z-index: var(--popup-z-index) !important;
-    background-color: white;
-    border: 2px solid white;
-    padding: 5px;
-    box-shadow: var(--hover-shadow);
-}
-
-.hover-popup {
-    display: flex;
-    align-items: center;
-    transform: none !important;
-    contain: none !important;
-}
-
-.video-hover {
-    display: none;
-    position: absolute;
-}
-
-
-
-.F2-pair-container {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
-
-/* Figure images */
-.figure-image {
-    flex: 0 0 auto;
-    width: 50%;
-    position: relative;
-}
-
-.figure-image img {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-}
-
-/* Plots */
-#plot {
-    width: 100%;
-    max-width: var(--paper-width);
-    margin: 0 auto;
-    aspect-ratio: 22/9;
-}
-
-/* Boxplot section */
-.boxplot-section {
-    display: flex;
-    gap: 0;
-    align-items: flex-start;
-}
-
-.caption-image {
-    width: 35px;
-    flex: 0 0 auto;
-}
-
-#boxplot {
-    flex: 1;
-}
-.figure-container-with-sidebar {
-    display: flex;
-    gap: 20px;
-}
-
-.pairs-main-content {
-    flex: 1;
-}
-
-.vertical-image {
-    width: 600px;  /* Adjust width as needed */
-    align-self: flex-start;
-    position: sticky;
-    top: 20px;
-}
-
-.vertical-image img {
-    width: 100%;
-    height: auto;
-}
-/* Sankey plots section */
-.sankey-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.sankey-plot {
-    flex: 1;
-    max-width: 450px;
-}
-
-/* Video elements */
-.video-hover video,
-.hover-popup video {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    object-position: left top;
-}
-
-/* Modal specific styles */
-.modal-content {
-    position: relative;
-    width: 90%;
-    height: 90%;
-    margin: 50px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    transform-origin: center;
-    cursor: move;
-}
-
-.close-button {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* Responsive design */
-@media screen and (max-width: 768px) {
-    :root {
-        --paper-margin: 0.5in;
-    }
-
-    .scientific-paper {
-        padding: var(--paper-margin);
-    }
-
-    .results-section,
-    .header-image-container,
-    #plot {
-        max-width: 100%;
-    }
-
-    .F2-pair-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .figure-image {
-        width: 100%;
-    }
-}
-
-/* Plotly specific styles */
-.js-plotly-plot .plotly .modebar {
-    top: 0;
-    right: 0;
-}
