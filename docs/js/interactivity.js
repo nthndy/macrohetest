@@ -322,40 +322,28 @@ function loadPlotlyFigure(plotId, jsonPath, containerPrefix) {
     fetch(jsonPath)
         .then(response => response.json())
         .then(data => {
-            // Modify layout to be fully responsive
+
+            // Common layout properties
             const layout = {
                 ...data.layout,
-                autosize: true,
                 responsive: true,
-                margin: { l: 10, r: 10, t: 10, b: 10 }  // Adjust margins as needed
+                margin: { l: 10, r: 10, t: 10, b: 10 }
             };
 
-            // Use Plotly.newPlot with responsive configuration
             return Plotly.newPlot(plotId, data.data, layout, {
                 responsive: true,
-                displayModeBar: false  // Optional: hide mode bar
+                displayModeBar: false
             });
         })
         .then(() => {
-            // Add resize listener to ensure responsiveness
-            window.addEventListener('resize', () => {
-                Plotly.Plots.resize(plotDiv);
-            });
 
-            // Remove any fixed height constraints for the container
-            const figureNumber = plotId.charAt(plotId.length - 1);  // Get A, B, or C
-            const prefix = containerPrefix || (plotId.includes('plot-2') ? 'F2' :
-                            plotId.includes('plot-3') ? 'F3' : null);
+              // Existing resize listener
+              window.addEventListener('resize', () => {
+                  Plotly.Plots.resize(plotDiv);
+              });
 
-            if (prefix) {
-                const plotContainer = document.querySelector(`.${prefix}${figureNumber}-container`);
-                if (plotContainer) {
-                    // Remove any fixed height
-                    plotContainer.style.height = 'auto';
-                }
-            }
-        })
-        .catch(error => console.error(`❌ Error loading ${jsonPath}:`, error));
+          })
+          .catch(error => console.error(`❌ Error loading ${jsonPath}:`, error));
 }
 
 // ===========================================
@@ -504,6 +492,6 @@ function setupSankeyDiagrams() {
 }
 
 // ===========================================
-// 10. Wait for DOM to Load
+// 11. Wait for DOM to Load
 // ===========================================
 document.addEventListener('DOMContentLoaded', initializeFigures);
