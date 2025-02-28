@@ -353,19 +353,20 @@ a {
 
 /********* FIGURE 3 STYLES ************/
 .F3-container {
-  width: 120%;  /* Match F2 container width */
-  margin-left: -10%;  /* Match F2 container margin */
-  margin-right: -10%;  /* Match F2 container margin */
+  width: 150%;  /* Match F2 container width */
+  margin-left: -25%;  /* Match F2 container margin */
+  margin-right: -25%;  /* Match F2 container margin */
   align-items: center;
 }
 
-/* Grid layout - adjust for narrower container */
+/* Set the F3-grid to have a fixed width of 120% */
 .F3-grid {
   display: grid;
-  grid-template-columns: minmax(200px, 1fr) minmax(250px, 1.5fr) minmax(150px, 0.8fr);
-  grid-auto-rows: auto;
-  grid-gap: 10px; /* Add some gap for better spacing */
-  margin-bottom: 0px;
+  grid-template-columns: 33fr 25fr 42.5fr;
+  grid-auto-rows: auto; /* Let height adjust automatically */
+  grid-gap: 10px;
+  width: 100%; /* Match your requirement */
+
 }
 
 /* Image containers - make them match the plots */
@@ -392,21 +393,21 @@ a {
   min-width: 0; /* Prevent overflow */
 }
 
-/* Vertical image that spans all rows */
+/* Make the vertical image fill the height of its grid area */
 .F3-vertical-image {
   grid-column: 3;
   grid-row: 1 / span 3;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: left; /* Stretch to fill available space */
   justify-content: center;
-  overflow: hidden;
+  height: 100%; /* Fill the entire grid area height */
 }
 
 .F3-vertical-image img {
-  width: 100%;  /* Ensure full width */
-  height: auto; /* Allow natural height */
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Maintain aspect ratio while filling space */
   overflow: hidden;
   border-radius: 5px;
 }

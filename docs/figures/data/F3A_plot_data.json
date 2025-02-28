@@ -1,1830 +1,1744 @@
 {
-    "data": [
-        {
-            "hoverinfo": "skip",
-            "line": {
-                "color": "#1a9641",
-                "width": 6
+  "data": [
+    {
+      "hoverinfo": "skip",
+      "line": {
+        "color": "#1a9641",
+        "width": 6
+      },
+      "mode": "lines",
+      "name": "Growth Curve",
+      "opacity": 0.6,
+      "showlegend": true,
+      "x": [
+        null,
+        null,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        9.0,
+        10.0,
+        11.0,
+        12.0,
+        13.0,
+        14.0,
+        15.0,
+        16.0,
+        17.0,
+        18.0,
+        19.0,
+        20.0,
+        21.0,
+        22.0,
+        23.0,
+        24.0,
+        25.0,
+        26.0,
+        27.0,
+        28.0,
+        29.0,
+        30.0,
+        31.0,
+        32.0,
+        33.0,
+        34.0,
+        35.0,
+        36.0,
+        37.0,
+        38.0,
+        39.0,
+        40.0,
+        41.0,
+        42.0,
+        43.0,
+        44.0,
+        45.0,
+        46.0,
+        47.0,
+        48.0,
+        49.0,
+        50.0,
+        51.0,
+        52.0,
+        53.0,
+        54.0,
+        55.0,
+        56.0,
+        57.0,
+        58.0,
+        59.0,
+        60.0,
+        61.0,
+        62.0,
+        63.0,
+        64.0,
+        65.0,
+        66.0,
+        67.0,
+        68.0,
+        69.0,
+        70.0,
+        71.0,
+        72.0,
+        null,
+        null
+      ],
+      "y": [
+        null,
+        null,
+        7.014196527057369,
+        7.392066359402665,
+        7.778342524574491,
+        8.172785273238372,
+        8.57427173886964,
+        8.980959352393684,
+        9.390204948849362,
+        9.798656464762614,
+        10.217962614865035,
+        10.732121162680762,
+        11.270975806970064,
+        11.819683882664895,
+        12.361130846937534,
+        12.884050200785241,
+        13.384340607285935,
+        13.860370003221492,
+        14.309038027901474,
+        14.730909171190655,
+        15.138431164869589,
+        15.55172135151375,
+        15.979761980259743,
+        16.421899765918614,
+        16.87032845857293,
+        17.31567498901548,
+        17.754161110125573,
+        18.18976168919005,
+        18.627386661673714,
+        19.06395275376432,
+        19.489623189987114,
+        19.896677898731227,
+        20.2901821456692,
+        20.699422989662843,
+        21.1652482464457,
+        21.70879654664835,
+        22.327066480304556,
+        23.005881204710683,
+        23.734108606730157,
+        24.515936036174743,
+        25.351185886469302,
+        26.24054984815908,
+        27.1924968536217,
+        28.20320564766819,
+        29.25243336405465,
+        30.331020301367438,
+        31.44380863772571,
+        32.58780269182266,
+        33.749318555134295,
+        34.92928456135661,
+        36.11559255204069,
+        37.293346677776206,
+        38.47967819762941,
+        39.70476221236264,
+        40.968669347144086,
+        42.252492143753436,
+        43.54308104898924,
+        44.839685727730554,
+        46.15393448906618,
+        47.52048793183206,
+        48.95951531708396,
+        50.45190299949727,
+        51.9557879204104,
+        53.4462298807592,
+        54.908913478569595,
+        56.33642137340264,
+        57.77870947235487,
+        59.23003822553739,
+        60.685350684619046,
+        62.14148057405153,
+        63.59667240552859,
+        65.05070002518028,
+        66.50410748762465,
+        null,
+        null
+      ],
+      "type": "scatter"
+    },
+    {
+      "hoverinfo": "skip",
+      "legendgroup": "raw_data",
+      "line": {
+        "color": "#f1b6da",
+        "width": 4
+      },
+      "mode": "lines",
+      "name": "Raw data",
+      "showlegend": true,
+      "x": [
+        -2.5,
+        -1.5,
+        -0.5,
+        0.5,
+        1.5,
+        2.5,
+        3.5,
+        4.5,
+        5.5,
+        6.5,
+        7.5,
+        8.5,
+        9.5,
+        10.5,
+        11.5,
+        12.5,
+        13.5,
+        14.5,
+        15.5,
+        16.5,
+        17.5,
+        18.5,
+        19.5,
+        20.5,
+        21.5,
+        22.5,
+        23.5,
+        24.5,
+        25.5,
+        26.5,
+        27.5,
+        28.5,
+        29.5,
+        30.5,
+        31.5,
+        32.5,
+        33.5,
+        34.5,
+        35.5,
+        36.5,
+        37.5,
+        38.5,
+        39.5,
+        40.5,
+        41.5,
+        42.5,
+        43.5,
+        44.5,
+        45.5,
+        46.5,
+        47.5,
+        48.5,
+        49.5,
+        50.5,
+        51.5,
+        52.5,
+        53.5,
+        54.5,
+        55.5,
+        56.5,
+        57.5,
+        58.5,
+        59.5,
+        60.5,
+        61.5,
+        62.5,
+        63.5,
+        64.5,
+        65.5,
+        66.5,
+        67.5,
+        68.5,
+        69.5,
+        70.5,
+        71.5
+      ],
+      "y": [
+        null,
+        null,
+        null,
+        null,
+        7.4643863371500085,
+        7.620825571760937,
+        8.023097889331895,
+        8.112491737680998,
+        8.313627896466476,
+        8.403021744815579,
+        8.403021744815579,
+        9.43105100083025,
+        10.146201787623065,
+        10.81665565024133,
+        11.017791809026809,
+        12.135214913390582,
+        12.179911837565134,
+        13.498471100714386,
+        13.811349569936244,
+        13.811349569936244,
+        14.213621887507202,
+        14.86172728803819,
+        15.152257295172772,
+        15.800362695703761,
+        15.822711157791035,
+        16.180286551187443,
+        16.537861944583852,
+        16.94013426215481,
+        17.945815056082207,
+        18.795056615398675,
+        18.81740507748595,
+        18.97384431209688,
+        19.75604048515152,
+        19.979525106024273,
+        20.0465704922861,
+        20.426494347769783,
+        21.231038982911702,
+        21.34278129334808,
+        21.92384130761724,
+        22.057932080140894,
+        22.840128253195534,
+        24.024596743821135,
+        25.18671677235946,
+        26.393533725072334,
+        27.55565375361066,
+        28.20375915414165,
+        28.29315300249075,
+        30.304514590345544,
+        31.332543846360217,
+        31.488983080971142,
+        33.32155697212773,
+        35.4446608704189,
+        35.48935779459345,
+        38.17117324506651,
+        39.37799019777938,
+        39.89200482578672,
+        39.89200482578672,
+        39.914353287874,
+        42.41738104164885,
+        44.428742629503645,
+        45.59086265804197,
+        47.53517885963493,
+        49.725328144187934,
+        50.84275124855171,
+        52.09426512543913,
+        52.69767360179557,
+        54.86547442426129,
+        55.98289752862507,
+        58.17304681317806,
+        59.692742235112796,
+        60.83251380156384,
+        60.83251380156384,
+        63.603723100386,
+        64.18478311465516,
+        67.40296165522282
+      ],
+      "type": "scatter"
+    },
+    {
+      "customdata": [
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_000.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_001.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_002.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_003.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_004.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_005.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_006.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_007.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_008.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_009.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_010.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_011.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_012.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_013.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_014.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_015.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_016.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_017.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_018.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_019.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_020.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_021.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_022.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_023.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_024.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_025.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_026.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_027.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_028.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_029.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_030.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_031.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_032.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_033.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_034.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_035.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_036.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_037.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_038.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_039.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_040.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_041.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_042.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_043.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_044.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_045.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_046.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_047.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_048.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_049.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_050.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_051.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_052.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_053.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_054.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_055.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_056.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_057.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_058.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_059.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_060.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_061.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_062.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_063.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_064.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_065.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_066.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_067.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_068.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_069.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_070.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_071.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_072.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_073.png",
+        "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_074.png"
+      ],
+      "hoverinfo": "text",
+      "legendgroup": "raw_data",
+      "marker": {
+        "color": "#d02c91",
+        "size": 4
+      },
+      "mode": "markers",
+      "showlegend": false,
+      "text": [
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> nan hours<br><b>Mtb Growth Curve:</b> nan \u00b5m\u00b2<br><b>Raw Mtb Area:</b> nan \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> nan hours<br><b>Mtb Growth Curve:</b> nan \u00b5m\u00b2<br><b>Raw Mtb Area:</b> nan \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 2.00 hours<br><b>Mtb Growth Curve:</b> 7.01 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> nan \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 3.00 hours<br><b>Mtb Growth Curve:</b> 7.39 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> nan \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 4.00 hours<br><b>Mtb Growth Curve:</b> 7.78 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 7.46 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 5.00 hours<br><b>Mtb Growth Curve:</b> 8.17 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 7.62 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 6.00 hours<br><b>Mtb Growth Curve:</b> 8.57 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 8.02 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 7.00 hours<br><b>Mtb Growth Curve:</b> 8.98 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 8.11 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 8.00 hours<br><b>Mtb Growth Curve:</b> 9.39 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 8.31 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 9.00 hours<br><b>Mtb Growth Curve:</b> 9.80 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 8.40 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 10.00 hours<br><b>Mtb Growth Curve:</b> 10.22 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 8.40 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 11.00 hours<br><b>Mtb Growth Curve:</b> 10.73 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 9.43 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 12.00 hours<br><b>Mtb Growth Curve:</b> 11.27 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 10.15 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 13.00 hours<br><b>Mtb Growth Curve:</b> 11.82 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 10.82 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 14.00 hours<br><b>Mtb Growth Curve:</b> 12.36 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 11.02 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 15.00 hours<br><b>Mtb Growth Curve:</b> 12.88 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 12.14 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 16.00 hours<br><b>Mtb Growth Curve:</b> 13.38 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 12.18 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 17.00 hours<br><b>Mtb Growth Curve:</b> 13.86 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 13.50 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 18.00 hours<br><b>Mtb Growth Curve:</b> 14.31 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 13.81 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 19.00 hours<br><b>Mtb Growth Curve:</b> 14.73 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 13.81 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 20.00 hours<br><b>Mtb Growth Curve:</b> 15.14 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 14.21 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 21.00 hours<br><b>Mtb Growth Curve:</b> 15.55 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 14.86 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 22.00 hours<br><b>Mtb Growth Curve:</b> 15.98 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 15.15 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 23.00 hours<br><b>Mtb Growth Curve:</b> 16.42 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 15.80 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 24.00 hours<br><b>Mtb Growth Curve:</b> 16.87 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 15.82 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 25.00 hours<br><b>Mtb Growth Curve:</b> 17.32 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 16.18 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 26.00 hours<br><b>Mtb Growth Curve:</b> 17.75 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 16.54 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 27.00 hours<br><b>Mtb Growth Curve:</b> 18.19 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 16.94 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 28.00 hours<br><b>Mtb Growth Curve:</b> 18.63 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 17.95 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 29.00 hours<br><b>Mtb Growth Curve:</b> 19.06 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 18.80 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 30.00 hours<br><b>Mtb Growth Curve:</b> 19.49 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 18.82 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 31.00 hours<br><b>Mtb Growth Curve:</b> 19.90 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 18.97 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 32.00 hours<br><b>Mtb Growth Curve:</b> 20.29 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 19.76 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 33.00 hours<br><b>Mtb Growth Curve:</b> 20.70 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 19.98 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 34.00 hours<br><b>Mtb Growth Curve:</b> 21.17 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 20.05 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 35.00 hours<br><b>Mtb Growth Curve:</b> 21.71 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 20.43 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 36.00 hours<br><b>Mtb Growth Curve:</b> 22.33 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 21.23 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 37.00 hours<br><b>Mtb Growth Curve:</b> 23.01 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 21.34 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 38.00 hours<br><b>Mtb Growth Curve:</b> 23.73 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 21.92 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 39.00 hours<br><b>Mtb Growth Curve:</b> 24.52 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 22.06 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 40.00 hours<br><b>Mtb Growth Curve:</b> 25.35 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 22.84 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 41.00 hours<br><b>Mtb Growth Curve:</b> 26.24 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 24.02 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 42.00 hours<br><b>Mtb Growth Curve:</b> 27.19 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 25.19 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 43.00 hours<br><b>Mtb Growth Curve:</b> 28.20 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 26.39 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 44.00 hours<br><b>Mtb Growth Curve:</b> 29.25 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 27.56 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 45.00 hours<br><b>Mtb Growth Curve:</b> 30.33 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 28.20 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 46.00 hours<br><b>Mtb Growth Curve:</b> 31.44 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 28.29 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 47.00 hours<br><b>Mtb Growth Curve:</b> 32.59 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 30.30 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 48.00 hours<br><b>Mtb Growth Curve:</b> 33.75 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 31.33 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 49.00 hours<br><b>Mtb Growth Curve:</b> 34.93 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 31.49 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 50.00 hours<br><b>Mtb Growth Curve:</b> 36.12 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 33.32 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 51.00 hours<br><b>Mtb Growth Curve:</b> 37.29 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 35.44 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 52.00 hours<br><b>Mtb Growth Curve:</b> 38.48 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 35.49 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 53.00 hours<br><b>Mtb Growth Curve:</b> 39.70 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 38.17 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 54.00 hours<br><b>Mtb Growth Curve:</b> 40.97 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 39.38 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 55.00 hours<br><b>Mtb Growth Curve:</b> 42.25 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 39.89 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 56.00 hours<br><b>Mtb Growth Curve:</b> 43.54 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 39.89 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 57.00 hours<br><b>Mtb Growth Curve:</b> 44.84 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 39.91 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 58.00 hours<br><b>Mtb Growth Curve:</b> 46.15 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 42.42 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 59.00 hours<br><b>Mtb Growth Curve:</b> 47.52 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 44.43 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 60.00 hours<br><b>Mtb Growth Curve:</b> 48.96 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 45.59 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 61.00 hours<br><b>Mtb Growth Curve:</b> 50.45 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 47.54 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 62.00 hours<br><b>Mtb Growth Curve:</b> 51.96 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 49.73 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 63.00 hours<br><b>Mtb Growth Curve:</b> 53.45 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 50.84 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 64.00 hours<br><b>Mtb Growth Curve:</b> 54.91 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 52.09 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 65.00 hours<br><b>Mtb Growth Curve:</b> 56.34 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 52.70 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 66.00 hours<br><b>Mtb Growth Curve:</b> 57.78 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 54.87 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 67.00 hours<br><b>Mtb Growth Curve:</b> 59.23 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 55.98 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 68.00 hours<br><b>Mtb Growth Curve:</b> 60.69 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 58.17 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 69.00 hours<br><b>Mtb Growth Curve:</b> 62.14 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 59.69 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 70.00 hours<br><b>Mtb Growth Curve:</b> 63.60 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 60.83 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 71.00 hours<br><b>Mtb Growth Curve:</b> 65.05 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 60.83 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 72.00 hours<br><b>Mtb Growth Curve:</b> 66.50 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 63.60 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> nan hours<br><b>Mtb Growth Curve:</b> nan \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 64.18 \u00b5m\u00b2",
+        "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> nan hours<br><b>Mtb Growth Curve:</b> nan \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 67.40 \u00b5m\u00b2"
+      ],
+      "x": [
+        -2.5,
+        -1.5,
+        -0.5,
+        0.5,
+        1.5,
+        2.5,
+        3.5,
+        4.5,
+        5.5,
+        6.5,
+        7.5,
+        8.5,
+        9.5,
+        10.5,
+        11.5,
+        12.5,
+        13.5,
+        14.5,
+        15.5,
+        16.5,
+        17.5,
+        18.5,
+        19.5,
+        20.5,
+        21.5,
+        22.5,
+        23.5,
+        24.5,
+        25.5,
+        26.5,
+        27.5,
+        28.5,
+        29.5,
+        30.5,
+        31.5,
+        32.5,
+        33.5,
+        34.5,
+        35.5,
+        36.5,
+        37.5,
+        38.5,
+        39.5,
+        40.5,
+        41.5,
+        42.5,
+        43.5,
+        44.5,
+        45.5,
+        46.5,
+        47.5,
+        48.5,
+        49.5,
+        50.5,
+        51.5,
+        52.5,
+        53.5,
+        54.5,
+        55.5,
+        56.5,
+        57.5,
+        58.5,
+        59.5,
+        60.5,
+        61.5,
+        62.5,
+        63.5,
+        64.5,
+        65.5,
+        66.5,
+        67.5,
+        68.5,
+        69.5,
+        70.5,
+        71.5
+      ],
+      "y": [
+        null,
+        null,
+        null,
+        null,
+        7.4643863371500085,
+        7.620825571760937,
+        8.023097889331895,
+        8.112491737680998,
+        8.313627896466476,
+        8.403021744815579,
+        8.403021744815579,
+        9.43105100083025,
+        10.146201787623065,
+        10.81665565024133,
+        11.017791809026809,
+        12.135214913390582,
+        12.179911837565134,
+        13.498471100714386,
+        13.811349569936244,
+        13.811349569936244,
+        14.213621887507202,
+        14.86172728803819,
+        15.152257295172772,
+        15.800362695703761,
+        15.822711157791035,
+        16.180286551187443,
+        16.537861944583852,
+        16.94013426215481,
+        17.945815056082207,
+        18.795056615398675,
+        18.81740507748595,
+        18.97384431209688,
+        19.75604048515152,
+        19.979525106024273,
+        20.0465704922861,
+        20.426494347769783,
+        21.231038982911702,
+        21.34278129334808,
+        21.92384130761724,
+        22.057932080140894,
+        22.840128253195534,
+        24.024596743821135,
+        25.18671677235946,
+        26.393533725072334,
+        27.55565375361066,
+        28.20375915414165,
+        28.29315300249075,
+        30.304514590345544,
+        31.332543846360217,
+        31.488983080971142,
+        33.32155697212773,
+        35.4446608704189,
+        35.48935779459345,
+        38.17117324506651,
+        39.37799019777938,
+        39.89200482578672,
+        39.89200482578672,
+        39.914353287874,
+        42.41738104164885,
+        44.428742629503645,
+        45.59086265804197,
+        47.53517885963493,
+        49.725328144187934,
+        50.84275124855171,
+        52.09426512543913,
+        52.69767360179557,
+        54.86547442426129,
+        55.98289752862507,
+        58.17304681317806,
+        59.692742235112796,
+        60.83251380156384,
+        60.83251380156384,
+        63.603723100386,
+        64.18478311465516,
+        67.40296165522282
+      ],
+      "type": "scatter"
+    },
+    {
+      "legendgroup": "doubling",
+      "line": {
+        "color": "gray",
+        "dash": "dot",
+        "width": 2
+      },
+      "mode": "lines",
+      "name": "Doubling Instances",
+      "showlegend": true,
+      "visible": true,
+      "x": [
+        2.0,
+        2.0
+      ],
+      "y": [
+        0,
+        75
+      ],
+      "type": "scatter"
+    },
+    {
+      "legendgroup": "doubling",
+      "line": {
+        "color": "gray",
+        "dash": "dot",
+        "width": 2
+      },
+      "mode": "lines",
+      "showlegend": false,
+      "visible": true,
+      "x": [
+        0,
+        80
+      ],
+      "y": [
+        7.014196527057369,
+        7.014196527057369
+      ],
+      "type": "scatter"
+    },
+    {
+      "legendgroup": "doubling",
+      "line": {
+        "color": "gray",
+        "dash": "dot",
+        "width": 2
+      },
+      "mode": "lines",
+      "showlegend": false,
+      "visible": true,
+      "x": [
+        17.0,
+        17.0
+      ],
+      "y": [
+        0,
+        75
+      ],
+      "type": "scatter"
+    },
+    {
+      "legendgroup": "doubling",
+      "line": {
+        "color": "gray",
+        "dash": "dot",
+        "width": 2
+      },
+      "mode": "lines",
+      "showlegend": false,
+      "visible": true,
+      "x": [
+        0,
+        80
+      ],
+      "y": [
+        14.028393054114739,
+        14.028393054114739
+      ],
+      "type": "scatter"
+    },
+    {
+      "legendgroup": "doubling",
+      "line": {
+        "color": "gray",
+        "dash": "dot",
+        "width": 2
+      },
+      "mode": "lines",
+      "showlegend": false,
+      "visible": true,
+      "x": [
+        43.0,
+        43.0
+      ],
+      "y": [
+        0,
+        75
+      ],
+      "type": "scatter"
+    },
+    {
+      "legendgroup": "doubling",
+      "line": {
+        "color": "gray",
+        "dash": "dot",
+        "width": 2
+      },
+      "mode": "lines",
+      "showlegend": false,
+      "visible": true,
+      "x": [
+        0,
+        80
+      ],
+      "y": [
+        28.056786108229478,
+        28.056786108229478
+      ],
+      "type": "scatter"
+    },
+    {
+      "legendgroup": "doubling",
+      "line": {
+        "color": "gray",
+        "dash": "dot",
+        "width": 2
+      },
+      "mode": "lines",
+      "showlegend": false,
+      "visible": true,
+      "x": [
+        65.0,
+        65.0
+      ],
+      "y": [
+        0,
+        75
+      ],
+      "type": "scatter"
+    },
+    {
+      "legendgroup": "doubling",
+      "line": {
+        "color": "gray",
+        "dash": "dot",
+        "width": 2
+      },
+      "mode": "lines",
+      "showlegend": false,
+      "visible": true,
+      "x": [
+        0,
+        80
+      ],
+      "y": [
+        56.113572216458955,
+        56.113572216458955
+      ],
+      "type": "scatter"
+    }
+  ],
+  "layout": {
+    "template": {
+      "data": {
+        "histogram2dcontour": [
+          {
+            "type": "histogram2dcontour",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
             },
-            "mode": "lines",
-            "name": "Growth Curve",
-            "opacity": 0.6,
-            "showlegend": true,
-            "x": [
-                null,
-                null,
-                2.0,
-                3.0,
-                4.0,
-                5.0,
-                6.0,
-                7.0,
-                8.0,
-                9.0,
-                10.0,
-                11.0,
-                12.0,
-                13.0,
-                14.0,
-                15.0,
-                16.0,
-                17.0,
-                18.0,
-                19.0,
-                20.0,
-                21.0,
-                22.0,
-                23.0,
-                24.0,
-                25.0,
-                26.0,
-                27.0,
-                28.0,
-                29.0,
-                30.0,
-                31.0,
-                32.0,
-                33.0,
-                34.0,
-                35.0,
-                36.0,
-                37.0,
-                38.0,
-                39.0,
-                40.0,
-                41.0,
-                42.0,
-                43.0,
-                44.0,
-                45.0,
-                46.0,
-                47.0,
-                48.0,
-                49.0,
-                50.0,
-                51.0,
-                52.0,
-                53.0,
-                54.0,
-                55.0,
-                56.0,
-                57.0,
-                58.0,
-                59.0,
-                60.0,
-                61.0,
-                62.0,
-                63.0,
-                64.0,
-                65.0,
-                66.0,
-                67.0,
-                68.0,
-                69.0,
-                70.0,
-                71.0,
-                72.0,
-                null,
-                null
-            ],
-            "y": [
-                null,
-                null,
-                7.014196527057369,
-                7.392066359402665,
-                7.778342524574491,
-                8.172785273238372,
-                8.57427173886964,
-                8.980959352393684,
-                9.390204948849362,
-                9.798656464762614,
-                10.217962614865035,
-                10.732121162680762,
-                11.270975806970064,
-                11.819683882664895,
-                12.361130846937534,
-                12.884050200785241,
-                13.384340607285935,
-                13.860370003221492,
-                14.309038027901474,
-                14.730909171190655,
-                15.138431164869589,
-                15.55172135151375,
-                15.979761980259743,
-                16.421899765918614,
-                16.87032845857293,
-                17.31567498901548,
-                17.754161110125573,
-                18.18976168919005,
-                18.627386661673714,
-                19.06395275376432,
-                19.489623189987114,
-                19.896677898731227,
-                20.2901821456692,
-                20.699422989662843,
-                21.1652482464457,
-                21.70879654664835,
-                22.327066480304556,
-                23.005881204710683,
-                23.734108606730157,
-                24.515936036174743,
-                25.351185886469302,
-                26.24054984815908,
-                27.1924968536217,
-                28.20320564766819,
-                29.25243336405465,
-                30.331020301367438,
-                31.44380863772571,
-                32.58780269182266,
-                33.749318555134295,
-                34.92928456135661,
-                36.11559255204069,
-                37.293346677776206,
-                38.47967819762941,
-                39.70476221236264,
-                40.968669347144086,
-                42.252492143753436,
-                43.54308104898924,
-                44.839685727730554,
-                46.15393448906618,
-                47.52048793183206,
-                48.95951531708396,
-                50.45190299949727,
-                51.9557879204104,
-                53.4462298807592,
-                54.908913478569595,
-                56.33642137340264,
-                57.77870947235487,
-                59.23003822553739,
-                60.685350684619046,
-                62.14148057405153,
-                63.59667240552859,
-                65.05070002518028,
-                66.50410748762465,
-                null,
-                null
-            ],
-            "type": "scatter"
-        },
-        {
-            "hoverinfo": "skip",
-            "legendgroup": "raw_data",
-            "line": {
-                "color": "#f1b6da",
-                "width": 4
-            },
-            "mode": "lines",
-            "name": "Raw data",
-            "showlegend": true,
-            "x": [
-                -2.5,
-                -1.5,
-                -0.5,
-                0.5,
-                1.5,
-                2.5,
-                3.5,
-                4.5,
-                5.5,
-                6.5,
-                7.5,
-                8.5,
-                9.5,
-                10.5,
-                11.5,
-                12.5,
-                13.5,
-                14.5,
-                15.5,
-                16.5,
-                17.5,
-                18.5,
-                19.5,
-                20.5,
-                21.5,
-                22.5,
-                23.5,
-                24.5,
-                25.5,
-                26.5,
-                27.5,
-                28.5,
-                29.5,
-                30.5,
-                31.5,
-                32.5,
-                33.5,
-                34.5,
-                35.5,
-                36.5,
-                37.5,
-                38.5,
-                39.5,
-                40.5,
-                41.5,
-                42.5,
-                43.5,
-                44.5,
-                45.5,
-                46.5,
-                47.5,
-                48.5,
-                49.5,
-                50.5,
-                51.5,
-                52.5,
-                53.5,
-                54.5,
-                55.5,
-                56.5,
-                57.5,
-                58.5,
-                59.5,
-                60.5,
-                61.5,
-                62.5,
-                63.5,
-                64.5,
-                65.5,
-                66.5,
-                67.5,
-                68.5,
-                69.5,
-                70.5,
-                71.5
-            ],
-            "y": [
-                null,
-                null,
-                null,
-                null,
-                7.4643863371500085,
-                7.620825571760937,
-                8.023097889331895,
-                8.112491737680998,
-                8.313627896466476,
-                8.403021744815579,
-                8.403021744815579,
-                9.43105100083025,
-                10.146201787623065,
-                10.81665565024133,
-                11.017791809026809,
-                12.135214913390582,
-                12.179911837565134,
-                13.498471100714386,
-                13.811349569936244,
-                13.811349569936244,
-                14.213621887507202,
-                14.86172728803819,
-                15.152257295172772,
-                15.800362695703761,
-                15.822711157791035,
-                16.180286551187443,
-                16.537861944583852,
-                16.94013426215481,
-                17.945815056082207,
-                18.795056615398675,
-                18.81740507748595,
-                18.97384431209688,
-                19.75604048515152,
-                19.979525106024273,
-                20.0465704922861,
-                20.426494347769783,
-                21.231038982911702,
-                21.34278129334808,
-                21.92384130761724,
-                22.057932080140894,
-                22.840128253195534,
-                24.024596743821135,
-                25.18671677235946,
-                26.393533725072334,
-                27.55565375361066,
-                28.20375915414165,
-                28.29315300249075,
-                30.304514590345544,
-                31.332543846360217,
-                31.488983080971142,
-                33.32155697212773,
-                35.4446608704189,
-                35.48935779459345,
-                38.17117324506651,
-                39.37799019777938,
-                39.89200482578672,
-                39.89200482578672,
-                39.914353287874,
-                42.41738104164885,
-                44.428742629503645,
-                45.59086265804197,
-                47.53517885963493,
-                49.725328144187934,
-                50.84275124855171,
-                52.09426512543913,
-                52.69767360179557,
-                54.86547442426129,
-                55.98289752862507,
-                58.17304681317806,
-                59.692742235112796,
-                60.83251380156384,
-                60.83251380156384,
-                63.603723100386,
-                64.18478311465516,
-                67.40296165522282
-            ],
-            "type": "scatter"
-        },
-        {
-            "customdata": [
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_000.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_001.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_002.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_003.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_004.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_005.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_006.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_007.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_008.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_009.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_010.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_011.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_012.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_013.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_014.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_015.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_016.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_017.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_018.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_019.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_020.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_021.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_022.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_023.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_024.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_025.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_026.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_027.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_028.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_029.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_030.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_031.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_032.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_033.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_034.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_035.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_036.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_037.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_038.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_039.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_040.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_041.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_042.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_043.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_044.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_045.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_046.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_047.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_048.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_049.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_050.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_051.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_052.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_053.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_054.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_055.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_056.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_057.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_058.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_059.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_060.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_061.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_062.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_063.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_064.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_065.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_066.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_067.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_068.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_069.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_070.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_071.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_072.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_073.png"
-                },
-                {
-                    "image": "https://s3.eu-west-2.amazonaws.com/macrohet.glimpses/glimpse_frames/497.4.5.PS0000/frame_074.png"
-                }
-            ],
-            "hoverinfo": "text",
-            "legendgroup": "raw_data",
-            "marker": {
-                "color": "#d02c91",
-                "size": 4
-            },
-            "mode": "markers",
-            "showlegend": false,
-            "text": [
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> nan hours<br><b>Mtb Growth Curve:</b> nan \u00b5m\u00b2<br><b>Raw Mtb Area:</b> nan \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> nan hours<br><b>Mtb Growth Curve:</b> nan \u00b5m\u00b2<br><b>Raw Mtb Area:</b> nan \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 2.00 hours<br><b>Mtb Growth Curve:</b> 7.01 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> nan \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 3.00 hours<br><b>Mtb Growth Curve:</b> 7.39 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> nan \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 4.00 hours<br><b>Mtb Growth Curve:</b> 7.78 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 7.46 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 5.00 hours<br><b>Mtb Growth Curve:</b> 8.17 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 7.62 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 6.00 hours<br><b>Mtb Growth Curve:</b> 8.57 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 8.02 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 7.00 hours<br><b>Mtb Growth Curve:</b> 8.98 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 8.11 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 8.00 hours<br><b>Mtb Growth Curve:</b> 9.39 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 8.31 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 9.00 hours<br><b>Mtb Growth Curve:</b> 9.80 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 8.40 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 10.00 hours<br><b>Mtb Growth Curve:</b> 10.22 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 8.40 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 11.00 hours<br><b>Mtb Growth Curve:</b> 10.73 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 9.43 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 12.00 hours<br><b>Mtb Growth Curve:</b> 11.27 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 10.15 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 13.00 hours<br><b>Mtb Growth Curve:</b> 11.82 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 10.82 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 14.00 hours<br><b>Mtb Growth Curve:</b> 12.36 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 11.02 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 15.00 hours<br><b>Mtb Growth Curve:</b> 12.88 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 12.14 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 16.00 hours<br><b>Mtb Growth Curve:</b> 13.38 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 12.18 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 17.00 hours<br><b>Mtb Growth Curve:</b> 13.86 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 13.50 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 18.00 hours<br><b>Mtb Growth Curve:</b> 14.31 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 13.81 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 19.00 hours<br><b>Mtb Growth Curve:</b> 14.73 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 13.81 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 20.00 hours<br><b>Mtb Growth Curve:</b> 15.14 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 14.21 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 21.00 hours<br><b>Mtb Growth Curve:</b> 15.55 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 14.86 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 22.00 hours<br><b>Mtb Growth Curve:</b> 15.98 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 15.15 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 23.00 hours<br><b>Mtb Growth Curve:</b> 16.42 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 15.80 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 24.00 hours<br><b>Mtb Growth Curve:</b> 16.87 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 15.82 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 25.00 hours<br><b>Mtb Growth Curve:</b> 17.32 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 16.18 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 26.00 hours<br><b>Mtb Growth Curve:</b> 17.75 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 16.54 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 27.00 hours<br><b>Mtb Growth Curve:</b> 18.19 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 16.94 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 28.00 hours<br><b>Mtb Growth Curve:</b> 18.63 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 17.95 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 29.00 hours<br><b>Mtb Growth Curve:</b> 19.06 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 18.80 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 30.00 hours<br><b>Mtb Growth Curve:</b> 19.49 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 18.82 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 31.00 hours<br><b>Mtb Growth Curve:</b> 19.90 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 18.97 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 32.00 hours<br><b>Mtb Growth Curve:</b> 20.29 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 19.76 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 33.00 hours<br><b>Mtb Growth Curve:</b> 20.70 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 19.98 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 34.00 hours<br><b>Mtb Growth Curve:</b> 21.17 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 20.05 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 35.00 hours<br><b>Mtb Growth Curve:</b> 21.71 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 20.43 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 36.00 hours<br><b>Mtb Growth Curve:</b> 22.33 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 21.23 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 37.00 hours<br><b>Mtb Growth Curve:</b> 23.01 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 21.34 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 38.00 hours<br><b>Mtb Growth Curve:</b> 23.73 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 21.92 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 39.00 hours<br><b>Mtb Growth Curve:</b> 24.52 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 22.06 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 40.00 hours<br><b>Mtb Growth Curve:</b> 25.35 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 22.84 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 41.00 hours<br><b>Mtb Growth Curve:</b> 26.24 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 24.02 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 42.00 hours<br><b>Mtb Growth Curve:</b> 27.19 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 25.19 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 43.00 hours<br><b>Mtb Growth Curve:</b> 28.20 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 26.39 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 44.00 hours<br><b>Mtb Growth Curve:</b> 29.25 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 27.56 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 45.00 hours<br><b>Mtb Growth Curve:</b> 30.33 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 28.20 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 46.00 hours<br><b>Mtb Growth Curve:</b> 31.44 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 28.29 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 47.00 hours<br><b>Mtb Growth Curve:</b> 32.59 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 30.30 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 48.00 hours<br><b>Mtb Growth Curve:</b> 33.75 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 31.33 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 49.00 hours<br><b>Mtb Growth Curve:</b> 34.93 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 31.49 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 50.00 hours<br><b>Mtb Growth Curve:</b> 36.12 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 33.32 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 51.00 hours<br><b>Mtb Growth Curve:</b> 37.29 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 35.44 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 52.00 hours<br><b>Mtb Growth Curve:</b> 38.48 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 35.49 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 53.00 hours<br><b>Mtb Growth Curve:</b> 39.70 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 38.17 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 54.00 hours<br><b>Mtb Growth Curve:</b> 40.97 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 39.38 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 55.00 hours<br><b>Mtb Growth Curve:</b> 42.25 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 39.89 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 56.00 hours<br><b>Mtb Growth Curve:</b> 43.54 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 39.89 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 57.00 hours<br><b>Mtb Growth Curve:</b> 44.84 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 39.91 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 58.00 hours<br><b>Mtb Growth Curve:</b> 46.15 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 42.42 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 59.00 hours<br><b>Mtb Growth Curve:</b> 47.52 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 44.43 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 60.00 hours<br><b>Mtb Growth Curve:</b> 48.96 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 45.59 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 61.00 hours<br><b>Mtb Growth Curve:</b> 50.45 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 47.54 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 62.00 hours<br><b>Mtb Growth Curve:</b> 51.96 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 49.73 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 63.00 hours<br><b>Mtb Growth Curve:</b> 53.45 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 50.84 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 64.00 hours<br><b>Mtb Growth Curve:</b> 54.91 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 52.09 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 65.00 hours<br><b>Mtb Growth Curve:</b> 56.34 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 52.70 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 66.00 hours<br><b>Mtb Growth Curve:</b> 57.78 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 54.87 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 67.00 hours<br><b>Mtb Growth Curve:</b> 59.23 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 55.98 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 68.00 hours<br><b>Mtb Growth Curve:</b> 60.69 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 58.17 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 69.00 hours<br><b>Mtb Growth Curve:</b> 62.14 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 59.69 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 70.00 hours<br><b>Mtb Growth Curve:</b> 63.60 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 60.83 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 71.00 hours<br><b>Mtb Growth Curve:</b> 65.05 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 60.83 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> 72.00 hours<br><b>Mtb Growth Curve:</b> 66.50 \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 63.60 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> nan hours<br><b>Mtb Growth Curve:</b> nan \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 64.18 \u00b5m\u00b2",
-                "<b>ID:</b> 497.4.5.PS0000<br><b>Time:</b> nan hours<br><b>Mtb Growth Curve:</b> nan \u00b5m\u00b2<br><b>Raw Mtb Area:</b> 67.40 \u00b5m\u00b2"
-            ],
-            "x": [
-                -2.5,
-                -1.5,
-                -0.5,
-                0.5,
-                1.5,
-                2.5,
-                3.5,
-                4.5,
-                5.5,
-                6.5,
-                7.5,
-                8.5,
-                9.5,
-                10.5,
-                11.5,
-                12.5,
-                13.5,
-                14.5,
-                15.5,
-                16.5,
-                17.5,
-                18.5,
-                19.5,
-                20.5,
-                21.5,
-                22.5,
-                23.5,
-                24.5,
-                25.5,
-                26.5,
-                27.5,
-                28.5,
-                29.5,
-                30.5,
-                31.5,
-                32.5,
-                33.5,
-                34.5,
-                35.5,
-                36.5,
-                37.5,
-                38.5,
-                39.5,
-                40.5,
-                41.5,
-                42.5,
-                43.5,
-                44.5,
-                45.5,
-                46.5,
-                47.5,
-                48.5,
-                49.5,
-                50.5,
-                51.5,
-                52.5,
-                53.5,
-                54.5,
-                55.5,
-                56.5,
-                57.5,
-                58.5,
-                59.5,
-                60.5,
-                61.5,
-                62.5,
-                63.5,
-                64.5,
-                65.5,
-                66.5,
-                67.5,
-                68.5,
-                69.5,
-                70.5,
-                71.5
-            ],
-            "y": [
-                null,
-                null,
-                null,
-                null,
-                7.4643863371500085,
-                7.620825571760937,
-                8.023097889331895,
-                8.112491737680998,
-                8.313627896466476,
-                8.403021744815579,
-                8.403021744815579,
-                9.43105100083025,
-                10.146201787623065,
-                10.81665565024133,
-                11.017791809026809,
-                12.135214913390582,
-                12.179911837565134,
-                13.498471100714386,
-                13.811349569936244,
-                13.811349569936244,
-                14.213621887507202,
-                14.86172728803819,
-                15.152257295172772,
-                15.800362695703761,
-                15.822711157791035,
-                16.180286551187443,
-                16.537861944583852,
-                16.94013426215481,
-                17.945815056082207,
-                18.795056615398675,
-                18.81740507748595,
-                18.97384431209688,
-                19.75604048515152,
-                19.979525106024273,
-                20.0465704922861,
-                20.426494347769783,
-                21.231038982911702,
-                21.34278129334808,
-                21.92384130761724,
-                22.057932080140894,
-                22.840128253195534,
-                24.024596743821135,
-                25.18671677235946,
-                26.393533725072334,
-                27.55565375361066,
-                28.20375915414165,
-                28.29315300249075,
-                30.304514590345544,
-                31.332543846360217,
-                31.488983080971142,
-                33.32155697212773,
-                35.4446608704189,
-                35.48935779459345,
-                38.17117324506651,
-                39.37799019777938,
-                39.89200482578672,
-                39.89200482578672,
-                39.914353287874,
-                42.41738104164885,
-                44.428742629503645,
-                45.59086265804197,
-                47.53517885963493,
-                49.725328144187934,
-                50.84275124855171,
-                52.09426512543913,
-                52.69767360179557,
-                54.86547442426129,
-                55.98289752862507,
-                58.17304681317806,
-                59.692742235112796,
-                60.83251380156384,
-                60.83251380156384,
-                63.603723100386,
-                64.18478311465516,
-                67.40296165522282
-            ],
-            "type": "scatter"
-        }
-    ],
-    "layout": {
-        "template": {
-            "data": {
-                "histogram2dcontour": [
-                    {
-                        "type": "histogram2dcontour",
-                        "colorbar": {
-                            "outlinewidth": 0,
-                            "ticks": ""
-                        },
-                        "colorscale": [
-                            [
-                                0.0,
-                                "#0d0887"
-                            ],
-                            [
-                                0.1111111111111111,
-                                "#46039f"
-                            ],
-                            [
-                                0.2222222222222222,
-                                "#7201a8"
-                            ],
-                            [
-                                0.3333333333333333,
-                                "#9c179e"
-                            ],
-                            [
-                                0.4444444444444444,
-                                "#bd3786"
-                            ],
-                            [
-                                0.5555555555555556,
-                                "#d8576b"
-                            ],
-                            [
-                                0.6666666666666666,
-                                "#ed7953"
-                            ],
-                            [
-                                0.7777777777777778,
-                                "#fb9f3a"
-                            ],
-                            [
-                                0.8888888888888888,
-                                "#fdca26"
-                            ],
-                            [
-                                1.0,
-                                "#f0f921"
-                            ]
-                        ]
-                    }
-                ],
-                "choropleth": [
-                    {
-                        "type": "choropleth",
-                        "colorbar": {
-                            "outlinewidth": 0,
-                            "ticks": ""
-                        }
-                    }
-                ],
-                "histogram2d": [
-                    {
-                        "type": "histogram2d",
-                        "colorbar": {
-                            "outlinewidth": 0,
-                            "ticks": ""
-                        },
-                        "colorscale": [
-                            [
-                                0.0,
-                                "#0d0887"
-                            ],
-                            [
-                                0.1111111111111111,
-                                "#46039f"
-                            ],
-                            [
-                                0.2222222222222222,
-                                "#7201a8"
-                            ],
-                            [
-                                0.3333333333333333,
-                                "#9c179e"
-                            ],
-                            [
-                                0.4444444444444444,
-                                "#bd3786"
-                            ],
-                            [
-                                0.5555555555555556,
-                                "#d8576b"
-                            ],
-                            [
-                                0.6666666666666666,
-                                "#ed7953"
-                            ],
-                            [
-                                0.7777777777777778,
-                                "#fb9f3a"
-                            ],
-                            [
-                                0.8888888888888888,
-                                "#fdca26"
-                            ],
-                            [
-                                1.0,
-                                "#f0f921"
-                            ]
-                        ]
-                    }
-                ],
-                "heatmap": [
-                    {
-                        "type": "heatmap",
-                        "colorbar": {
-                            "outlinewidth": 0,
-                            "ticks": ""
-                        },
-                        "colorscale": [
-                            [
-                                0.0,
-                                "#0d0887"
-                            ],
-                            [
-                                0.1111111111111111,
-                                "#46039f"
-                            ],
-                            [
-                                0.2222222222222222,
-                                "#7201a8"
-                            ],
-                            [
-                                0.3333333333333333,
-                                "#9c179e"
-                            ],
-                            [
-                                0.4444444444444444,
-                                "#bd3786"
-                            ],
-                            [
-                                0.5555555555555556,
-                                "#d8576b"
-                            ],
-                            [
-                                0.6666666666666666,
-                                "#ed7953"
-                            ],
-                            [
-                                0.7777777777777778,
-                                "#fb9f3a"
-                            ],
-                            [
-                                0.8888888888888888,
-                                "#fdca26"
-                            ],
-                            [
-                                1.0,
-                                "#f0f921"
-                            ]
-                        ]
-                    }
-                ],
-                "heatmapgl": [
-                    {
-                        "type": "heatmapgl",
-                        "colorbar": {
-                            "outlinewidth": 0,
-                            "ticks": ""
-                        },
-                        "colorscale": [
-                            [
-                                0.0,
-                                "#0d0887"
-                            ],
-                            [
-                                0.1111111111111111,
-                                "#46039f"
-                            ],
-                            [
-                                0.2222222222222222,
-                                "#7201a8"
-                            ],
-                            [
-                                0.3333333333333333,
-                                "#9c179e"
-                            ],
-                            [
-                                0.4444444444444444,
-                                "#bd3786"
-                            ],
-                            [
-                                0.5555555555555556,
-                                "#d8576b"
-                            ],
-                            [
-                                0.6666666666666666,
-                                "#ed7953"
-                            ],
-                            [
-                                0.7777777777777778,
-                                "#fb9f3a"
-                            ],
-                            [
-                                0.8888888888888888,
-                                "#fdca26"
-                            ],
-                            [
-                                1.0,
-                                "#f0f921"
-                            ]
-                        ]
-                    }
-                ],
-                "contourcarpet": [
-                    {
-                        "type": "contourcarpet",
-                        "colorbar": {
-                            "outlinewidth": 0,
-                            "ticks": ""
-                        }
-                    }
-                ],
-                "contour": [
-                    {
-                        "type": "contour",
-                        "colorbar": {
-                            "outlinewidth": 0,
-                            "ticks": ""
-                        },
-                        "colorscale": [
-                            [
-                                0.0,
-                                "#0d0887"
-                            ],
-                            [
-                                0.1111111111111111,
-                                "#46039f"
-                            ],
-                            [
-                                0.2222222222222222,
-                                "#7201a8"
-                            ],
-                            [
-                                0.3333333333333333,
-                                "#9c179e"
-                            ],
-                            [
-                                0.4444444444444444,
-                                "#bd3786"
-                            ],
-                            [
-                                0.5555555555555556,
-                                "#d8576b"
-                            ],
-                            [
-                                0.6666666666666666,
-                                "#ed7953"
-                            ],
-                            [
-                                0.7777777777777778,
-                                "#fb9f3a"
-                            ],
-                            [
-                                0.8888888888888888,
-                                "#fdca26"
-                            ],
-                            [
-                                1.0,
-                                "#f0f921"
-                            ]
-                        ]
-                    }
-                ],
-                "surface": [
-                    {
-                        "type": "surface",
-                        "colorbar": {
-                            "outlinewidth": 0,
-                            "ticks": ""
-                        },
-                        "colorscale": [
-                            [
-                                0.0,
-                                "#0d0887"
-                            ],
-                            [
-                                0.1111111111111111,
-                                "#46039f"
-                            ],
-                            [
-                                0.2222222222222222,
-                                "#7201a8"
-                            ],
-                            [
-                                0.3333333333333333,
-                                "#9c179e"
-                            ],
-                            [
-                                0.4444444444444444,
-                                "#bd3786"
-                            ],
-                            [
-                                0.5555555555555556,
-                                "#d8576b"
-                            ],
-                            [
-                                0.6666666666666666,
-                                "#ed7953"
-                            ],
-                            [
-                                0.7777777777777778,
-                                "#fb9f3a"
-                            ],
-                            [
-                                0.8888888888888888,
-                                "#fdca26"
-                            ],
-                            [
-                                1.0,
-                                "#f0f921"
-                            ]
-                        ]
-                    }
-                ],
-                "mesh3d": [
-                    {
-                        "type": "mesh3d",
-                        "colorbar": {
-                            "outlinewidth": 0,
-                            "ticks": ""
-                        }
-                    }
-                ],
-                "scatter": [
-                    {
-                        "fillpattern": {
-                            "fillmode": "overlay",
-                            "size": 10,
-                            "solidity": 0.2
-                        },
-                        "type": "scatter"
-                    }
-                ],
-                "parcoords": [
-                    {
-                        "type": "parcoords",
-                        "line": {
-                            "colorbar": {
-                                "outlinewidth": 0,
-                                "ticks": ""
-                            }
-                        }
-                    }
-                ],
-                "scatterpolargl": [
-                    {
-                        "type": "scatterpolargl",
-                        "marker": {
-                            "colorbar": {
-                                "outlinewidth": 0,
-                                "ticks": ""
-                            }
-                        }
-                    }
-                ],
-                "bar": [
-                    {
-                        "error_x": {
-                            "color": "#2a3f5f"
-                        },
-                        "error_y": {
-                            "color": "#2a3f5f"
-                        },
-                        "marker": {
-                            "line": {
-                                "color": "#E5ECF6",
-                                "width": 0.5
-                            },
-                            "pattern": {
-                                "fillmode": "overlay",
-                                "size": 10,
-                                "solidity": 0.2
-                            }
-                        },
-                        "type": "bar"
-                    }
-                ],
-                "scattergeo": [
-                    {
-                        "type": "scattergeo",
-                        "marker": {
-                            "colorbar": {
-                                "outlinewidth": 0,
-                                "ticks": ""
-                            }
-                        }
-                    }
-                ],
-                "scatterpolar": [
-                    {
-                        "type": "scatterpolar",
-                        "marker": {
-                            "colorbar": {
-                                "outlinewidth": 0,
-                                "ticks": ""
-                            }
-                        }
-                    }
-                ],
-                "histogram": [
-                    {
-                        "marker": {
-                            "pattern": {
-                                "fillmode": "overlay",
-                                "size": 10,
-                                "solidity": 0.2
-                            }
-                        },
-                        "type": "histogram"
-                    }
-                ],
-                "scattergl": [
-                    {
-                        "type": "scattergl",
-                        "marker": {
-                            "colorbar": {
-                                "outlinewidth": 0,
-                                "ticks": ""
-                            }
-                        }
-                    }
-                ],
-                "scatter3d": [
-                    {
-                        "type": "scatter3d",
-                        "line": {
-                            "colorbar": {
-                                "outlinewidth": 0,
-                                "ticks": ""
-                            }
-                        },
-                        "marker": {
-                            "colorbar": {
-                                "outlinewidth": 0,
-                                "ticks": ""
-                            }
-                        }
-                    }
-                ],
-                "scattermapbox": [
-                    {
-                        "type": "scattermapbox",
-                        "marker": {
-                            "colorbar": {
-                                "outlinewidth": 0,
-                                "ticks": ""
-                            }
-                        }
-                    }
-                ],
-                "scatterternary": [
-                    {
-                        "type": "scatterternary",
-                        "marker": {
-                            "colorbar": {
-                                "outlinewidth": 0,
-                                "ticks": ""
-                            }
-                        }
-                    }
-                ],
-                "scattercarpet": [
-                    {
-                        "type": "scattercarpet",
-                        "marker": {
-                            "colorbar": {
-                                "outlinewidth": 0,
-                                "ticks": ""
-                            }
-                        }
-                    }
-                ],
-                "carpet": [
-                    {
-                        "aaxis": {
-                            "endlinecolor": "#2a3f5f",
-                            "gridcolor": "white",
-                            "linecolor": "white",
-                            "minorgridcolor": "white",
-                            "startlinecolor": "#2a3f5f"
-                        },
-                        "baxis": {
-                            "endlinecolor": "#2a3f5f",
-                            "gridcolor": "white",
-                            "linecolor": "white",
-                            "minorgridcolor": "white",
-                            "startlinecolor": "#2a3f5f"
-                        },
-                        "type": "carpet"
-                    }
-                ],
-                "table": [
-                    {
-                        "cells": {
-                            "fill": {
-                                "color": "#EBF0F8"
-                            },
-                            "line": {
-                                "color": "white"
-                            }
-                        },
-                        "header": {
-                            "fill": {
-                                "color": "#C8D4E3"
-                            },
-                            "line": {
-                                "color": "white"
-                            }
-                        },
-                        "type": "table"
-                    }
-                ],
-                "barpolar": [
-                    {
-                        "marker": {
-                            "line": {
-                                "color": "#E5ECF6",
-                                "width": 0.5
-                            },
-                            "pattern": {
-                                "fillmode": "overlay",
-                                "size": 10,
-                                "solidity": 0.2
-                            }
-                        },
-                        "type": "barpolar"
-                    }
-                ],
-                "pie": [
-                    {
-                        "automargin": true,
-                        "type": "pie"
-                    }
-                ]
-            },
-            "layout": {
-                "autotypenumbers": "strict",
-                "colorway": [
-                    "#636efa",
-                    "#EF553B",
-                    "#00cc96",
-                    "#ab63fa",
-                    "#FFA15A",
-                    "#19d3f3",
-                    "#FF6692",
-                    "#B6E880",
-                    "#FF97FF",
-                    "#FECB52"
-                ],
-                "font": {
-                    "color": "#2a3f5f"
-                },
-                "hovermode": "closest",
-                "hoverlabel": {
-                    "align": "left"
-                },
-                "paper_bgcolor": "white",
-                "plot_bgcolor": "#E5ECF6",
-                "polar": {
-                    "bgcolor": "#E5ECF6",
-                    "angularaxis": {
-                        "gridcolor": "white",
-                        "linecolor": "white",
-                        "ticks": ""
-                    },
-                    "radialaxis": {
-                        "gridcolor": "white",
-                        "linecolor": "white",
-                        "ticks": ""
-                    }
-                },
-                "ternary": {
-                    "bgcolor": "#E5ECF6",
-                    "aaxis": {
-                        "gridcolor": "white",
-                        "linecolor": "white",
-                        "ticks": ""
-                    },
-                    "baxis": {
-                        "gridcolor": "white",
-                        "linecolor": "white",
-                        "ticks": ""
-                    },
-                    "caxis": {
-                        "gridcolor": "white",
-                        "linecolor": "white",
-                        "ticks": ""
-                    }
-                },
-                "coloraxis": {
-                    "colorbar": {
-                        "outlinewidth": 0,
-                        "ticks": ""
-                    }
-                },
-                "colorscale": {
-                    "sequential": [
-                        [
-                            0.0,
-                            "#0d0887"
-                        ],
-                        [
-                            0.1111111111111111,
-                            "#46039f"
-                        ],
-                        [
-                            0.2222222222222222,
-                            "#7201a8"
-                        ],
-                        [
-                            0.3333333333333333,
-                            "#9c179e"
-                        ],
-                        [
-                            0.4444444444444444,
-                            "#bd3786"
-                        ],
-                        [
-                            0.5555555555555556,
-                            "#d8576b"
-                        ],
-                        [
-                            0.6666666666666666,
-                            "#ed7953"
-                        ],
-                        [
-                            0.7777777777777778,
-                            "#fb9f3a"
-                        ],
-                        [
-                            0.8888888888888888,
-                            "#fdca26"
-                        ],
-                        [
-                            1.0,
-                            "#f0f921"
-                        ]
-                    ],
-                    "sequentialminus": [
-                        [
-                            0.0,
-                            "#0d0887"
-                        ],
-                        [
-                            0.1111111111111111,
-                            "#46039f"
-                        ],
-                        [
-                            0.2222222222222222,
-                            "#7201a8"
-                        ],
-                        [
-                            0.3333333333333333,
-                            "#9c179e"
-                        ],
-                        [
-                            0.4444444444444444,
-                            "#bd3786"
-                        ],
-                        [
-                            0.5555555555555556,
-                            "#d8576b"
-                        ],
-                        [
-                            0.6666666666666666,
-                            "#ed7953"
-                        ],
-                        [
-                            0.7777777777777778,
-                            "#fb9f3a"
-                        ],
-                        [
-                            0.8888888888888888,
-                            "#fdca26"
-                        ],
-                        [
-                            1.0,
-                            "#f0f921"
-                        ]
-                    ],
-                    "diverging": [
-                        [
-                            0,
-                            "#8e0152"
-                        ],
-                        [
-                            0.1,
-                            "#c51b7d"
-                        ],
-                        [
-                            0.2,
-                            "#de77ae"
-                        ],
-                        [
-                            0.3,
-                            "#f1b6da"
-                        ],
-                        [
-                            0.4,
-                            "#fde0ef"
-                        ],
-                        [
-                            0.5,
-                            "#f7f7f7"
-                        ],
-                        [
-                            0.6,
-                            "#e6f5d0"
-                        ],
-                        [
-                            0.7,
-                            "#b8e186"
-                        ],
-                        [
-                            0.8,
-                            "#7fbc41"
-                        ],
-                        [
-                            0.9,
-                            "#4d9221"
-                        ],
-                        [
-                            1,
-                            "#276419"
-                        ]
-                    ]
-                },
-                "xaxis": {
-                    "gridcolor": "white",
-                    "linecolor": "white",
-                    "ticks": "",
-                    "title": {
-                        "standoff": 15
-                    },
-                    "zerolinecolor": "white",
-                    "automargin": true,
-                    "zerolinewidth": 2
-                },
-                "yaxis": {
-                    "gridcolor": "white",
-                    "linecolor": "white",
-                    "ticks": "",
-                    "title": {
-                        "standoff": 15
-                    },
-                    "zerolinecolor": "white",
-                    "automargin": true,
-                    "zerolinewidth": 2
-                },
-                "scene": {
-                    "xaxis": {
-                        "backgroundcolor": "#E5ECF6",
-                        "gridcolor": "white",
-                        "linecolor": "white",
-                        "showbackground": true,
-                        "ticks": "",
-                        "zerolinecolor": "white",
-                        "gridwidth": 2
-                    },
-                    "yaxis": {
-                        "backgroundcolor": "#E5ECF6",
-                        "gridcolor": "white",
-                        "linecolor": "white",
-                        "showbackground": true,
-                        "ticks": "",
-                        "zerolinecolor": "white",
-                        "gridwidth": 2
-                    },
-                    "zaxis": {
-                        "backgroundcolor": "#E5ECF6",
-                        "gridcolor": "white",
-                        "linecolor": "white",
-                        "showbackground": true,
-                        "ticks": "",
-                        "zerolinecolor": "white",
-                        "gridwidth": 2
-                    }
-                },
-                "shapedefaults": {
-                    "line": {
-                        "color": "#2a3f5f"
-                    }
-                },
-                "annotationdefaults": {
-                    "arrowcolor": "#2a3f5f",
-                    "arrowhead": 0,
-                    "arrowwidth": 1
-                },
-                "geo": {
-                    "bgcolor": "white",
-                    "landcolor": "#E5ECF6",
-                    "subunitcolor": "white",
-                    "showland": true,
-                    "showlakes": true,
-                    "lakecolor": "white"
-                },
-                "title": {
-                    "x": 0.05
-                },
-                "mapbox": {
-                    "style": "light"
-                }
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "choropleth": [
+          {
+            "type": "choropleth",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
             }
+          }
+        ],
+        "histogram2d": [
+          {
+            "type": "histogram2d",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "heatmap": [
+          {
+            "type": "heatmap",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "heatmapgl": [
+          {
+            "type": "heatmapgl",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "contourcarpet": [
+          {
+            "type": "contourcarpet",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            }
+          }
+        ],
+        "contour": [
+          {
+            "type": "contour",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "surface": [
+          {
+            "type": "surface",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "mesh3d": [
+          {
+            "type": "mesh3d",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            }
+          }
+        ],
+        "scatter": [
+          {
+            "fillpattern": {
+              "fillmode": "overlay",
+              "size": 10,
+              "solidity": 0.2
+            },
+            "type": "scatter"
+          }
+        ],
+        "parcoords": [
+          {
+            "type": "parcoords",
+            "line": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatterpolargl": [
+          {
+            "type": "scatterpolargl",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "bar": [
+          {
+            "error_x": {
+              "color": "#2a3f5f"
+            },
+            "error_y": {
+              "color": "#2a3f5f"
+            },
+            "marker": {
+              "line": {
+                "color": "#E5ECF6",
+                "width": 0.5
+              },
+              "pattern": {
+                "fillmode": "overlay",
+                "size": 10,
+                "solidity": 0.2
+              }
+            },
+            "type": "bar"
+          }
+        ],
+        "scattergeo": [
+          {
+            "type": "scattergeo",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatterpolar": [
+          {
+            "type": "scatterpolar",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "histogram": [
+          {
+            "marker": {
+              "pattern": {
+                "fillmode": "overlay",
+                "size": 10,
+                "solidity": 0.2
+              }
+            },
+            "type": "histogram"
+          }
+        ],
+        "scattergl": [
+          {
+            "type": "scattergl",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatter3d": [
+          {
+            "type": "scatter3d",
+            "line": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            },
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scattermapbox": [
+          {
+            "type": "scattermapbox",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatterternary": [
+          {
+            "type": "scatterternary",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scattercarpet": [
+          {
+            "type": "scattercarpet",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "carpet": [
+          {
+            "aaxis": {
+              "endlinecolor": "#2a3f5f",
+              "gridcolor": "white",
+              "linecolor": "white",
+              "minorgridcolor": "white",
+              "startlinecolor": "#2a3f5f"
+            },
+            "baxis": {
+              "endlinecolor": "#2a3f5f",
+              "gridcolor": "white",
+              "linecolor": "white",
+              "minorgridcolor": "white",
+              "startlinecolor": "#2a3f5f"
+            },
+            "type": "carpet"
+          }
+        ],
+        "table": [
+          {
+            "cells": {
+              "fill": {
+                "color": "#EBF0F8"
+              },
+              "line": {
+                "color": "white"
+              }
+            },
+            "header": {
+              "fill": {
+                "color": "#C8D4E3"
+              },
+              "line": {
+                "color": "white"
+              }
+            },
+            "type": "table"
+          }
+        ],
+        "barpolar": [
+          {
+            "marker": {
+              "line": {
+                "color": "#E5ECF6",
+                "width": 0.5
+              },
+              "pattern": {
+                "fillmode": "overlay",
+                "size": 10,
+                "solidity": 0.2
+              }
+            },
+            "type": "barpolar"
+          }
+        ],
+        "pie": [
+          {
+            "automargin": true,
+            "type": "pie"
+          }
+        ]
+      },
+      "layout": {
+        "autotypenumbers": "strict",
+        "colorway": [
+          "#636efa",
+          "#EF553B",
+          "#00cc96",
+          "#ab63fa",
+          "#FFA15A",
+          "#19d3f3",
+          "#FF6692",
+          "#B6E880",
+          "#FF97FF",
+          "#FECB52"
+        ],
+        "font": {
+          "color": "#2a3f5f"
+        },
+        "hovermode": "closest",
+        "hoverlabel": {
+          "align": "left"
+        },
+        "paper_bgcolor": "white",
+        "plot_bgcolor": "#E5ECF6",
+        "polar": {
+          "bgcolor": "#E5ECF6",
+          "angularaxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          },
+          "radialaxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          }
+        },
+        "ternary": {
+          "bgcolor": "#E5ECF6",
+          "aaxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          },
+          "baxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          },
+          "caxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          }
+        },
+        "coloraxis": {
+          "colorbar": {
+            "outlinewidth": 0,
+            "ticks": ""
+          }
+        },
+        "colorscale": {
+          "sequential": [
+            [
+              0.0,
+              "#0d0887"
+            ],
+            [
+              0.1111111111111111,
+              "#46039f"
+            ],
+            [
+              0.2222222222222222,
+              "#7201a8"
+            ],
+            [
+              0.3333333333333333,
+              "#9c179e"
+            ],
+            [
+              0.4444444444444444,
+              "#bd3786"
+            ],
+            [
+              0.5555555555555556,
+              "#d8576b"
+            ],
+            [
+              0.6666666666666666,
+              "#ed7953"
+            ],
+            [
+              0.7777777777777778,
+              "#fb9f3a"
+            ],
+            [
+              0.8888888888888888,
+              "#fdca26"
+            ],
+            [
+              1.0,
+              "#f0f921"
+            ]
+          ],
+          "sequentialminus": [
+            [
+              0.0,
+              "#0d0887"
+            ],
+            [
+              0.1111111111111111,
+              "#46039f"
+            ],
+            [
+              0.2222222222222222,
+              "#7201a8"
+            ],
+            [
+              0.3333333333333333,
+              "#9c179e"
+            ],
+            [
+              0.4444444444444444,
+              "#bd3786"
+            ],
+            [
+              0.5555555555555556,
+              "#d8576b"
+            ],
+            [
+              0.6666666666666666,
+              "#ed7953"
+            ],
+            [
+              0.7777777777777778,
+              "#fb9f3a"
+            ],
+            [
+              0.8888888888888888,
+              "#fdca26"
+            ],
+            [
+              1.0,
+              "#f0f921"
+            ]
+          ],
+          "diverging": [
+            [
+              0,
+              "#8e0152"
+            ],
+            [
+              0.1,
+              "#c51b7d"
+            ],
+            [
+              0.2,
+              "#de77ae"
+            ],
+            [
+              0.3,
+              "#f1b6da"
+            ],
+            [
+              0.4,
+              "#fde0ef"
+            ],
+            [
+              0.5,
+              "#f7f7f7"
+            ],
+            [
+              0.6,
+              "#e6f5d0"
+            ],
+            [
+              0.7,
+              "#b8e186"
+            ],
+            [
+              0.8,
+              "#7fbc41"
+            ],
+            [
+              0.9,
+              "#4d9221"
+            ],
+            [
+              1,
+              "#276419"
+            ]
+          ]
         },
         "xaxis": {
-            "title": {
-                "font": {
-                    "family": "Helvetica",
-                    "size": 16
-                },
-                "text": "Time (hours)"
-            },
-            "tickfont": {
-                "family": "Helvetica",
-                "size": 16
-            },
-            "gridcolor": "rgba(200,200,200,0.3)",
-            "showline": false,
-            "zeroline": false,
-            "showgrid": false,
-            "range": [
-                -5,
-                80
-            ]
+          "gridcolor": "white",
+          "linecolor": "white",
+          "ticks": "",
+          "title": {
+            "standoff": 15
+          },
+          "zerolinecolor": "white",
+          "automargin": true,
+          "zerolinewidth": 2
         },
         "yaxis": {
-            "title": {
-                "font": {
-                    "family": "Helvetica",
-                    "size": 16
-                },
-                "text": "Mtb Area (\u00b5m\u00b2)"
-            },
-            "tickfont": {
-                "family": "Helvetica",
-                "size": 16
-            },
-            "gridcolor": "rgba(200,200,200,0.3)",
-            "showline": false,
-            "showgrid": false,
-            "zeroline": false,
-            "range": [
-                -5,
-                80
-            ],
-            "tickmode": "array",
-            "tickvals": [
-                0,
-                25,
-                50,
-                75
-            ],
-            "ticktext": [
-                "0",
-                "25",
-                "50",
-                "75"
-            ]
+          "gridcolor": "white",
+          "linecolor": "white",
+          "ticks": "",
+          "title": {
+            "standoff": 15
+          },
+          "zerolinecolor": "white",
+          "automargin": true,
+          "zerolinewidth": 2
         },
+        "scene": {
+          "xaxis": {
+            "backgroundcolor": "#E5ECF6",
+            "gridcolor": "white",
+            "linecolor": "white",
+            "showbackground": true,
+            "ticks": "",
+            "zerolinecolor": "white",
+            "gridwidth": 2
+          },
+          "yaxis": {
+            "backgroundcolor": "#E5ECF6",
+            "gridcolor": "white",
+            "linecolor": "white",
+            "showbackground": true,
+            "ticks": "",
+            "zerolinecolor": "white",
+            "gridwidth": 2
+          },
+          "zaxis": {
+            "backgroundcolor": "#E5ECF6",
+            "gridcolor": "white",
+            "linecolor": "white",
+            "showbackground": true,
+            "ticks": "",
+            "zerolinecolor": "white",
+            "gridwidth": 2
+          }
+        },
+        "shapedefaults": {
+          "line": {
+            "color": "#2a3f5f"
+          }
+        },
+        "annotationdefaults": {
+          "arrowcolor": "#2a3f5f",
+          "arrowhead": 0,
+          "arrowwidth": 1
+        },
+        "geo": {
+          "bgcolor": "white",
+          "landcolor": "#E5ECF6",
+          "subunitcolor": "white",
+          "showland": true,
+          "showlakes": true,
+          "lakecolor": "white"
+        },
+        "title": {
+          "x": 0.05
+        },
+        "mapbox": {
+          "style": "light"
+        }
+      }
+    },
+    "xaxis": {
+      "title": {
         "font": {
-            "family": "Helvetica",
-            "size": 16
+          "family": "Helvetica",
+          "size": 14
         },
-        "margin": {
-            "r": 50,
-            "t": 50,
-            "b": 50
+        "text": "Time (hours)"
+      },
+      "tickfont": {
+        "family": "Helvetica",
+        "size": 14
+      },
+      "gridcolor": "rgba(200,200,200,0.3)",
+      "showline": false,
+      "zeroline": false,
+      "showgrid": false,
+      "range": [
+        -5,
+        80
+      ]
+    },
+    "yaxis": {
+      "title": {
+        "font": {
+          "family": "Helvetica",
+          "size": 14
         },
-        "legend": {
-            "x": 0.1,
-            "y": 0.9,
-            "xanchor": "left",
-            "yanchor": "top"
+        "text": "Mtb Area (\u00b5m\u00b2)"
+      },
+      "tickfont": {
+        "family": "Helvetica",
+        "size": 14
+      },
+      "gridcolor": "rgba(200,200,200,0.3)",
+      "showline": false,
+      "showgrid": false,
+      "zeroline": false,
+      "range": [
+        -5,
+        80
+      ],
+      "tickmode": "array",
+      "tickvals": [
+        0,
+        25,
+        50,
+        75
+      ],
+      "ticktext": [
+        "0",
+        "25",
+        "50",
+        "75"
+      ]
+    },
+    "font": {
+      "family": "Helvetica",
+      "size": 14
+    },
+    "margin": {
+      "r": 50,
+      "t": 50,
+      "b": 50
+    },
+    "legend": {
+      "font": {
+        "size": 10
+      },
+      "x": 0.05,
+      "y": 1.1,
+      "xanchor": "left",
+      "yanchor": "top",
+      "tracegroupgap": 0,
+      "itemwidth": 30,
+      "bgcolor": "rgba(255, 255, 255, 0.9)",
+      "borderwidth": 0
+    },
+    "plot_bgcolor": "white",
+    "width": 300,
+    "height": 225,
+    "shapes": [
+      {
+        "line": {
+          "color": "black",
+          "dash": "solid",
+          "width": 2
         },
-        "plot_bgcolor": "white",
-        "width": 400,
-        "height": 300,
-        "shapes": [
-            {
-                "line": {
-                    "color": "gray",
-                    "dash": "dash",
-                    "width": 1
-                },
-                "opacity": 0.5,
-                "type": "line",
-                "x0": 2.0,
-                "x1": 2.0,
-                "y0": 0,
-                "y1": 300
-            },
-            {
-                "line": {
-                    "color": "gray",
-                    "dash": "dash",
-                    "width": 1
-                },
-                "opacity": 0.5,
-                "type": "line",
-                "x0": 0,
-                "x1": 80,
-                "y0": 7.014196527057369,
-                "y1": 7.014196527057369
-            },
-            {
-                "line": {
-                    "color": "gray",
-                    "dash": "dash",
-                    "width": 1
-                },
-                "opacity": 0.5,
-                "type": "line",
-                "x0": 17.0,
-                "x1": 17.0,
-                "y0": 0,
-                "y1": 300
-            },
-            {
-                "line": {
-                    "color": "gray",
-                    "dash": "dash",
-                    "width": 1
-                },
-                "opacity": 0.5,
-                "type": "line",
-                "x0": 0,
-                "x1": 80,
-                "y0": 14.028393054114739,
-                "y1": 14.028393054114739
-            },
-            {
-                "line": {
-                    "color": "gray",
-                    "dash": "dash",
-                    "width": 1
-                },
-                "opacity": 0.5,
-                "type": "line",
-                "x0": 43.0,
-                "x1": 43.0,
-                "y0": 0,
-                "y1": 300
-            },
-            {
-                "line": {
-                    "color": "gray",
-                    "dash": "dash",
-                    "width": 1
-                },
-                "opacity": 0.5,
-                "type": "line",
-                "x0": 0,
-                "x1": 80,
-                "y0": 28.056786108229478,
-                "y1": 28.056786108229478
-            },
-            {
-                "line": {
-                    "color": "gray",
-                    "dash": "dash",
-                    "width": 1
-                },
-                "opacity": 0.5,
-                "type": "line",
-                "x0": 65.0,
-                "x1": 65.0,
-                "y0": 0,
-                "y1": 300
-            },
-            {
-                "line": {
-                    "color": "gray",
-                    "dash": "dash",
-                    "width": 1
-                },
-                "opacity": 0.5,
-                "type": "line",
-                "x0": 0,
-                "x1": 80,
-                "y0": 56.113572216458955,
-                "y1": 56.113572216458955
-            },
-            {
-                "line": {
-                    "color": "black",
-                    "dash": "solid",
-                    "width": 2
-                },
-                "type": "line",
-                "x0": -1.6,
-                "x1": -1.6,
-                "xref": "x",
-                "y0": 0,
-                "y1": 75,
-                "yref": "y"
-            },
-            {
-                "line": {
-                    "color": "black",
-                    "dash": "solid",
-                    "width": 2
-                },
-                "type": "line",
-                "x0": 0,
-                "x1": 80,
-                "xref": "x",
-                "y0": -3.75,
-                "y1": -3.75,
-                "yref": "y"
-            }
-        ]
-    }
+        "type": "line",
+        "x0": -1.6,
+        "x1": -1.6,
+        "xref": "x",
+        "y0": 0,
+        "y1": 75,
+        "yref": "y"
+      },
+      {
+        "line": {
+          "color": "black",
+          "dash": "solid",
+          "width": 2
+        },
+        "type": "line",
+        "x0": 0,
+        "x1": 80,
+        "xref": "x",
+        "y0": -3.75,
+        "y1": -3.75,
+        "yref": "y"
+      }
+    ]
+  }
 }
