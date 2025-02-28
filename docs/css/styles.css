@@ -148,7 +148,53 @@ a {
 
 }
 
-/* Ensure the F1-container fits within the page width */
+.methods-section-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 10;
+    border-radius: 15px;
+}
+
+.methods-section-link:hover {
+    background-color: rgba(208,28,139,0.1);
+    cursor: pointer;
+    border-radius: 15px;
+}
+.fluorescent-reporter-section-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 10;
+    border-radius: 15px;
+}
+
+.fluorescent-reporter-section-link:hover {
+    background-color: rgba(77,172,38,0.1);
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+
+/********* FIGURE 1 STYLES ************/
+.F1-container > div {
+    width: 100%; /* Ensure grid items take full width of grid */
+}
+
+.F1B-container,
+.F1C-container,
+.F1D-container,
+.F1F-container,
+{
+    position: relative;
+}
+
 .F1-container {
     position: relative;
     max-width: var(--paper-width); /* Ensure it doesn't exceed the page width */
@@ -182,22 +228,6 @@ a {
     display: block;  /* Ensure margins work with block display */
 }
 
-.methods-section-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    z-index: 10;
-    border-radius: 15px;
-}
-
-.methods-section-link:hover {
-    background-color: rgba(208,28,139,0.1);
-    cursor: pointer;
-    border-radius: 15px;
-}
 
 .F1D-container {
     position: relative;
@@ -207,22 +237,6 @@ a {
     width: 98%;  /* Scale image to 90% of container width */
     margin: 2% auto;  /* Center the image and add vertical margin */
     display: block;  /* Ensure margins work with block display */
-}
-.fluorescent-reporter-section-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    z-index: 10;
-    border-radius: 15px;
-}
-
-.fluorescent-reporter-section-link:hover {
-    background-color: rgba(77,172,38,0.1);
-    cursor: pointer;
-    border-radius: 15px;
 }
 
 /* Panel A spans full width */
@@ -245,138 +259,10 @@ a {
     grid-column: span 3;
 }
 
-/* Horizontal line caption styles */
-.horizontal-caption-container {
-    display: flex;
-    flex-direction: column; /* Stack caption and line vertically */
-    align-items: flex-start; /* Align items to the left */
-    margin-bottom: 10px; /* Space between the line and the plot */
-}
 
-.horizontal-caption-container .caption {
-    font-weight: bold;
-    font-size: 26px;
-    margin-bottom: 2px; /* Space between the caption and the line */
-}
 
-.horizontal-line {
-    width: 100%; /* Make the line extend the full width of the container */
-    height: 3px; /* Thickness of the line */
-    background-color: black; /* Color of the line */
-}
 
-.vertical-caption-container {
-    position: absolute; /* Take out of normal flow */
-    top: 0;
-    left: 0;
-    height: 100%;
-    z-index: 2;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-}
-
-.vertical-caption-container .caption {
-    font-weight: bold;
-    font-size: 26px;
-    margin-right: 10px;
-}
-
-.vertical-line {
-    width: 3px;
-    height: 100%; /* Match the container height */
-    background-color: black;
-    margin-top: 0px;
-}
-
-/* Ensure grid items take full width of grid */
-.F1-container > div {
-    width: 100%; /* Ensure grid items take full width of grid */
-}
-
-.F1B-container,
-.F1C-container,
-.F1D-container,
-.F1F-container,
-{
-    position: relative;
-}
-
-/* Wrapper to position both image and text together */
-.hover-preview-wrapper {
-    position: fixed;
-    z-index: 9999;
-    pointer-events: none;
-}
-
-/* Hover Preview Image */
-.hover-preview {
-    center: left;
-    width: 300px;
-    height: auto;
-    max-height: 300px;
-    border-radius: 5px;
-    border: 4px solid white;
-    background: white;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
-    object-fit: contain;
-}
-
-/* Overlay Text */
-.hover-text {
-    position: absolute;
-    top: 10px;
-    left: 32.5%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 5px 10px;
-    font-size: 16px;
-    border-radius: 3px;
-    font-weight: bold;
-    white-space: nowrap;
-    text-align: center;
-}
-
-.image-popup {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.9);
-}
-
-.plot-preview-container {
-    position: relative;
-    width: 300px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    border: 1px solid #ddd;
-    padding: 8px;
-    display: none;  /* Container starts hidden */
-}
-
-/* Styles for both images and videos */
-.plot-preview-container img,
-.plot-preview-container video {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-}
-
-/* Video-specific adjustments if needed */
-.plot-preview-container video {
-    background-color: black; /* Common for video players */
-    min-height: 150px;      /* Minimum height for video content */
-}
-
-/* F2 specific layout adjustments */
+/********* FIGURE 2 STYLES ************/
 .F2-container {
     width: 120%;  /* Make wider than text */
     margin-left: -10%;  /* Pull left to help center */
@@ -465,30 +351,7 @@ a {
     /* height: auto !important;  /* Ensure plot can determine its own height */ */
 }
 
-.video-popup {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;      /* Full viewport width */
-    height: 100vh;     /* Full viewport height */
-    max-width: 100%;   /* Ensure it doesn't overflow */
-    max-height: 100%;  /* Ensure it doesn't overflow */
-}
-
-.video-popup .video-container {
-    width: 90vw;       /* 90% of viewport width */
-    height: 90vh;      /* 90% of viewport height */
-    max-width: 90%;    /* Fallback for older browsers */
-    max-height: 90%;   /* Fallback for older browsers */
-}
-
-.video-popup .popup-video {
-    width: 100%;       /* Fill the container width */
-    height: 100%;      /* Fill the container height */
-    object-fit: contain; /* Maintain aspect ratio, fit entire video */
-}
-
-/* Main container styles */
+/********* FIGURE 3 STYLES ************/
 .F3-container {
   width: 120%;  /* Match F2 container width */
   margin-left: -10%;  /* Match F2 container margin */
@@ -613,4 +476,148 @@ a {
   height: 100%;
   background-color: black;
   margin-top: 8px;
+}
+
+/********* CAPTION STYLES ************/
+.horizontal-caption-container {
+    display: flex;
+    flex-direction: column; /* Stack caption and line vertically */
+    align-items: flex-start; /* Align items to the left */
+    margin-bottom: 10px; /* Space between the line and the plot */
+}
+
+.horizontal-caption-container .caption {
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 2px; /* Space between the caption and the line */
+}
+
+.horizontal-line {
+    width: 100%; /* Make the line extend the full width of the container */
+    height: 3px; /* Thickness of the line */
+    background-color: black; /* Color of the line */
+}
+
+.vertical-caption-container {
+    position: absolute; /* Take out of normal flow */
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.vertical-caption-container .caption {
+    font-weight: bold;
+    font-size: 26px;
+    margin-right: 10px;
+}
+
+.vertical-line {
+    width: 3px;
+    height: 100%; /* Match the container height */
+    background-color: black;
+    margin-top: 0px;
+}
+
+
+/********* GENERIC POP UP STYLES ************/
+
+.video-popup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;      /* Full viewport width */
+    height: 100vh;     /* Full viewport height */
+    max-width: 100%;   /* Ensure it doesn't overflow */
+    max-height: 100%;  /* Ensure it doesn't overflow */
+}
+
+.video-popup .video-container {
+    width: 90vw;       /* 90% of viewport width */
+    height: 90vh;      /* 90% of viewport height */
+    max-width: 90%;    /* Fallback for older browsers */
+    max-height: 90%;   /* Fallback for older browsers */
+}
+
+.video-popup .popup-video {
+    width: 100%;       /* Fill the container width */
+    height: 100%;      /* Fill the container height */
+    object-fit: contain; /* Maintain aspect ratio, fit entire video */
+}
+
+/* Wrapper to position both image and text together */
+.hover-preview-wrapper {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+/* Hover Preview Image */
+.hover-preview {
+    center: left;
+    width: 300px;
+    height: auto;
+    max-height: 300px;
+    border-radius: 5px;
+    border: 4px solid white;
+    background: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    object-fit: contain;
+}
+
+/* Overlay Text */
+.hover-text {
+    position: absolute;
+    top: 10px;
+    left: 32.5%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 3px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.image-popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.plot-preview-container {
+    position: relative;
+    width: 300px;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    padding: 8px;
+    display: none;  /* Container starts hidden */
+}
+
+/* Styles for both images and videos */
+.plot-preview-container img,
+.plot-preview-container video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Video-specific adjustments if needed */
+.plot-preview-container video {
+    background-color: black; /* Common for video players */
+    min-height: 150px;      /* Minimum height for video content */
 }
