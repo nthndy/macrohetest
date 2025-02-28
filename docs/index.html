@@ -343,7 +343,7 @@
                     </div>
 
                   </div>
-                  <figcaption>
+                    <figcaption>
                     <p><b>Fig. 3. Intracellular fast-growing Mtb is a distinct subpopulation of infected macrophages.</b></p>
                       <b>(A)</b> Mtb population doublings of intracellular origin typically result in steady growth patterns well represented by the LOWESS growth model and subsequent R<sup>2</sup> value. <b>(B)</b> Extracellular uptake of smaller populations of Mtb can result in an artificially quick doubling. <b>(C)</b> Intercellular transfer of larger populations of Mtb from neighboring cells results in more artificially quick doubling. <b>(D)</b> Distribution of Mtb doubling time separated by intrinsic versus extrinsic origin. <b>(E)</b> Sankey diagram illustrating how the proportion of each wild-type Mtb growth phenotype changes across the time-lapse. <b>(F)</b> The equivalent Sankey diagram for &Delta;RD1 reflects the mutants’ reduced capacity to cause cell death and subsequent inter-cellular transfer.
 
@@ -352,15 +352,45 @@
 
               </section>
 
-              <section class="results">
+              <figure id="results-4" class="results-section">
                 <h2>Fast growing intracellular Mtb evades antibiotic treatment.</h2>
-                  <figure class="research-figure">
-                      <div class="figure-results">
+                  <div class="results-text">
                         <p>Responses of Mtb to antibiotic treatment are commonly measured in vitro in planktonic cultures or at the single-bacilli level using microfluidic devices <a href="#ref16"><i>(16)</i></a>, <a href="#ref17"><i>(17)</i></a>. To analyze the behavior of intracellular Mtb populations following antibiotic treatment, macrophages were treated with pre-determined EC50 and EC99 concentrations of first line antibiotics: Rifampicin (RIF), Isoniazid (INH), and Pyrazinamide (PZA) <i>(Fig. 4A)</i>. At the population level, RIF, INH and PZA reduced the replication of intracellular Mtb, resulting in a striking concentration-dependent decrease in the amount of measurable doubling populations <i>(Fig. 4B, Fig. S2)</i>.</p>
                         <p>An analysis of the temporal evolution of infection status of each macrophage showed that in antibiotic-treated macrophages a higher proportion of initially infected macrophages finished the time-lapse as uninfected <i>(Fig. S3)</i>, confirming the efficacy of the antibiotics tested. Mtb ∆RD1 infection already resulted in a large reduction in the amount of measurable growth in untreated conditions and we found that under antibiotic-treated Mtb ∆RD1 conditions the number of doubling times was close to zero, precluding any further analysis.</p>
                         <p>However, for Mtb WT, even at the EC99 concentrations of PZA, INH and RIF, we observed a population of macrophages harboring Mtb replication <i>(Fig 4B)</i>. The doubling times under antibiotic-treated conditions revealed statistically significant shifts in the distribution of Mtb growth distributions for INH EC50, RIF EC50 and RIF EC99 <i>(Table S1)</i>. At EC50 concentrations, there was an enrichment of the subpopulation of slow-growing bacteria, increasing from 56% in untreated controls to 68% with PZA, 65% with INH and 72% with RIF <i>(Fig. 4B)</i>.</p>
                         <p>At EC99 concentrations, however, there was a notable selection for fast-growing subpopulations, increasing from 11% in the untreated control to 33% for PZA, 20% for INH and a significant 60% for RIF <i>(Fig. 4B, Table S2)</i>. Further Chi-squared statistical tests revealed that the proportion shifts in growth phenotype subpopulations were statistically significant for INH EC99 and RIF EC99, whilst PZA EC99 did not allow for enough doubling times measurements to yield significance for the fastest growth category. Altogether, our data indicate that these fast-growing intracellular Mtb populations evaded antibiotic treatment, particularly RIF and INH to a lesser extent PZA.</p>
+                        <div id="F4" class="F4-container">
+                      <!-- Top image - experiment design -->
+                      <div class="F4A">
+                        <img src="images/Figure_4A.png" alt="Figure 4A - Experimental design of antibiotic-treated, Mtb-infected macrophages">
                       </div>
+
+                      <!-- Middle content - the iframe with main plot -->
+                      <div class="F4-iframe-container">
+                        <iframe
+                          id="fig:4"
+                          src="figures/F4.html"
+                          title="Figure 4: Antibiotic doubling time plot"
+                          loading="lazy"
+                          class="F4-iframe">
+                        </iframe>
+                      </div>
+
+                      <!-- Bottom image C - scatter plots -->
+                      <div class="F4C">
+                        <img src="images/Figure_4C.png" alt="Figure 4C - Scatter plots of antibiotic treatments">
+                      </div>
+
+                      <!-- Bottom image D - additional visualization -->
+                      <div class="F4D">
+                        <img src="images/Figure_4D.png" alt="Figure 4D - Additional antibiotic response data">
+                      </div>
+                    </div>
+                    <figcaption>
+                      <p><b>Fig. 4.</b> Fast growing intracellular Mtb evade antibiotic treatment. <b>(A)</b> Timeline and experimental design of antibiotic-treated, Mtb-infected macrophages live-cell imaging. <b>(B)</b> Distribution of intracellular doubling times attributable solely to intrinsic, intracellular Mtb growth within host-macrophages. These doubling times are separated into control (untreated) wild-type Mtb, control (untreated) ∆RD1-Mtb and antibiotic-treated wild-type Mtb, with further subdivisions according to the concentration of antibiotics (EC50 and EC99). A Mann-Whitney U test accompanies these distributions, comparing the overall distribution of each condition to the wild-type control. The intracellular Mtb doubling times across PZA, INH and RIF treated macrophages exhibit heterogenous distributions that diverge further with increasing antibiotic concentrations. The proportion of fast, normal and slow growth phenotypes are also exhibited as percentages for each strain of Mtb and concentration of antibiotic. A Chi-squared (χ2) test accompanies these distributions, comparing the proportions of each growth phenotype in each condition to the wild-type control. <b>(C)</b> Visualization of the selective pressure that antibiotics exert on intracellular Mtb populations.</p>
+                    </figcaption>
+
+                  <!-- </div>
                       <iframe
                           id="fig:4"
                           src="figures/F4.html"
@@ -370,9 +400,8 @@
                       </iframe>
                       <figcaption>
                           <p><b>Fig. 4.</b> Fast growing intracellular Mtb evade antibiotic treatment. <b>(A)</b> Timeline and experimental design of antibiotic-treated, Mtb-infected macrophages live-cell imaging. <b>(B)</b> Distribution of intracellular doubling times attributable solely to intrinsic, intracellular Mtb growth within host-macrophages. These doubling times are separated into control (untreated) wild-type Mtb, control (untreated) ∆RD1-Mtb and antibiotic-treated wild-type Mtb, with further subdivisions according to the concentration of antibiotics (EC50 and EC99). A Mann-Whitney U test accompanies these distributions, comparing the overall distribution of each condition to the wild-type control. The intracellular Mtb doubling times across PZA, INH and RIF treated macrophages exhibit heterogenous distributions that diverge further with increasing antibiotic concentrations. The proportion of fast, normal and slow growth phenotypes are also exhibited as percentages for each strain of Mtb and concentration of antibiotic. A Chi-squared (χ2) test accompanies these distributions, comparing the proportions of each growth phenotype in each condition to the wild-type control.</p>
-                      </figcaption>
-                  </figure>
-              </section>
+                      </figcaption> -->
+                </figure>
             </section>
 
             <section class="discussion">

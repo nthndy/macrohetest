@@ -458,7 +458,7 @@ function setupSankeyDiagrams() {
 
                     // Adjust aspect ratio if needed
                     // You can make it wider by increasing width or decreasing height
-                    data.layout.width = data.layout.width * 2; // Make 50% wider
+                    data.layout.width = data.layout.width *1.45; // Make 50% wider
 
                     // Remove any fixed autosize settings if present
                     data.layout.autosize = true;
