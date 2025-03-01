@@ -56,6 +56,8 @@
             </section>
 
             <section class="results">
+
+
                   <figure id="results-1" class="results-section">
                     <h2>An image-based pipeline to study Mtb replication in single human macrophages with high spatiotemporal resolution.</h2>
                       <div class="results-text">
@@ -169,7 +171,6 @@
                           <b>(A)</b> Timeline of the experimental design and imaging conditions. <b>(B)</b> A single image acquisition, showing EGFP-expressing macrophages infected with Mtb H37Rv WT-E2Crimson. <b>(C)</b> A full mosaic of 9 images (single tile shown as white square inset) with 10% overlap. <b>(D)</b> Each mosaic is composed of 2 fluorescent channels and 3 z-slices with a step of 2μm. <b>(E)</b> The image acquisition lasts for 75 h at 30/60min frame rates. <b>(F)</b> This image volume is then segmented using the EGFP channel. <b>(G)</b> Each segment in each frame is then localized and intracellular Mtb quantified, prior to linking each cell instance over time into a series of tracks, shown here as a visualization in 3 dimensions (x,y,t). <b>(H)</b> Single-cell trajectories (N=1,127) of intracellular Mtb growth in n=4 biological replicates, color-coded to the final intracellular Mtb burden.
                       </figcaption>
                   </figure>
-
 
 
                   <figure id="results-2" class="results-section">
@@ -343,14 +344,13 @@
                     </div>
 
                   </div>
-                    <figcaption>
-                    <p><b>Fig. 3. Intracellular fast-growing Mtb is a distinct subpopulation of infected macrophages.</b></p>
-                      <b>(A)</b> Mtb population doublings of intracellular origin typically result in steady growth patterns well represented by the LOWESS growth model and subsequent R<sup>2</sup> value. <b>(B)</b> Extracellular uptake of smaller populations of Mtb can result in an artificially quick doubling. <b>(C)</b> Intercellular transfer of larger populations of Mtb from neighboring cells results in more artificially quick doubling. <b>(D)</b> Distribution of Mtb doubling time separated by intrinsic versus extrinsic origin. <b>(E)</b> Sankey diagram illustrating how the proportion of each wild-type Mtb growth phenotype changes across the time-lapse. <b>(F)</b> The equivalent Sankey diagram for &Delta;RD1 reflects the mutants’ reduced capacity to cause cell death and subsequent inter-cellular transfer.
+                      <figcaption>
+                      <p><b>Fig. 3. Intracellular fast-growing Mtb is a distinct subpopulation of infected macrophages.</b></p>
+                        <b>(A)</b> Mtb population doublings of intracellular origin typically result in steady growth patterns well represented by the LOWESS growth model and subsequent R<sup>2</sup> value. <b>(B)</b> Extracellular uptake of smaller populations of Mtb can result in an artificially quick doubling. <b>(C)</b> Intercellular transfer of larger populations of Mtb from neighboring cells results in more artificially quick doubling. <b>(D)</b> Distribution of Mtb doubling time separated by intrinsic versus extrinsic origin. <b>(E)</b> Sankey diagram illustrating how the proportion of each wild-type Mtb growth phenotype changes across the time-lapse. <b>(F)</b> The equivalent Sankey diagram for &Delta;RD1 reflects the mutants’ reduced capacity to cause cell death and subsequent inter-cellular transfer.
 
-                  </figcaption>
+                    </figcaption>
                 </figure>
 
-              </section>
 
               <figure id="results-4" class="results-section">
                 <h2>Fast growing intracellular Mtb evades antibiotic treatment.</h2>
@@ -361,12 +361,12 @@
                         <p>At EC99 concentrations, however, there was a notable selection for fast-growing subpopulations, increasing from 11% in the untreated control to 33% for PZA, 20% for INH and a significant 60% for RIF <i>(Fig. 4B, Table S2)</i>. Further Chi-squared statistical tests revealed that the proportion shifts in growth phenotype subpopulations were statistically significant for INH EC99 and RIF EC99, whilst PZA EC99 did not allow for enough doubling times measurements to yield significance for the fastest growth category. Altogether, our data indicate that these fast-growing intracellular Mtb populations evaded antibiotic treatment, particularly RIF and INH to a lesser extent PZA.</p>
                         <div id="F4" class="F4-container">
                       <!-- Top image - experiment design -->
-                      <div class="F4A">
+                      <div class="F4A-container">
                         <img src="images/Figure_4A.png" alt="Figure 4A - Experimental design of antibiotic-treated, Mtb-infected macrophages">
                       </div>
 
                       <!-- Middle content - the iframe with main plot -->
-                      <div class="F4-iframe-container">
+                      <!-- <div class="F4-iframe-container">
                         <iframe
                           id="fig:4"
                           src="figures/F4.html"
@@ -374,33 +374,24 @@
                           loading="lazy"
                           class="F4-iframe">
                         </iframe>
+                      </div> -->
+                      <div class="F4B-container">
+                        <div id="plot-4B" class="F4-plot"></div>
                       </div>
 
                       <!-- Bottom image C - scatter plots -->
-                      <div class="F4C">
+                      <div class="F4C-container">
                         <img src="images/Figure_4C.png" alt="Figure 4C - Scatter plots of antibiotic treatments">
                       </div>
 
                       <!-- Bottom image D - additional visualization -->
-                      <div class="F4D">
+                      <div class="F4D-container">
                         <img src="images/Figure_4D.png" alt="Figure 4D - Additional antibiotic response data">
                       </div>
                     </div>
                     <figcaption>
                       <p><b>Fig. 4.</b> Fast growing intracellular Mtb evade antibiotic treatment. <b>(A)</b> Timeline and experimental design of antibiotic-treated, Mtb-infected macrophages live-cell imaging. <b>(B)</b> Distribution of intracellular doubling times attributable solely to intrinsic, intracellular Mtb growth within host-macrophages. These doubling times are separated into control (untreated) wild-type Mtb, control (untreated) ∆RD1-Mtb and antibiotic-treated wild-type Mtb, with further subdivisions according to the concentration of antibiotics (EC50 and EC99). A Mann-Whitney U test accompanies these distributions, comparing the overall distribution of each condition to the wild-type control. The intracellular Mtb doubling times across PZA, INH and RIF treated macrophages exhibit heterogenous distributions that diverge further with increasing antibiotic concentrations. The proportion of fast, normal and slow growth phenotypes are also exhibited as percentages for each strain of Mtb and concentration of antibiotic. A Chi-squared (χ2) test accompanies these distributions, comparing the proportions of each growth phenotype in each condition to the wild-type control. <b>(C)</b> Visualization of the selective pressure that antibiotics exert on intracellular Mtb populations.</p>
                     </figcaption>
-
-                  <!-- </div>
-                      <iframe
-                          id="fig:4"
-                          src="figures/F4.html"
-                          title="Figure 4: Antibiotic doubling time plot"
-                          loading="lazy"
-                          style="width: 100%; max-width: 100vw; height: 800px; border: none; overflow: visible;">
-                      </iframe>
-                      <figcaption>
-                          <p><b>Fig. 4.</b> Fast growing intracellular Mtb evade antibiotic treatment. <b>(A)</b> Timeline and experimental design of antibiotic-treated, Mtb-infected macrophages live-cell imaging. <b>(B)</b> Distribution of intracellular doubling times attributable solely to intrinsic, intracellular Mtb growth within host-macrophages. These doubling times are separated into control (untreated) wild-type Mtb, control (untreated) ∆RD1-Mtb and antibiotic-treated wild-type Mtb, with further subdivisions according to the concentration of antibiotics (EC50 and EC99). A Mann-Whitney U test accompanies these distributions, comparing the overall distribution of each condition to the wild-type control. The intracellular Mtb doubling times across PZA, INH and RIF treated macrophages exhibit heterogenous distributions that diverge further with increasing antibiotic concentrations. The proportion of fast, normal and slow growth phenotypes are also exhibited as percentages for each strain of Mtb and concentration of antibiotic. A Chi-squared (χ2) test accompanies these distributions, comparing the proportions of each growth phenotype in each condition to the wild-type control.</p>
-                      </figcaption> -->
                 </figure>
             </section>
 

@@ -404,7 +404,7 @@ function initializeFigures() {
     // Existing code
     setupImagePopup(document.querySelectorAll('.F1B-container, .F1C-container, .F1F-container'));
     setupHoverPreview(document.querySelectorAll('.F1B-container, .F1C-container, .F1F-container'));
-    setupVideoHoverAndPopup(document.querySelectorAll('.F1E-container, .F1G-container, .F2A-container, .F2B-container, .F2C-container, .F3A-container, .F3B-container, .F3C-container'));
+    setupVideoHoverAndPopup(document.querySelectorAll('.F1E-container, .F1G-container, .F2A-container, .F2B-container, .F2C-container, .F3A-container, .F3B-container, .F3C-container, .F4B-container'));
 
     // Dynamically load all figures
     const plotFigures = [
@@ -418,6 +418,7 @@ function initializeFigures() {
         { id: 'plot-3B', jsonPath: './figures/data/F3B_plot_data.json', container: 'F3B' },
         { id: 'plot-3C', jsonPath: './figures/data/F3C_plot_data.json', container: 'F3C' },
         { id: 'plot-3D', jsonPath: './figures/data/F3D_plot_data.json', container: 'F3D' },
+        { id: 'plot-4B', jsonPath: './figures/data/F4B_plot_data.json', container: 'F4B' },
 
     ];
 

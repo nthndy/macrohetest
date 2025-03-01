@@ -505,7 +505,7 @@ a {
 }
 
 /* Images above and below the plot */
-.F4A, .F4C, .F4D {
+.F4A-container, .F4C-container, .F4D-container {
   width: 100%;  /* Full width of container */
   display: flex;
   justify-content: center; /* Center the image horizontally */
@@ -514,53 +514,34 @@ a {
   text-align: center; /* Ensure text-align center for IE */
 }
 
-.F4A img, .F4C img, .F4D img {
+.F4A-container img, .F4C-container img, .F4D-container img {
   width: 100%;  /* Take 80% width to prevent excess width */
   height: auto;
   object-fit: contain;
   margin: 0 auto; /* Extra centering */
 }
 
-/* F4 content containing the plot */
-.F4-content {
-  width: 90%; /* Slightly less than container width */
-  max-width: 1200px; /* Hard maximum width */
-  display: flex;
-  justify-content: center;
+.F4B-container {
+  width: 75%;  /* Match the iframe container width */
+  /* max-width: 1000px; /* Match the iframe max width */
   position: relative;
   margin: 0 auto; /* Center in container */
 }
 
-/* F4 plot styling */
 .F4-plot {
   width: 100%;
-  height: 600px;  /* Adjust based on the actual plot height needed */
+  height: auto; /* Match the iframe height */
   position: relative;
+  overflow: hidden;
 }
 
-/* Make sure the Plotly elements respect container size */
+/* Make sure Plotly elements respect container size */
 .F4-plot .js-plotly-plot,
 .F4-plot .plot-container,
 .F4-plot .svg-container {
   max-width: 100% !important;
+  height: 100% !important;
 }
-
-/* For the iframe implementation */
-.F4-iframe-container {
-  width: 75%;  /* Constrained width */
-  max-width: 1000px; /* Hard maximum width */
-  height: 600px; /* Reduced from 800px to eliminate excess space */
-  position: relative;
-  margin: 0 auto; /* Center in container */
-}
-
-.F4-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  overflow: hidden;
-}
-
 
 
 /********* CAPTION STYLES ************/
