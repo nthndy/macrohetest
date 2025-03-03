@@ -404,7 +404,7 @@ function initializeFigures() {
     // Existing code
     setupImagePopup(document.querySelectorAll('.F1B-container, .F1C-container, .F1F-container'));
     setupHoverPreview(document.querySelectorAll('.F1B-container, .F1C-container, .F1F-container'));
-    setupVideoHoverAndPopup(document.querySelectorAll('.F1E-container, .F1G-container, .F2A-container, .F2B-container, .F2C-container, .F3A-container, .F3B-container, .F3C-container, .F4B-container'));
+    setupVideoHoverAndPopup(document.querySelectorAll('.F1E-container, .F1G-container, .F2A-container, .F2B-container, .F2C-container, .F3A-container, .F3B-container, .F3C-container'));
 
     // Dynamically load all figures
     const plotFigures = [

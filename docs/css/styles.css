@@ -522,7 +522,8 @@ a {
 }
 
 .F4B-container {
-  width: 75%;  /* Match the iframe container width */
+  width: 100%;  /* Match the iframe container width */
+  min-height: 500px;
   /* max-width: 1000px; /* Match the iframe max width */
   position: relative;
   margin: 0 auto; /* Center in container */
@@ -530,9 +531,14 @@ a {
 
 .F4-plot {
   width: 100%;
-  height: auto; /* Match the iframe height */
+  height: 100% !important; /* Match the iframe height */
   position: relative;
   overflow: hidden;
+}
+
+#plot-4B {
+  height: 100% !important;
+  min-height: 600px !important;
 }
 
 /* Make sure Plotly elements respect container size */
