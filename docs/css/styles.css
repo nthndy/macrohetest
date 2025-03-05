@@ -491,54 +491,66 @@ a {
 
 /********* FIGURE 4 STYLES ************/
 .F4-container {
-  width: 130%;  /* Make wider than text, similar to F2 & F3 */
-  margin-left: -15%;  /* Pull left to help center */
-  margin-right: -15%;  /* Pull right to help center */
+  width: 130%;  /* Keep your current width */
+  margin-left: auto;
+  margin-right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;  /* Center all content */
-  gap: 20px;  /* Space between elements */
-  overflow: visible;
-  position: relative;
-  max-width: 1600px; /* Maximum absolute width */
-  margin: 0 auto; /* Center if max-width is reached */
-}
-
-/* Images above and below the plot */
-.F4A-container, .F4C-container, .F4D-container {
-  width: 100%;  /* Full width of container */
-  display: flex;
-  justify-content: center; /* Center the image horizontally */
   align-items: center;
-  margin: 20px auto; /* Center with margin */
-  text-align: center; /* Ensure text-align center for IE */
+  max-width: 1600px;
+  overflow: visible;
 }
 
-.F4A-container img, .F4C-container img, .F4D-container img {
-  width: 100%;  /* Take 80% width to prevent excess width */
-  height: auto;
-  object-fit: contain;
-  margin: 0 auto; /* Extra centering */
-}
 
-.F4B-container {
-  width: 100%;  /* Match the iframe container width */
-  min-height: 500px;
-  /* max-width: 1000px; /* Match the iframe max width */
+
+
+/* Improve container alignment */
+.F4A-container,
+.F4B-container,
+.F4C-container,
+.F4D-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
   position: relative;
-  margin: 0 auto; /* Center in container */
+}
+
+/* Ensure content is centered properly */
+.F4A-container img,
+.F4C-container img,
+.F4D-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: 40px; /* Space for caption */
+  width: calc(100% - 40px);
+}
+
+/* Center the plot properly */
+.F4B-container .F4-plot {
+  width: calc(100% - 40px);
+  margin-left: 40px;
+  min-height: 600px;
+
 }
 
 .F4-plot {
   width: 100%;
   height: 100% !important; /* Match the iframe height */
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #plot-4B {
+  width: calc(100% - 40px) !important;
   height: 100% !important;
   min-height: 600px !important;
+  margin-left: 40px !important;
 }
 
 /* Make sure Plotly elements respect container size */
@@ -549,6 +561,54 @@ a {
   height: 100% !important;
 }
 
+.F4A-container .vertical-caption-container,
+.F4B-container .vertical-caption-container,
+.F4C-container .vertical-caption-container,
+.F4D-container .vertical-caption-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 40px; /* Constrain width */
+  overflow: visible;
+}
+
+.F4-container .vertical-caption-container .caption {
+  font-weight: bold;
+  font-size: 26px;
+  margin-right: 10px;
+  line-height: 1;
+}
+
+.F4-container .vertical-line {
+  width: 3px;
+  height: 100%;
+  background-color: black;
+  margin-top: 0;
+}
+
+/* Create proper margin for content in Figure 4 containers */
+.F4A-container img,
+.F4C-container img,
+.F4D-container img,
+.F4B-container .F4-plot {
+  margin-left: 40px; /* Consistent margin to accommodate caption */
+  width: calc(100% - 40px); /* Adjust width to maintain container bounds */
+}
+
+/* Fix container positioning issues */
+.F4A-container,
+.F4B-container,
+.F4C-container,
+.F4D-container {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
 
 /********* CAPTION STYLES ************/
 .horizontal-caption-container {
