@@ -535,7 +535,7 @@ a {
 .F4B-container .F4-plot {
   width: calc(100% - 40px);
   margin-left: 40px;
-  min-height: 600px;
+  min-height: 500px;
 
 }
 
@@ -549,7 +549,7 @@ a {
 #plot-4B {
   width: calc(100% - 40px) !important;
   height: 100% !important;
-  min-height: 600px !important;
+  min-height: 500px !important;
   margin-left: 40px !important;
 }
 
