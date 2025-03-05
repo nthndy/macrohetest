@@ -234,8 +234,8 @@ function setupVideoHoverAndPopup(videoContainers) {
                     // Create video preview for F2
                     const preview = document.createElement('video');
                     preview.className = 'hover-preview';
-                    preview.style.maxWidth = '300px';
-                    preview.style.maxHeight = '300px';
+                    // preview.style.maxWidth = '300px';
+                    preview.style.maxHeight = '800px';
                     preview.autoplay = true;
                     preview.loop = true;
                     preview.muted = true;
@@ -247,7 +247,7 @@ function setupVideoHoverAndPopup(videoContainers) {
 
                     const overlayText = document.createElement('div');
                     overlayText.className = 'hover-text';
-                    overlayText.innerText = "Click to view larger";
+                    overlayText.innerText = "Click to view fullscreen";
 
                     previewWrapper.appendChild(preview);
                     previewWrapper.appendChild(overlayText);
@@ -256,12 +256,12 @@ function setupVideoHoverAndPopup(videoContainers) {
                     const preview = document.createElement('img');
                     preview.src = previewImageSrc || img.src;
                     preview.className = 'hover-preview';
-                    preview.style.maxWidth = '300px';
-                    preview.style.maxHeight = '300px';
+                    // preview.style.maxWidth = '300px';
+                    preview.style.maxHeight = '800px';
 
                     const overlayText = document.createElement('div');
                     overlayText.className = 'hover-text';
-                    overlayText.innerText = "Click to view video";
+                    overlayText.innerText = "Click to view fullscreen";
 
                     previewWrapper.appendChild(preview);
                     previewWrapper.appendChild(overlayText);
@@ -691,8 +691,211 @@ function addF3DLabels() {
 
   }, 50); // Increased wait time slightly to ensure plot is rendered
 }
+// Improved hover video function with no text label
+function setupHoverVideoPlayers() {
+  console.log("Initializing hover video players...");
 
-// ===========================================
-// 11. Wait for DOM to Load
-// ===========================================
-document.addEventListener('DOMContentLoaded', initializeFigures);
+  // Remove any existing popup to avoid duplicates
+  const existingPopup = document.getElementById('hover-video-popup');
+  if (existingPopup) {
+    existingPopup.remove();
+  }
+
+  // Create a global hover video container
+  const hoverPopup = document.createElement('div');
+  hoverPopup.id = 'hover-video-popup';
+  hoverPopup.className = 'hover-popup';
+
+  // Create video element
+  const popupVideo = document.createElement('video');
+  popupVideo.id = 'hover-popup-video';
+  popupVideo.autoplay = true;
+  popupVideo.loop = true;
+  popupVideo.muted = true;
+  popupVideo.playsInline = true;
+
+  hoverPopup.appendChild(popupVideo);
+  document.body.appendChild(hoverPopup);
+
+  // Handle all plots that might have hover data
+  const plotIds = ['plot-1H', 'plot-2A', 'plot-2B', 'plot-2C', 'plot-2D',
+                  'plot-3A', 'plot-3B', 'plot-3C', 'plot-3D', 'plot-4B'];
+
+  plotIds.forEach(plotId => {
+    const plotDiv = document.getElementById(plotId);
+    if (!plotDiv) {
+      console.log(`Plot ${plotId} not found, skipping video hover setup...`);
+      return;
+    }
+
+    console.log(`Setting up video hover for ${plotId}`);
+
+    // Check if the plot is a fully initialized Plotly plot
+    let usePlotlyEvents = false;
+    if (plotDiv._fullLayout && plotDiv.on && typeof plotDiv.on === 'function') {
+      usePlotlyEvents = true;
+
+      // Use Plotly's native event system
+      plotDiv.on('plotly_hover', function(eventData) {
+        if (!eventData || !eventData.points || eventData.points.length === 0) return;
+        handleHoverVideo(eventData.points[0], eventData.event);
+      });
+
+      plotDiv.on('plotly_unhover', function() {
+        hoverPopup.style.display = 'none';
+        popupVideo.pause();
+      });
+    } else {
+      // Fallback to DOM events if Plotly events aren't available
+      console.log(`Using DOM events for ${plotId} instead of Plotly events`);
+
+      plotDiv.addEventListener('mouseover', function(e) {
+        // For DOM events, we'll try to find data in attributes or data properties
+        const target = e.target;
+
+        // Try to find a data point closest to where the user is hovering
+        if (plotDiv._fullData) {
+          // This is a simplification - in a real implementation, we'd need more sophisticated
+          // point detection based on mouse coordinates
+          const data = plotDiv._fullData[0];
+          if (data && data.customdata && data.customdata.length > 0) {
+            const simplePoint = {
+              customdata: data.customdata[0],
+              text: data.text ? data.text[0] : null,
+              hovertext: data.hovertext ? data.hovertext[0] : null
+            };
+            handleHoverVideo(simplePoint, e);
+          }
+        }
+      });
+
+      plotDiv.addEventListener('mouseout', function() {
+        hoverPopup.style.display = 'none';
+        popupVideo.pause();
+      });
+    }
+
+    // Always add mousemove to update position, regardless of event system
+    plotDiv.addEventListener('mousemove', function(e) {
+      if (hoverPopup.style.display === 'block') {
+        // Position popup near the cursor
+        hoverPopup.style.left = `${e.clientX + 20}px`;
+        hoverPopup.style.top = `${e.clientY - 120}px`;
+      }
+    });
+  });
+
+  function handleHoverVideo(point, event) {
+    // Try to find video source in the data point
+    let videoSrc = null;
+
+    // Check customdata object first
+    if (point.customdata) {
+      if (typeof point.customdata === 'object') {
+        // Check for video URL in various properties
+        const possibleProps = ['Video', 'video', 'VideoLink', 'videoLink', 'src', 'source'];
+        for (const prop of possibleProps) {
+          if (point.customdata[prop] && typeof point.customdata[prop] === 'string') {
+            videoSrc = point.customdata[prop];
+            console.log(`Found video in customdata.${prop}`);
+            break;
+          }
+        }
+      }
+      // If customdata is directly a string URL
+      else if (typeof point.customdata === 'string') {
+        videoSrc = point.customdata;
+        console.log('Found video in customdata string');
+      }
+    }
+
+    // Check text field
+    if (!videoSrc && point.text) {
+      // Look for Video Link pattern
+      const videoLinkMatch = typeof point.text === 'string' &&
+                            point.text.match(/Video Link[:\s]+([^<\\s"]+)/i);
+      if (videoLinkMatch && videoLinkMatch[1]) {
+        videoSrc = videoLinkMatch[1];
+        console.log('Found video in text Video Link field');
+      }
+
+      // Look for any video URL pattern
+      if (!videoSrc) {
+        const videoMatch = typeof point.text === 'string' &&
+                          point.text.match(/(https?:\/\/[^\s<>"]+\.mp4|\/[^\s<>"]+\.mp4)/i);
+        if (videoMatch) {
+          videoSrc = videoMatch[0];
+          console.log('Found video by URL pattern in text');
+        }
+      }
+    }
+
+    // Also try hovertext
+    if (!videoSrc && point.hovertext) {
+      const videoMatch = typeof point.hovertext === 'string' &&
+                        point.hovertext.match(/(https?:\/\/[^\s<>"]+\.mp4|\/[^\s<>"]+\.mp4)/i);
+      if (videoMatch) {
+        videoSrc = videoMatch[0];
+        console.log('Found video in hovertext');
+      }
+    }
+
+    if (!videoSrc) {
+      console.log(`No video source found for hover point:`, point);
+      return;
+    }
+
+    console.log(`Found video source: ${videoSrc}`);
+
+    // Set video source
+    const source = document.createElement('source');
+    source.src = videoSrc;
+    source.type = 'video/mp4';
+
+    // Clear any existing sources
+    while (popupVideo.firstChild) {
+      popupVideo.removeChild(popupVideo.firstChild);
+    }
+
+    popupVideo.appendChild(source);
+
+    // Try to load and play the video
+    popupVideo.load();
+    const playPromise = popupVideo.play();
+
+    if (playPromise !== undefined) {
+      playPromise.then(_ => {
+        // Video is playing, show the popup
+        hoverPopup.style.display = 'block';
+        // Position popup next to cursor
+        hoverPopup.style.left = `${event.clientX + 20}px`;
+        hoverPopup.style.top = `${event.clientY - 120}px`;
+      })
+      .catch(error => {
+        console.log(`Error playing video: ${error}`);
+        hoverPopup.style.display = 'none';
+      });
+    }
+  }
+
+  // Hide video when mouse leaves the document
+  document.addEventListener('mouseleave', function() {
+    hoverPopup.style.display = 'none';
+    popupVideo.pause();
+  });
+
+  console.log("Hover video players initialization complete");
+}
+
+// Add this to your initialization flow
+function enhancedInitializeFigures() {
+  // Call original initialization
+  initializeFigures();
+
+  // Wait for plots to be fully initialized before setting up video hover
+  setTimeout(setupHoverVideoPlayers, 2000); // 2 seconds to ensure plots are fully loaded
+}
+
+// Replace your document.addEventListener line with this
+document.removeEventListener('DOMContentLoaded', initializeFigures);
+document.addEventListener('DOMContentLoaded', enhancedInitializeFigures);
