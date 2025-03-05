@@ -208,6 +208,9 @@ function setupVideoHoverAndPopup(videoContainers) {
         const isF2Container = container.classList.contains('F2A-container') ||
                             container.classList.contains('F2B-container') ||
                             container.classList.contains('F2C-container');
+        const isF3Container = container.classList.contains('F3A-container') ||
+                            container.classList.contains('F3B-container') ||
+                            container.classList.contains('F3C-container');
 
         let hoverDisabled = false;
         let previewWrapper = null;
@@ -230,7 +233,7 @@ function setupVideoHoverAndPopup(videoContainers) {
                 previewWrapper = document.createElement('div');
                 previewWrapper.className = 'hover-preview-wrapper';
 
-                if (isF2Container) {
+                if (isF2Container || isF3Container) {
                     // Create video preview for F2
                     const preview = document.createElement('video');
                     preview.className = 'hover-preview';
