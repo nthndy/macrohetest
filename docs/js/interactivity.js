@@ -369,6 +369,8 @@ function loadPlotlyFigure(plotId, jsonPath, containerPrefix) {
 // ===========================================
 // 6. Setup Plotly Hover Interaction
 // ===========================================
+// Add this at the end of the interactivity.js file, replacing the existing setupPlotHover function
+
 function setupPlotHover(plotId) {
     const plotDiv = document.getElementById(plotId);
     if (!plotDiv) {
@@ -376,46 +378,151 @@ function setupPlotHover(plotId) {
         return;
     }
 
-    // Update selector to just look for the image container
-    const hoverPopup = document.querySelector('.F1H-container .plot-preview-container');
-    const hoverImage = document.getElementById("plot-hover-image");
+    // Check for the preview container, create it if it doesn't exist
+    let hoverPopup = document.querySelector('.F1H-container .plot-preview-container');
+    let hoverImage = document.getElementById("plot-hover-image");
 
     if (!hoverPopup || !hoverImage) {
-        console.warn("⚠️ Required elements not found:", {
-            hoverPopup: !!hoverPopup,
-            hoverImage: !!hoverImage
-        });
-        return;
+        // Create the container if it doesn't exist
+        const f1hContainer = document.querySelector('.F1H-container');
+        if (!f1hContainer) {
+            console.warn("⚠️ F1H container not found");
+            return;
+        }
+
+        hoverPopup = document.createElement('div');
+        hoverPopup.className = 'plot-preview-container';
+        hoverPopup.style.display = 'none';
+        hoverPopup.style.position = 'fixed';
+        hoverPopup.style.width = '300px';
+        hoverPopup.style.height = 'auto';
+        hoverPopup.style.backgroundColor = 'white';
+        hoverPopup.style.border = '2px solid #333';
+        hoverPopup.style.borderRadius = '5px';
+        hoverPopup.style.padding = '8px';
+        hoverPopup.style.boxShadow = '0 4px 15px rgba(0,0,0,0.3)';
+        hoverPopup.style.zIndex = '99999';
+        hoverPopup.style.pointerEvents = 'none'; // So it doesn't interfere with hover
+
+        hoverImage = document.createElement('img');
+        hoverImage.id = 'plot-hover-image';
+        hoverImage.style.width = '100%';
+        hoverImage.style.height = 'auto';
+        hoverImage.style.display = 'block';
+        hoverPopup.appendChild(hoverImage);
+
+        f1hContainer.appendChild(hoverPopup);
+        console.log("✅ Created plot preview container");
     }
 
     plotDiv.on('plotly_hover', function(eventData) {
         if (!eventData || !eventData.points || eventData.points.length === 0) return;
 
         const point = eventData.points[0];
-        const mediaSrc = point.customdata?.image || null;
-        if (!mediaSrc) return;
+        let imageSrc = null;
 
-        // console.log("🎥 Media detected:", mediaSrc); keep this debug step in for now
-        hoverImage.src = mediaSrc;
+        // Debug information
+        console.log("Hover data received:", point.customdata);
+
+        // Handle different possible structures of customdata
+        if (point.customdata) {
+            // Case 1: customdata is directly the object with image property
+            if (typeof point.customdata === 'object' && point.customdata.image) {
+                imageSrc = point.customdata.image;
+                console.log("✅ Found image source directly:", imageSrc);
+            }
+            // Case 2: customdata is an array containing objects with image property
+            else if (Array.isArray(point.customdata) &&
+                    point.customdata.length > 0 &&
+                    typeof point.customdata[0] === 'object' &&
+                    point.customdata[0].image) {
+                imageSrc = point.customdata[0].image;
+                console.log("✅ Found image source in array:", imageSrc);
+            }
+            // Case 3: customdata is directly a string URL
+            else if (typeof point.customdata === 'string' &&
+                    point.customdata.includes('http')) {
+                imageSrc = point.customdata;
+                console.log("✅ Found image source as string:", imageSrc);
+            }
+        }
+
+        if (!imageSrc) {
+            console.warn("⚠️ No image source found in customdata. Structure:", point.customdata);
+            return;
+        }
+
+        // Set the image source and show the popup
+        hoverImage.src = imageSrc;
+        hoverImage.alt = "Track glimpse";
+        hoverImage.style.display = 'block';
+
+        // Position the popup near the cursor
         hoverPopup.style.display = 'block';
-        hoverPopup.style.position = 'fixed';
-        hoverPopup.style.zIndex = "99999";
-        hoverPopup.style.left = `${eventData.event.clientX - hoverPopup.offsetWidth - 5}px`;
-        hoverPopup.style.top = `${eventData.event.clientY - (hoverPopup.offsetHeight / 2)}px`;
+        hoverPopup.style.left = `${eventData.event.clientX + 20}px`; // Position to the right
+        hoverPopup.style.top = `${eventData.event.clientY - (hoverPopup.offsetHeight / 2)}px`; // Center vertically
 
+        // Function to move the popup with the mouse
         const movePopup = (e) => {
-            hoverPopup.style.left = `${e.clientX - hoverPopup.offsetWidth - 5}px`;
+            hoverPopup.style.left = `${e.clientX + 20}px`;
             hoverPopup.style.top = `${e.clientY - (hoverPopup.offsetHeight / 2)}px`;
         };
 
-        plotDiv.addEventListener('mousemove', movePopup);
+        // Add mousemove event to follow the cursor
+        document.addEventListener('mousemove', movePopup);
 
+        // Hide popup when unhovered
         plotDiv.on('plotly_unhover', () => {
             hoverPopup.style.display = 'none';
-            plotDiv.removeEventListener('mousemove', movePopup);
+            document.removeEventListener('mousemove', movePopup);
         });
     });
 }
+
+
+
+// Add this function to ensure the plot preview container is properly set up
+function setupPlotPreviewContainer() {
+    // Get the F1H container
+    const f1hContainer = document.querySelector('.F1H-container');
+    if (!f1hContainer) {
+        console.warn("⚠️ F1H container not found");
+        return;
+    }
+
+    // Check if the preview container already exists
+    let previewContainer = f1hContainer.querySelector('.plot-preview-container');
+
+    // If it doesn't exist, create it
+    if (!previewContainer) {
+        previewContainer = document.createElement('div');
+        previewContainer.className = 'plot-preview-container';
+        previewContainer.style.display = 'none';
+        previewContainer.style.position = 'fixed';
+        previewContainer.style.width = '300px';
+        previewContainer.style.height = 'auto';
+        previewContainer.style.backgroundColor = 'white';
+        previewContainer.style.border = '2px solid #333';
+        previewContainer.style.borderRadius = '5px';
+        previewContainer.style.padding = '8px';
+        previewContainer.style.boxShadow = '0 4px 15px rgba(0,0,0,0.3)';
+        previewContainer.style.zIndex = '99999';
+        previewContainer.style.pointerEvents = 'none'; // So it doesn't interfere with hover
+
+        const hoverImage = document.createElement('img');
+        hoverImage.id = 'plot-hover-image';
+        hoverImage.style.width = '100%';
+        hoverImage.style.height = 'auto';
+        hoverImage.style.display = 'block';
+        previewContainer.appendChild(hoverImage);
+
+        f1hContainer.appendChild(previewContainer);
+        console.log("✅ Created plot preview container");
+    } else {
+        console.log("ℹ️ Plot preview container already exists");
+    }
+}
+
 
 // ===========================================
 // 7. Initialize All Components
@@ -425,6 +532,9 @@ function initializeFigures() {
     setupImagePopup(document.querySelectorAll('.F1B-container, .F1C-container, .F1F-container'));
     setupHoverPreview(document.querySelectorAll('.F1B-container, .F1C-container, .F1F-container'));
     setupVideoHoverAndPopup(document.querySelectorAll('.F1E-container, .F1G-container, .F2A-container, .F2B-container, .F2C-container, .F3A-container, .F3B-container, .F3C-container'));
+
+    // NEW: Ensure the plot preview container is set up
+    setupPlotPreviewContainer();
 
     // Dynamically load all figures
     const plotFigures = [
@@ -446,11 +556,25 @@ function initializeFigures() {
         loadPlotlyFigure(fig.id, fig.jsonPath, fig.container);
     });
 
+    // Setup the hover functionality for plot-1H specifically
+    setupPlotHover('plot-1H');
+
     // Setup Sankey diagrams if they exist
     const sankeyPlots = document.querySelectorAll('#plot-3E, #plot-3F');
     if (sankeyPlots.length > 0) {
         setupSankeyDiagrams();
     }
+
+    // Inside initializeFigures function, after loading plots:
+    plotFigures.forEach(fig => {
+        loadPlotlyFigure(fig.id, fig.jsonPath, fig.container);
+
+        // Add this line to specifically set up hover for plot-1H
+        if (fig.id === 'plot-1H') {
+            setTimeout(() => setupPlotHover(fig.id), 500); // Add a slight delay to ensure plot is loaded
+        }
+    });
+
 }
 
 // ===========================================
@@ -738,8 +862,7 @@ function setupHoverVideoPlayers() {
   document.body.appendChild(hoverPopup);
 
   // Handle all plots that might have hover data
-  const plotIds = ['plot-1H', 'plot-2A', 'plot-2B', 'plot-2C', 'plot-2D',
-                  'plot-3A', 'plot-3B', 'plot-3C', 'plot-3D', 'plot-4B'];
+  const plotIds =  ['plot-2D', 'plot-3D', 'plot-4B'];
 
   plotIds.forEach(plotId => {
     const plotDiv = document.getElementById(plotId);

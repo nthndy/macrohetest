@@ -704,10 +704,10 @@ a {
 .hover-text-video {
     position: absolute;
     top: 40px;
-    left: 13.5%;
+    left: 25%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    color: yellow;
     padding: 5px 10px;
     font-size: 16px;
     border-radius: 3px;
