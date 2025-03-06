@@ -701,7 +701,7 @@ a {
 }
 
 /* Overlay Text */
-.hover-text {
+.hover-text-video {
     position: absolute;
     top: 40px;
     left: 13.5%;
@@ -715,6 +715,20 @@ a {
     white-space: nowrap;
     text-align: center;
 }
+
+.hover-text-image {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: yellow;
+    padding: 5px 10px;
+    font: bold 16px sans-serif;
+    border-radius: 3px;
+    white-space: nowrap;
+    text-align: center;
+}
+
 
 .image-popup {
     display: none;

@@ -150,8 +150,8 @@ function setupHoverPreview(imageContainers) {
                 preview.style.maxHeight = '300px';
 
                 const overlayText = document.createElement('div');
-                overlayText.className = 'hover-text';
-                overlayText.innerText = "Click to pan and zoom";
+                overlayText.className = 'hover-text-image';
+                overlayText.innerText = "Click to inspect";
 
                 previewWrapper.appendChild(preview);
                 previewWrapper.appendChild(overlayText);
@@ -249,22 +249,39 @@ function setupVideoHoverAndPopup(videoContainers) {
                     preview.appendChild(source);
 
                     const overlayText = document.createElement('div');
-                    overlayText.className = 'hover-text';
+                    overlayText.className = 'hover-text-video';
                     overlayText.innerText = "Click to view fullscreen";
 
                     previewWrapper.appendChild(preview);
                     previewWrapper.appendChild(overlayText);
                 } else {
                     // Original image preview for F1 containers
-                    const preview = document.createElement('img');
-                    preview.src = previewImageSrc || img.src;
+                    const preview = document.createElement('video');
+                    // preview.src = previewImageSrc || img.src;
                     preview.className = 'hover-preview';
-                    // preview.style.maxWidth = '300px';
-                    preview.style.maxHeight = '800px';
+                    preview.style.maxWidth = '300px';
+                    preview.style.maxHeight = '300px';
+
+
+                    preview.autoplay = true;
+                    preview.loop = true;
+                    preview.muted = true;
+                    preview.playsInline = true;
+                    const source = document.createElement('source');
+                    source.src = video.querySelector('source').src;
+                    source.type = 'video/mp4';
+                    preview.appendChild(source);
 
                     const overlayText = document.createElement('div');
-                    overlayText.className = 'hover-text';
+                    overlayText.className = 'hover-text-video';
                     overlayText.innerText = "Click to view fullscreen";
+
+                    // previewWrapper.appendChild(preview);
+                    // previewWrapper.appendChild(overlayText);
+                    //
+                    // const overlayText = document.createElement('div');
+                    // overlayText.className = 'hover-text-image';
+                    // overlayText.innerText = "Click to view fullscreen";
 
                     previewWrapper.appendChild(preview);
                     previewWrapper.appendChild(overlayText);
